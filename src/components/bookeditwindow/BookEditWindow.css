@@ -1,0 +1,13 @@
+.book-edit-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* height: 500px; */
+    transform: translate(-50%, -50%);
+    background-color: red;
+}
+
+.book-edit-form {
+    display: flex;
+    flex-direction: column;
+}
