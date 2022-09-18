@@ -14,12 +14,12 @@ const BookItem = ({ book }) => {
   const editing = useSelector((s) => s.mode.editing);
 
   return (
-    <div onClick={() => navigate(`/books/${book.id}`)} className='book-card' title='See book details'>
+    <div onClick={() => navigate(`/books/${book.id}`)} className='book-card' title='See Details'>
       <div className='top-book-card'>
         <img className='img-book-card' src={book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail} alt="" />
         <div className='text-book-card'>
           <hr />
-          <h3>{book.volumeInfo.title}</h3>
+          <h5>{book.volumeInfo.title}</h5>
           <p>
             {book.volumeInfo.authors}
             &nbsp;&#9679;&nbsp;
@@ -31,7 +31,7 @@ const BookItem = ({ book }) => {
       <div className="book-btns">
         <button
           className='btn btn-book-item'
-          title={book.isFavorite ? "Remove from favorites" : "Add to favorites"}
+          title={book.isFavorite ? "Remove from Favorites" : "Add to Favorites"}
           onClick={(e) => {
             e.stopPropagation();
             dispatch(toggleFavorite(book.id));
