@@ -4,21 +4,42 @@ const initialState = {
     books: [],
     loading: false,
     error: '',
+    filter: '',
 };
 
-export const fetchBooks = createAsyncThunk('books/fetch', () => {
-    return fetch('../data.json', {
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
-    })
+export const fetchBooks = createAsyncThunk('books/fetch', (filter) => {
+    // console.log(filter);
+
+    // return fetch('../data.json', {
+    //     headers: {
+    //         "Content-Type": "application/json",
+    //         "Accept": "application/json"
+    //     },
+    // })
+    //     .then((response) => response.json())
+    //     .then((json) => json.items)
+    //     .then((books) => books.map((b) => ({
+    //         ...b,
+    //         isFavorite: false
+    //     })));
+
+    //    const query = "flowers+inauthor:keyes";
+    const query = "physics";
+    const books = "ebooks/";
+
+    return fetch(
+        `https://www.googleapis.com/books/v1/volumes?` +
+        // (query ?? `q=${query}`) +
+        `q=${query}` +
+        (filter ?? `&filter=${filter}`) +
+        `&key=AIzaSyBvRxCh4SRMHlh1s87QhItZwqVOEqKNyR0`
+    )
         .then((response) => response.json())
         .then((json) => json.items)
         .then((books) => books.map((b) => ({
             ...b,
             isFavorite: false
-        })))
+        })));
 });
 
 const booksSlice = createSlice({
@@ -39,6 +60,9 @@ const booksSlice = createSlice({
         toggleFavorite: (state, { payload }) => {
             const index = state.books.findIndex((b) => b.id === payload);
             state.books[index].isFavorite = !state.books[index].isFavorite;
+        },
+        changeFilter: (state, { payload }) => {
+            state.filter = payload;
         }
     },
     extraReducers: (builder) => {
@@ -62,4 +86,4 @@ const booksSlice = createSlice({
 });
 
 export default booksSlice.reducer;
-export const { addBook, editBook, deleteBook, toggleFavorite } = booksSlice.actions;
+export const { addBook, editBook, deleteBook, toggleFavorite, changeFilter } = booksSlice.actions;

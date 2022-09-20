@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { RiDeleteBin5Line } from 'react-icons/ri';
 import { AiOutlineEdit } from 'react-icons/ai';
 import { MdFavoriteBorder, MdFavorite } from 'react-icons/md';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const BookItem = ({ book }) => {
   // console.log(book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail);
@@ -35,7 +37,9 @@ const BookItem = ({ book }) => {
           onClick={(e) => {
             e.stopPropagation();
             dispatch(toggleFavorite(book.id));
+            toast(book.isFavorite ? "Removed from favorites." : "Added to favorites.");
           }}>
+          <ToastContainer />
           {book.isFavorite ? <MdFavorite /> : <MdFavoriteBorder />}
         </button>
         <button
@@ -44,15 +48,15 @@ const BookItem = ({ book }) => {
           onClick={(e) => {
             e.stopPropagation();
             // if (!editing) {
-              dispatch(enterEditMode(book.id));
-              // dispatch(editBook(
-              //   {
-              //     ...book,
-              //     volumeInfo: {
-              //       ...book.volumeInfo,
-              //       title: book.volumeInfo.title + " EDITED"
-              //     }
-              //   }));
+            dispatch(enterEditMode(book.id));
+            // dispatch(editBook(
+            //   {
+            //     ...book,
+            //     volumeInfo: {
+            //       ...book.volumeInfo,
+            //       title: book.volumeInfo.title + " EDITED"
+            //     }
+            //   }));
             // }
           }}>
           <AiOutlineEdit />
