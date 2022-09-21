@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import BookItem from '../../components/bookitem/BookItem';
 import { addBook, changeFilter } from '../../features/books-slice';
 import { ImFilter } from 'react-icons/im';
+import { ToastContainer } from 'react-toastify';
 
 const Books = () => {
     const dispatch = useDispatch();
@@ -11,6 +12,7 @@ const Books = () => {
     return (
         <>
             <div className="top">
+                <ToastContainer />
                 <div className='btn btn-add-book filters'>
                     <ImFilter />
                     <span>&nbsp;Filters&nbsp;</span>

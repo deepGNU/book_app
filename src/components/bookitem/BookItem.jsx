@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { RiDeleteBin5Line } from 'react-icons/ri';
 import { AiOutlineEdit } from 'react-icons/ai';
 import { MdFavoriteBorder, MdFavorite } from 'react-icons/md';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const BookItem = ({ book }) => {
@@ -31,15 +31,15 @@ const BookItem = ({ book }) => {
         </div>
       </div>
       <div className="book-btns">
+        {/* <ToastContainer /> */}
         <button
           className='btn btn-book-item'
           title={book.isFavorite ? "Remove from Favorites" : "Add to Favorites"}
           onClick={(e) => {
             e.stopPropagation();
             dispatch(toggleFavorite(book.id));
-            toast(book.isFavorite ? "Removed from favorites." : "Added to favorites.");
+            toast(book.volumeInfo.title + (book.isFavorite ? " removed from favorites." : " added to favorites."));
           }}>
-          <ToastContainer />
           {book.isFavorite ? <MdFavorite /> : <MdFavoriteBorder />}
         </button>
         <button
