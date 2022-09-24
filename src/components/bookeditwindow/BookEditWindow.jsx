@@ -5,36 +5,52 @@ import { leaveEditMode } from '../../features/mode-slice';
 import { editBook } from '../../features/books-slice';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { AiFillCloseSquare, AiFillCloseCircle } from 'react-icons/ai';
+import {FaWindowClose} from 'react-icons/fa';
 
 const BookEditWindow = () => {
     const dispatch = useDispatch();
-    const editingId = useSelector((s) => s.mode.editingId);
-    const book = useSelector((s) => s.book.books).find((b) => b.id === editingId);
-    console.log(editingId);
-    const [title, setTitle] = useState(book.volumeInfo.title);
-    const [authors, setAuthors] = useState(book.volumeInfo.authors);
-    useEffect(() => {
-        setTitle(book.volumeInfo.title);
-        setAuthors(book.volumeInfo.authors);
-    }, [editingId]);
+    // const editingId = useSelector((s) => s.mode.editingId);
+    // const book = useSelector((s) => s.book.books).find((b) => b.id === editingId);
+    // console.log(editingId);
+    // const [title, setTitle] = useState(book.volumeInfo.title);
+    // const [authors, setAuthors] = useState(book.volumeInfo.authors);
+    // useEffect(() => {
+    //     setTitle(book.volumeInfo.title);
+    //     setAuthors(book.volumeInfo.authors);
+    // }, [editingId]);
 
     return (
         <div className='book-edit-window'>
-            BookEditWindow
+            <button
+            className='btn close'
+            title='Close'
+            onClick={() => dispatch(leaveEditMode())}
+            >
+                {/* <AiFillCloseSquare /> */}
+                {/* <FaWindowClose /> */}
+                <AiFillCloseCircle />
+            </button>
             <form className='book-edit-form' action="" onSubmit={() => {
-                dispatch(editBook(
-                    {
-                        ...book,
-                        volumeInfo: {
-                            ...book.volumeInfo,
-                            title,
-                            authors,
-                        }
-                    }));
-                dispatch(leaveEditMode());
+                // dispatch(editBook(
+                //     {
+                //         ...book,
+                //         volumeInfo: {
+                //             ...book.volumeInfo,
+                //             title,
+                //             authors,
+                //         }
+                //     }));
+                // dispatch(leaveEditMode());
             }}>
-                <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
-                <input type="text" value={authors} onChange={(e) => setAuthors(e.target.value)} />
+                {/* <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+                <input type="text" value={authors} onChange={(e) => setAuthors(e.target.value)} /> */}
+                <label htmlFor="title">Title</label>
+                <input id='title' type="text" value='Title' />
+
+                <label htmlFor="authors">Authors</label>
+                <input id='authors' type="text" value='Authors' />
+
                 <button>Submit</button>
             </form>
         </div>

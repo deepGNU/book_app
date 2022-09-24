@@ -3,22 +3,22 @@ import { useSelector, useDispatch } from "react-redux";
 import BookItem from '../../components/bookitem/BookItem';
 import { addBook, changeFilter } from '../../features/books-slice';
 import { ImFilter } from 'react-icons/im';
-import { ToastContainer } from 'react-toastify';
 
 const Books = () => {
     const dispatch = useDispatch();
     const books = useSelector((s) => s.book.books);
+    const filter = useSelector((s) => s.book.filter);
 
     return (
         <>
             <div className="top">
-                <ToastContainer />
                 <div className='btn btn-add-book filters'>
                     <ImFilter />
                     <span>&nbsp;Filters&nbsp;</span>
                     <select
                         className="drop-down-list"
                         onChange={(e) => dispatch(changeFilter(e.target.value))}
+                        value={filter}
                     >
                         <option value="">None</option>
                         <option value="partial" title='Returns results where at least parts of the text are previewable.'>Partial</option>

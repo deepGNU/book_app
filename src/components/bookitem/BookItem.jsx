@@ -31,7 +31,6 @@ const BookItem = ({ book }) => {
         </div>
       </div>
       <div className="book-btns">
-        {/* <ToastContainer /> */}
         <button
           className='btn btn-book-item'
           title={book.isFavorite ? "Remove from Favorites" : "Add to Favorites"}

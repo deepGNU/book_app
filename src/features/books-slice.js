@@ -10,37 +10,37 @@ const initialState = {
 export const fetchBooks = createAsyncThunk('books/fetch', (filter) => {
     // console.log(filter);
 
-    // return fetch('../data.json', {
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //         "Accept": "application/json"
-    //     },
-    // })
-    //     .then((response) => response.json())
-    //     .then((json) => json.items)
-    //     .then((books) => books.map((b) => ({
-    //         ...b,
-    //         isFavorite: false
-    //     })));
-
-    //    const query = "flowers+inauthor:keyes";
-    const query = "physics";
-    // const query = "american history";
-    const books = "ebooks/";
-
-    return fetch(
-        `https://www.googleapis.com/books/v1/volumes?` +
-        // (query ?? `q=${query}`) +
-        `q=${query}` +
-        (filter ?? `&filter=${filter}`) +
-        `&key=AIzaSyBvRxCh4SRMHlh1s87QhItZwqVOEqKNyR0`
-    )
+    return fetch('../data.json', {
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+    })
         .then((response) => response.json())
         .then((json) => json.items)
         .then((books) => books.map((b) => ({
             ...b,
             isFavorite: false
         })));
+
+    //    const query = "flowers+inauthor:keyes";
+    const query = "physics";
+    // const query = "american history";
+    const books = "ebooks/";
+
+    // return fetch(
+    //     `https://www.googleapis.com/books/v1/volumes?` +
+    //     // (query ?? `q=${query}`) +
+    //     `q=${query}` +
+    //     (filter ?? `&filter=${filter}`) +
+    //     `&key=AIzaSyBvRxCh4SRMHlh1s87QhItZwqVOEqKNyR0`
+    // )
+    //     .then((response) => response.json())
+    //     .then((json) => json.items)
+    //     .then((books) => books.map((b) => ({
+    //         ...b,
+    //         isFavorite: false
+    //     })));
 });
 
 const booksSlice = createSlice({

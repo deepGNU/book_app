@@ -9,6 +9,7 @@ import Favorites from "./pages/favorites/Favorites";
 import NotFound404 from "./pages/notfound404/NotFound404";
 import BookEditWindow from "./components/bookeditwindow/BookEditWindow";
 import { useSelector } from "react-redux";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   useBooks();
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+      <ToastContainer />
       <TopNav />
      {editing && <BookEditWindow />}
       <Routes>
