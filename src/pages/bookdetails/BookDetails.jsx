@@ -11,6 +11,8 @@ const BookDetails = () => {
         return <Navigate to='/books' />;
     }
 
+    const languageName = new Intl.DisplayNames(['en'], {type: 'language'});
+
     return (
         <div className='book-details-div'>
             <h1>{book.volumeInfo.title}</h1>
@@ -20,7 +22,7 @@ const BookDetails = () => {
             <p>Desciption: {book.volumeInfo.description ?? "unavailable."}</p>
             <p>Publisher: {book.volumeInfo.publisher ?? "unavailable."}</p>
             <p>Published date: {book.volumeInfo.publishedDate ?? "unavailable."}</p>
-            <p>Language: {book.volumeInfo.language ?? "unavailable."}</p>
+            <p>Language: {languageName.of(book.volumeInfo.language) ?? "unavailable."}</p>
             <div>
                 <a href={book.volumeInfo.previewLink ?? "unavailable."}>Preview at Google Books</a>
                 <br />

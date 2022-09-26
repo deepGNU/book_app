@@ -1,13 +1,16 @@
 import './Books.css';
 import { useSelector, useDispatch } from "react-redux";
 import BookItem from '../../components/bookitem/BookItem';
-import { addBook, changeFilter } from '../../features/books-slice';
+import { addBook, changeFilter, changeLang } from '../../features/books-slice';
 import { ImFilter } from 'react-icons/im';
+import langCodes from './lang-codes';
 
 const Books = () => {
     const dispatch = useDispatch();
     const books = useSelector((s) => s.book.books);
     const filter = useSelector((s) => s.book.filter);
+    const lang = useSelector((s) => s.book.lang);
+    const langName = new Intl.DisplayNames(['en'], {type: 'language'});
 
     return (
         <>
@@ -26,6 +29,13 @@ const Books = () => {
                         <option value="free-ebooks" title='Only returns results that are free Google eBooks.'>Free eBooks</option>
                         <option value="paid-ebooks" title='Only returns results that are Google eBooks with a price.'>Paid eBooks</option>
                         <option value="ebooks" title='Only returns results that are Google eBooks, paid or free. Examples of non-eBooks would be publisher content that is available in limited preview and not for sale, or magazines.'>eBooks</option>
+                    </select>
+
+                    <select
+                        onChange={(e) => dispatch(changeLang(e.target.value))}
+                        value={lang}
+                    >
+                        {langCodes.map((langCode) => <option value={langCode}>{langName.of(langCode)}</option>)}
                     </select>
                 </div>
                 <button className='btn btn-add-book'
