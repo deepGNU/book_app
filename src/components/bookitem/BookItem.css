@@ -51,10 +51,11 @@
 }
 
 .btn-book-item {
-    font-size: 1.2rem;
-    color: white;
-    background-color: #555;
-    border: solid black 1px;
+    /* font-size: 1.2rem; */
+    font-size: 1.8rem;
+    /* color: white; */
+    /* background-color: #555; */
+    /* border: solid black 1px; */
 }
 
 .book-card button.btn-book-item:hover {

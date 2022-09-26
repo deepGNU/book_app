@@ -1,4 +1,4 @@
 .book-details-div {
-    min-height: 100vh;
-    background: #fff;
+    background-color: rgba(230, 230, 230, 0.95);
+    padding: 50px;
 }

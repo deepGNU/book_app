@@ -12,7 +12,7 @@ const Books = () => {
     return (
         <>
             <div className="top">
-                <div className='btn btn-add-book filters'>
+                <div className='filters'>
                     <ImFilter />
                     <span>&nbsp;Filters&nbsp;</span>
                     <select

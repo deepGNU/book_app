@@ -65,7 +65,9 @@ const BookItem = ({ book }) => {
           title='Delete'
           onClick={(e) => {
             e.stopPropagation();
-            dispatch(deleteBook(book.id))
+            if (window.confirm(`Are you sure you want to delete ${book.volumeInfo.title}?`)) {
+              dispatch(deleteBook(book.id))
+            }
           }}>
           <RiDeleteBin5Line />
         </button>

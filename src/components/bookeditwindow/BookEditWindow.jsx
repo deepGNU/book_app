@@ -6,10 +6,12 @@ import { editBook } from '../../features/books-slice';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { AiFillCloseSquare, AiFillCloseCircle } from 'react-icons/ai';
-import {FaWindowClose} from 'react-icons/fa';
+import { FaWindowClose } from 'react-icons/fa';
+import useEsc from '../../hooks/useEsc';
 
 const BookEditWindow = () => {
     const dispatch = useDispatch();
+    useEsc(() => dispatch(leaveEditMode()));
     // const editingId = useSelector((s) => s.mode.editingId);
     // const book = useSelector((s) => s.book.books).find((b) => b.id === editingId);
     // console.log(editingId);
@@ -23,9 +25,9 @@ const BookEditWindow = () => {
     return (
         <div className='book-edit-window'>
             <button
-            className='btn close'
-            title='Close'
-            onClick={() => dispatch(leaveEditMode())}
+                className='btn close'
+                title='Close'
+                onClick={() => dispatch(leaveEditMode())}
             >
                 {/* <AiFillCloseSquare /> */}
                 {/* <FaWindowClose /> */}
@@ -47,6 +49,7 @@ const BookEditWindow = () => {
                 <input type="text" value={authors} onChange={(e) => setAuthors(e.target.value)} /> */}
                 <label htmlFor="title">Title</label>
                 <input id='title' type="text" value='Title' />
+                <hr />
 
                 <label htmlFor="authors">Authors</label>
                 <input id='authors' type="text" value='Authors' />
