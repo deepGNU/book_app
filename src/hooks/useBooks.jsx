@@ -6,10 +6,11 @@ const useBooks = () => {
     const dispatch = useDispatch();
     const filter = useSelector((s) => s.book.filter);
     const lang = useSelector((s) => s.book.lang);
+    const query = useSelector((s) => s.book.query);
 
     useEffect(() => {
-        dispatch(fetchBooks({filter, lang}));
-    }, [dispatch, filter, lang]);
+        dispatch(fetchBooks());
+    }, [dispatch, filter, lang, query]);
 };
 
 export default useBooks;

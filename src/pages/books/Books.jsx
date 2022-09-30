@@ -1,16 +1,21 @@
 import './Books.css';
 import { useSelector, useDispatch } from "react-redux";
 import BookItem from '../../components/bookitem/BookItem';
-import { addBook, changeFilter, changeLang } from '../../features/books-slice';
+import { addBook, changeFilter, changeLang, changeQuery } from '../../features/books-slice';
 import { ImFilter } from 'react-icons/im';
 import langCodes from './lang-codes';
+import { useState } from 'react';
 
 const Books = () => {
     const dispatch = useDispatch();
     const books = useSelector((s) => s.book.books);
     const filter = useSelector((s) => s.book.filter);
     const lang = useSelector((s) => s.book.lang);
-    const langName = new Intl.DisplayNames(['en'], {type: 'language'});
+    const query = useSelector((s) => s.book.query);
+    const langName = new Intl.DisplayNames(['en'], { type: 'language' });
+    const [searchBarVal, setSearchBarVal] = useState('');
+
+    console.log(books)
 
     return (
         <>
@@ -18,6 +23,16 @@ const Books = () => {
                 <div className='filters'>
                     <ImFilter />
                     <span>&nbsp;Filters&nbsp;</span>
+                    <form action="" onSubmit={() => dispatch(changeQuery(searchBarVal))}>
+                        <input
+                            id='search'
+                            type="text"
+                            placeholder='Search'
+                            value={searchBarVal}
+                            onChange={(e) => setSearchBarVal(e.target.value)}
+                        />
+                    </form>
+                    <button onClick={() => dispatch(changeQuery(searchBarVal))}>Search</button>
                     <select
                         className="drop-down-list"
                         onChange={(e) => dispatch(changeFilter(e.target.value))}
@@ -35,7 +50,7 @@ const Books = () => {
                         onChange={(e) => dispatch(changeLang(e.target.value))}
                         value={lang}
                     >
-                        {langCodes.map((langCode) => <option value={langCode}>{langName.of(langCode)}</option>)}
+                        {langCodes.map((langCode) => <option key={langCode} value={langCode}>{langName.of(langCode)}</option>)}
                     </select>
                 </div>
                 <button className='btn btn-add-book'

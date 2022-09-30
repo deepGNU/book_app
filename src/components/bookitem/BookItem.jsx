@@ -5,6 +5,7 @@ import { enterEditMode } from '../../features/mode-slice';
 import { useNavigate } from 'react-router-dom';
 import { RiDeleteBin5Line } from 'react-icons/ri';
 import { AiOutlineEdit } from 'react-icons/ai';
+import { FiExternalLink } from 'react-icons/fi';
 import { MdFavoriteBorder, MdFavorite } from 'react-icons/md';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -21,7 +22,7 @@ const BookItem = ({ book }) => {
         <img className='img-book-card' src={book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail} alt="" />
         <div className='text-book-card'>
           <hr />
-          <h5>{book.volumeInfo.title}</h5>
+          <h5 className='book-title'>{book.volumeInfo.title} <FiExternalLink /></h5>
           <p>
             {book.volumeInfo.authors}
             &nbsp;&#9679;&nbsp;
@@ -71,6 +72,7 @@ const BookItem = ({ book }) => {
           }}>
           <RiDeleteBin5Line />
         </button>
+        {/* {book.saleInfo.saleability == "FREE" && <h1>FREE</h1>} */}
         {/* <button className='btn btn-book-item' onClick={() => navigate(`/books/${book.id}`)}>See Details</button> */}
       </div>
     </div>

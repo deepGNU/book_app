@@ -43,6 +43,14 @@
     margin: 10px;
 }
 
+.book-title {
+    text-decoration: underline;
+}
+
+.book-card:hover .book-title{
+    color: #555;
+}
+
 .book-btns {
     display: flex;
     justify-content: center;
@@ -50,12 +58,17 @@
     margin: 10px;
 }
 
+
 .btn-book-item {
     /* font-size: 1.2rem; */
     font-size: 1.8rem;
     /* color: white; */
     /* background-color: #555; */
     /* border: solid black 1px; */
+}
+
+.book-card:hover.btn-book-item:hover {
+    color: #000;
 }
 
 .book-card button.btn-book-item:hover {
