@@ -5,7 +5,7 @@ const initialState = {
     books: [],
     loading: false,
     error: '',
-    query: 'Carl-Sagan',
+    query: 'physics',
     filter: 'Partial',
     lang: 'en'
 };
@@ -42,6 +42,7 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
         `&langRestrict=${lang}` +
         // (filter ?? `&filter=${filter}`) +
         `&filter=${filter}` +
+        `&maxResults=40` +
         `&key=AIzaSyBvRxCh4SRMHlh1s87QhItZwqVOEqKNyR0`
     )
         .then((response) => response.json())

@@ -8,14 +8,24 @@ import { useState } from 'react';
 
 const Books = () => {
     const dispatch = useDispatch();
-    const books = useSelector((s) => s.book.books);
+    const booksUnfiltered = useSelector((s) => s.book.books);
     const filter = useSelector((s) => s.book.filter);
     const lang = useSelector((s) => s.book.lang);
     const query = useSelector((s) => s.book.query);
     const langName = new Intl.DisplayNames(['en'], { type: 'language' });
     const [searchBarVal, setSearchBarVal] = useState('');
+    const [datePrior, setDatePrior] = useState(Date.parse("1980-01-20"));
+    let books = booksUnfiltered;
 
-    console.log(books)
+    if (datePrior) {
+        console.log(datePrior)
+        books = booksUnfiltered.filter((b) => {
+            return Date.parse(b.volumeInfo.publishedDate) < datePrior;
+        });
+        console.log(books)
+    }
+
+
 
     return (
         <>
@@ -23,7 +33,7 @@ const Books = () => {
                 <div className='filters'>
                     <ImFilter />
                     <span>&nbsp;Filters&nbsp;</span>
-                    <form action="" onSubmit={() => dispatch(changeQuery(searchBarVal))}>
+                    {/* <form action="" onSubmit={() => dispatch(changeQuery(searchBarVal))}>
                         <input
                             id='search'
                             type="text"
@@ -32,8 +42,9 @@ const Books = () => {
                             onChange={(e) => setSearchBarVal(e.target.value)}
                         />
                     </form>
-                    <button onClick={() => dispatch(changeQuery(searchBarVal))}>Search</button>
-                    <select
+                    <button onClick={() => dispatch(changeQuery(searchBarVal))}>Search</button> */}
+
+                    {/* <select
                         className="drop-down-list"
                         onChange={(e) => dispatch(changeFilter(e.target.value))}
                         value={filter}
@@ -51,8 +62,14 @@ const Books = () => {
                         value={lang}
                     >
                         {langCodes.map((langCode) => <option key={langCode} value={langCode}>{langName.of(langCode)}</option>)}
-                    </select>
+                    </select> */}
+                    <label htmlFor="published-prior">Published before:</label>
+                    <input id='published-prior' type="date" onChange={(e) => {
+                        console.log("entered change function");
+                        setDatePrior(Date.parse(e.target.value));
+                    }} />
                 </div>
+
                 <button className='btn btn-add-book'
                     title='Add Book'
                     onClick={() => dispatch(addBook({
@@ -127,9 +144,10 @@ const Books = () => {
                         "searchInfo": {
                             "textSnippet": "The classic novel about a daring experiment in human intelligence Charlie Gordon, IQ 68, is a floor sweeper and the gentle butt of everyone&#39;s jokes - until an experiment in the enhancement of human intelligence turns him into a genius."
                         }
-                    }))}>Add Book</button>
+                    }))}>
+                    Add Book
+                </button>
             </div>
-
             <div className='books-div'>{books.map((b) => <BookItem key={b.id} book={b} />)}</div>
         </>
     );

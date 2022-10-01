@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    // editing: false,
-    editing: true,
+    editing: false,
     editingId: null
 };
 

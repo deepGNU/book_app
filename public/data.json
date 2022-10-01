@@ -4,683 +4,2926 @@
     "items": [
         {
             "kind": "books#volume",
-            "id": "bKEAAAAAMAAJ",
-            "etag": "9f3+JSSdws4",
-            "selfLink": "https://www.googleapis.com/books/v1/volumes/bKEAAAAAMAAJ",
+            "id": "J4-30n591U8C",
+            "etag": "o3LZLgrx13U",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/J4-30n591U8C",
             "volumeInfo": {
                 "title": "Physics",
-                "subtitle": "Advanced Course",
+                "publisher": "PediaPress",
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "printType": "BOOK",
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=J4-30n591U8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=J4-30n591U8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=J4-30n591U8C&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=1&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=J4-30n591U8C&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Physics.html?hl=&id=J4-30n591U8C"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=J4-30n591U8C&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "8W6fDwAAQBAJ",
+            "etag": "JYEEGbC6OZI",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/8W6fDwAAQBAJ",
+            "volumeInfo": {
+                "title": "Physics",
                 "authors": [
-                    "George Frederick Barker"
+                    "Sidney Perkowitz"
                 ],
-                "publishedDate": "1893",
+                "publisher": "Oxford University Press, USA",
+                "publishedDate": "2019-07-25",
+                "description": "Physics, the fundamental science of matter and energy, encompasses all levels of nature from the subatomic to the cosmic, and underlies much of the technology around us. Understanding the physics of our universe is an essential aspect of humanity's quest to understand our environment and our place within it. Doing physics enables us to explore the interaction between environment and human society, and can help us to work towards the future sustainability of the planet. This Very Short Introduction provides an overview of how this pervasive science came to be and how it works: who funds it, how physicists are trained and how they think, and how physics supports the technology we all use. Sidney Perkowitz presents the theories and outcomes of pure and applied physics from ideas of the Greek natural philosophers to modern quantum mechanics, cosmology, digital electronics and energy production. Considering its most consequential experiments, including recent results in elementary particles, gravitational waves and materials science, he also discusses outside the lab, the effects of physics on society, culture, and humanity's vision of its place in the universe. ABOUT THE SERIES: The Very Short Introductions series from Oxford University Press contains hundreds of titles in almost every subject area. These pocket-sized books are the perfect way to get ahead in a new subject quickly. Our expert authors combine facts, analysis, perspective, new ideas, and enthusiasm to make interesting and challenging topics highly readable.",
                 "industryIdentifiers": [
                     {
-                        "type": "OTHER",
-                        "identifier": "NYPL:33433069088361"
+                        "type": "ISBN_13",
+                        "identifier": "9780198813941"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0198813945"
                     }
                 ],
                 "readingModes": {
                     "text": false,
                     "image": true
                 },
-                "pageCount": 902,
+                "pageCount": 168,
                 "printType": "BOOK",
                 "categories": [
-                    "Physics"
+                    "Science"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=8W6fDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=8W6fDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=8W6fDwAAQBAJ&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=2&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=8W6fDwAAQBAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Physics.html?hl=&id=8W6fDwAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=8W6fDwAAQBAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "ABOUT THE SERIES: The Very Short Introductions series from Oxford University Press contains hundreds of titles in almost every subject area. These pocket-sized books are the perfect way to get ahead in a new subject quickly."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "j0KjDwAAQBAJ",
+            "etag": "lyqsy+htDyE",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/j0KjDwAAQBAJ",
+            "volumeInfo": {
+                "title": "Physics: A Very Short Introduction",
+                "authors": [
+                    "Sidney Perkowitz"
+                ],
+                "publisher": "Oxford University Press",
+                "publishedDate": "2019-07-25",
+                "description": "Physics, the fundamental science of matter and energy, encompasses all levels of nature from the subatomic to the cosmic, and underlies much of the technology around us. Understanding the physics of our universe is an essential aspect of humanity's quest to understand our environment and our place within it. Doing physics enables us to explore the interaction between environment and human society, and can help us to work towards the future sustainability of the planet. This Very Short Introduction provides an overview of how this pervasive science came to be and how it works: who funds it, how physicists are trained and how they think, and how physics supports the technology we all use. Sidney Perkowitz presents the theories and outcomes of pure and applied physics from ideas of the Greek natural philosophers to modern quantum mechanics, cosmology, digital electronics and energy production. Considering its most consequential experiments, including recent results in elementary particles, gravitational waves and materials science, he also discusses outside the lab, the effects of physics on society, culture, and humanity's vision of its place in the universe. ABOUT THE SERIES: The Very Short Introductions series from Oxford University Press contains hundreds of titles in almost every subject area. These pocket-sized books are the perfect way to get ahead in a new subject quickly. Our expert authors combine facts, analysis, perspective, new ideas, and enthusiasm to make interesting and challenging topics highly readable.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780192543578"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0192543571"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 152,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "preview-1.0.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=j0KjDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=j0KjDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=j0KjDwAAQBAJ&pg=PP1&dq=physics&hl=&as_brr=3&cd=3&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=j0KjDwAAQBAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Physics_A_Very_Short_Introduction.html?hl=&id=j0KjDwAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Physics_A_Very_Short_Introduction-sample-epub.acsm?id=j0KjDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Physics_A_Very_Short_Introduction-sample-pdf.acsm?id=j0KjDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=j0KjDwAAQBAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "ABOUT THE SERIES: The Very Short Introductions series from Oxford University Press contains hundreds of titles in almost every subject area. These pocket-sized books are the perfect way to get ahead in a new subject quickly."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "HAPMB2e643kC",
+            "etag": "86AZBxFmkkw",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/HAPMB2e643kC",
+            "volumeInfo": {
+                "title": "Geometrical Methods of Mathematical Physics",
+                "authors": [
+                    "Bernard F. Schutz",
+                    "Director Bernard F Schutz"
+                ],
+                "publisher": "Cambridge University Press",
+                "publishedDate": "1980-01-28",
+                "description": "For physicists and applied mathematicians working in the fields of relativity and cosmology, high-energy physics and field theory, thermodynamics, fluid dynamics and mechanics. This book provides an introduction to the concepts and techniques of modern differential theory, particularly Lie groups, Lie forms and differential forms.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0521298873"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780521298872"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 272,
+                "printType": "BOOK",
+                "categories": [
+                    "Mathematics"
                 ],
                 "averageRating": 4,
                 "ratingsCount": 1,
                 "maturityRating": "NOT_MATURE",
                 "allowAnonLogging": false,
-                "contentVersion": "0.5.6.0.full.1",
+                "contentVersion": "4.4.3.0.preview.1",
                 "panelizationSummary": {
                     "containsEpubBubbles": false,
                     "containsImageBubbles": false
                 },
                 "imageLinks": {
-                    "smallThumbnail": "http://books.google.com/books/content?id=bKEAAAAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-                    "thumbnail": "http://books.google.com/books/content?id=bKEAAAAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                    "smallThumbnail": "http://books.google.com/books/content?id=HAPMB2e643kC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=HAPMB2e643kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
                 },
                 "language": "en",
-                "previewLink": "http://books.google.com/books?id=bKEAAAAAMAAJ&pg=PP1&dq=physics&hl=&as_brr=7&cd=1&source=gbs_api",
-                "infoLink": "https://play.google.com/store/books/details?id=bKEAAAAAMAAJ&source=gbs_api",
-                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=bKEAAAAAMAAJ"
+                "previewLink": "http://books.google.com/books?id=HAPMB2e643kC&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=4&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=HAPMB2e643kC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Geometrical_Methods_of_Mathematical_Phys.html?hl=&id=HAPMB2e643kC"
             },
             "saleInfo": {
                 "country": "IL",
-                "saleability": "FREE",
-                "isEbook": true,
-                "buyLink": "https://play.google.com/store/books/details?id=bKEAAAAAMAAJ&rdid=book-bKEAAAAAMAAJ&rdot=1&source=gbs_api"
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
             },
             "accessInfo": {
                 "country": "IL",
-                "viewability": "ALL_PAGES",
+                "viewability": "PARTIAL",
                 "embeddable": true,
-                "publicDomain": true,
+                "publicDomain": false,
                 "textToSpeechPermission": "ALLOWED",
                 "epub": {
-                    "isAvailable": true,
-                    "downloadLink": "http://books.google.com/books/download/Physics.epub?id=bKEAAAAAMAAJ&hl=&output=epub&source=gbs_api"
-                },
-                "pdf": {
-                    "isAvailable": true,
-                    "downloadLink": "http://books.google.com/books/download/Physics.pdf?id=bKEAAAAAMAAJ&hl=&output=pdf&sig=ACfU3U2zenmRjU7Ci7LNin6KsPaRlMQEMQ&source=gbs_api"
-                },
-                "webReaderLink": "http://play.google.com/books/reader?id=bKEAAAAAMAAJ&hl=&as_brr=7&printsec=frontcover&source=gbs_api",
-                "accessViewStatus": "FULL_PUBLIC_DOMAIN",
-                "quoteSharingAllowed": false
-            },
-            "isFavorite": false
-        },
-        {
-            "kind": "books#volume",
-            "id": "IKAAAAAAMAAJ",
-            "etag": "sy55mDwuIa4",
-            "selfLink": "https://www.googleapis.com/books/v1/volumes/IKAAAAAAMAAJ",
-            "volumeInfo": {
-                "title": "Elements of Physics",
-                "subtitle": "Or Natural Philosophy, General and Medical",
-                "authors": [
-                    "Neil Arnott"
-                ],
-                "publishedDate": "1841",
-                "industryIdentifiers": [
-                    {
-                        "type": "OTHER",
-                        "identifier": "NYPL:33433069107542"
-                    }
-                ],
-                "readingModes": {
-                    "text": false,
-                    "image": true
-                },
-                "pageCount": 520,
-                "printType": "BOOK",
-                "categories": [
-                    "Physics"
-                ],
-                "maturityRating": "NOT_MATURE",
-                "allowAnonLogging": false,
-                "contentVersion": "0.4.7.0.full.1",
-                "panelizationSummary": {
-                    "containsEpubBubbles": false,
-                    "containsImageBubbles": false
-                },
-                "imageLinks": {
-                    "smallThumbnail": "http://books.google.com/books/content?id=IKAAAAAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-                    "thumbnail": "http://books.google.com/books/content?id=IKAAAAAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-                },
-                "language": "en",
-                "previewLink": "http://books.google.com/books?id=IKAAAAAAMAAJ&printsec=frontcover&dq=physics&hl=&as_brr=7&cd=2&source=gbs_api",
-                "infoLink": "https://play.google.com/store/books/details?id=IKAAAAAAMAAJ&source=gbs_api",
-                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=IKAAAAAAMAAJ"
-            },
-            "saleInfo": {
-                "country": "IL",
-                "saleability": "FREE",
-                "isEbook": true,
-                "buyLink": "https://play.google.com/store/books/details?id=IKAAAAAAMAAJ&rdid=book-IKAAAAAAMAAJ&rdot=1&source=gbs_api"
-            },
-            "accessInfo": {
-                "country": "IL",
-                "viewability": "ALL_PAGES",
-                "embeddable": true,
-                "publicDomain": true,
-                "textToSpeechPermission": "ALLOWED",
-                "epub": {
-                    "isAvailable": false,
-                    "downloadLink": "http://books.google.com/books/download/Elements_of_Physics.epub?id=IKAAAAAAMAAJ&hl=&output=epub&source=gbs_api"
-                },
-                "pdf": {
-                    "isAvailable": true,
-                    "downloadLink": "http://books.google.com/books/download/Elements_of_Physics.pdf?id=IKAAAAAAMAAJ&hl=&output=pdf&sig=ACfU3U3RwMqO0bOci0K01HAIJOeTJMFW3Q&source=gbs_api"
-                },
-                "webReaderLink": "http://play.google.com/books/reader?id=IKAAAAAAMAAJ&hl=&as_brr=7&printsec=frontcover&source=gbs_api",
-                "accessViewStatus": "FULL_PUBLIC_DOMAIN",
-                "quoteSharingAllowed": false
-            },
-            "isFavorite": false
-        },
-        {
-            "kind": "books#volume",
-            "id": "I0lOAAAAMAAJ",
-            "etag": "imELYByw6T0",
-            "selfLink": "https://www.googleapis.com/books/v1/volumes/I0lOAAAAMAAJ",
-            "volumeInfo": {
-                "title": "Principles of the Algebra of Physics",
-                "authors": [
-                    "Alexander Macfarlane"
-                ],
-                "publishedDate": "1894",
-                "industryIdentifiers": [
-                    {
-                        "type": "OTHER",
-                        "identifier": "UOM:39015068547358"
-                    }
-                ],
-                "readingModes": {
-                    "text": false,
-                    "image": true
-                },
-                "pageCount": 53,
-                "printType": "BOOK",
-                "categories": [
-                    "Vector analysis"
-                ],
-                "maturityRating": "NOT_MATURE",
-                "allowAnonLogging": false,
-                "contentVersion": "0.2.5.0.full.1",
-                "panelizationSummary": {
-                    "containsEpubBubbles": false,
-                    "containsImageBubbles": false
-                },
-                "imageLinks": {
-                    "smallThumbnail": "http://books.google.com/books/content?id=I0lOAAAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-                    "thumbnail": "http://books.google.com/books/content?id=I0lOAAAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-                },
-                "language": "en",
-                "previewLink": "http://books.google.com/books?id=I0lOAAAAMAAJ&printsec=frontcover&dq=physics&hl=&as_brr=7&cd=3&source=gbs_api",
-                "infoLink": "https://play.google.com/store/books/details?id=I0lOAAAAMAAJ&source=gbs_api",
-                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=I0lOAAAAMAAJ"
-            },
-            "saleInfo": {
-                "country": "IL",
-                "saleability": "FREE",
-                "isEbook": true,
-                "buyLink": "https://play.google.com/store/books/details?id=I0lOAAAAMAAJ&rdid=book-I0lOAAAAMAAJ&rdot=1&source=gbs_api"
-            },
-            "accessInfo": {
-                "country": "IL",
-                "viewability": "ALL_PAGES",
-                "embeddable": true,
-                "publicDomain": true,
-                "textToSpeechPermission": "ALLOWED",
-                "epub": {
-                    "isAvailable": false,
-                    "downloadLink": "http://books.google.com/books/download/Principles_of_the_Algebra_of_Physics.epub?id=I0lOAAAAMAAJ&hl=&output=epub&source=gbs_api"
-                },
-                "pdf": {
-                    "isAvailable": true,
-                    "downloadLink": "http://books.google.com/books/download/Principles_of_the_Algebra_of_Physics.pdf?id=I0lOAAAAMAAJ&hl=&output=pdf&sig=ACfU3U0SK2_KHnLp7mGYRzIdD9fZOitjlA&source=gbs_api"
-                },
-                "webReaderLink": "http://play.google.com/books/reader?id=I0lOAAAAMAAJ&hl=&as_brr=7&printsec=frontcover&source=gbs_api",
-                "accessViewStatus": "FULL_PUBLIC_DOMAIN",
-                "quoteSharingAllowed": false
-            },
-            "isFavorite": false
-        },
-        {
-            "kind": "books#volume",
-            "id": "nH0tAAAAYAAJ",
-            "etag": "w+MrZEwt4Ic",
-            "selfLink": "https://www.googleapis.com/books/v1/volumes/nH0tAAAAYAAJ",
-            "volumeInfo": {
-                "title": "Mathematical Physics",
-                "subtitle": "Or, The Mathematical Principles of Natural Philosophy: with a Development of the Causes of Heat, Gaseous Elasticity, Gravitation, and Other Great Phenomena of Nature",
-                "authors": [
-                    "John Herapath"
-                ],
-                "publishedDate": "1847",
-                "industryIdentifiers": [
-                    {
-                        "type": "OTHER",
-                        "identifier": "HARVARD:HWSQE1"
-                    }
-                ],
-                "readingModes": {
-                    "text": false,
-                    "image": true
-                },
-                "pageCount": 434,
-                "printType": "BOOK",
-                "categories": [
-                    "Mathematical physics"
-                ],
-                "maturityRating": "NOT_MATURE",
-                "allowAnonLogging": false,
-                "contentVersion": "4.4.5.0.full.1",
-                "panelizationSummary": {
-                    "containsEpubBubbles": false,
-                    "containsImageBubbles": false
-                },
-                "imageLinks": {
-                    "smallThumbnail": "http://books.google.com/books/content?id=nH0tAAAAYAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-                    "thumbnail": "http://books.google.com/books/content?id=nH0tAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-                },
-                "language": "en",
-                "previewLink": "http://books.google.com/books?id=nH0tAAAAYAAJ&pg=PP1&dq=physics&hl=&as_brr=7&cd=4&source=gbs_api",
-                "infoLink": "https://play.google.com/store/books/details?id=nH0tAAAAYAAJ&source=gbs_api",
-                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=nH0tAAAAYAAJ"
-            },
-            "saleInfo": {
-                "country": "IL",
-                "saleability": "FREE",
-                "isEbook": true,
-                "buyLink": "https://play.google.com/store/books/details?id=nH0tAAAAYAAJ&rdid=book-nH0tAAAAYAAJ&rdot=1&source=gbs_api"
-            },
-            "accessInfo": {
-                "country": "IL",
-                "viewability": "ALL_PAGES",
-                "embeddable": true,
-                "publicDomain": true,
-                "textToSpeechPermission": "ALLOWED",
-                "epub": {
-                    "isAvailable": false,
-                    "downloadLink": "http://books.google.com/books/download/Mathematical_Physics.epub?id=nH0tAAAAYAAJ&hl=&output=epub&source=gbs_api"
-                },
-                "pdf": {
-                    "isAvailable": true,
-                    "downloadLink": "http://books.google.com/books/download/Mathematical_Physics.pdf?id=nH0tAAAAYAAJ&hl=&output=pdf&sig=ACfU3U22HMS1pR1eJg6mTC8tUsRreSB_Zg&source=gbs_api"
-                },
-                "webReaderLink": "http://play.google.com/books/reader?id=nH0tAAAAYAAJ&hl=&as_brr=7&printsec=frontcover&source=gbs_api",
-                "accessViewStatus": "FULL_PUBLIC_DOMAIN",
-                "quoteSharingAllowed": false
-            },
-            "isFavorite": false
-        },
-        {
-            "kind": "books#volume",
-            "id": "hbcEAAAAYAAJ",
-            "etag": "hL7Of3+zi0I",
-            "selfLink": "https://www.googleapis.com/books/v1/volumes/hbcEAAAAYAAJ",
-            "volumeInfo": {
-                "title": "James Clerk Maxwell and Modern Physics",
-                "authors": [
-                    "Richard Glazebrook"
-                ],
-                "publishedDate": "1896",
-                "industryIdentifiers": [
-                    {
-                        "type": "OTHER",
-                        "identifier": "HARVARD:32044010232304"
-                    }
-                ],
-                "readingModes": {
-                    "text": false,
-                    "image": true
-                },
-                "pageCount": 254,
-                "printType": "BOOK",
-                "categories": [
-                    "Physics"
-                ],
-                "maturityRating": "NOT_MATURE",
-                "allowAnonLogging": false,
-                "contentVersion": "0.4.5.0.full.1",
-                "panelizationSummary": {
-                    "containsEpubBubbles": false,
-                    "containsImageBubbles": false
-                },
-                "imageLinks": {
-                    "smallThumbnail": "http://books.google.com/books/content?id=hbcEAAAAYAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-                    "thumbnail": "http://books.google.com/books/content?id=hbcEAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-                },
-                "language": "en",
-                "previewLink": "http://books.google.com/books?id=hbcEAAAAYAAJ&pg=PP1&dq=physics&hl=&as_brr=7&cd=5&source=gbs_api",
-                "infoLink": "https://play.google.com/store/books/details?id=hbcEAAAAYAAJ&source=gbs_api",
-                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=hbcEAAAAYAAJ"
-            },
-            "saleInfo": {
-                "country": "IL",
-                "saleability": "FREE",
-                "isEbook": true,
-                "buyLink": "https://play.google.com/store/books/details?id=hbcEAAAAYAAJ&rdid=book-hbcEAAAAYAAJ&rdot=1&source=gbs_api"
-            },
-            "accessInfo": {
-                "country": "IL",
-                "viewability": "ALL_PAGES",
-                "embeddable": true,
-                "publicDomain": true,
-                "textToSpeechPermission": "ALLOWED",
-                "epub": {
-                    "isAvailable": false,
-                    "downloadLink": "http://books.google.com/books/download/James_Clerk_Maxwell_and_Modern_Physics.epub?id=hbcEAAAAYAAJ&hl=&output=epub&source=gbs_api"
+                    "isAvailable": false
                 },
                 "pdf": {
                     "isAvailable": false
                 },
-                "webReaderLink": "http://play.google.com/books/reader?id=hbcEAAAAYAAJ&hl=&as_brr=7&printsec=frontcover&source=gbs_api",
-                "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+                "webReaderLink": "http://play.google.com/books/reader?id=HAPMB2e643kC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "This book provides an introduction to the concepts and techniques of modern differential theory, particularly Lie groups, Lie forms and differential forms."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "XUkcJiu_AkYC",
+            "etag": "xWIlVfErUB4",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/XUkcJiu_AkYC",
+            "volumeInfo": {
+                "title": "Proceedings of the Estonian Academy of Sciences, Physics and Mathematics",
+                "publishedDate": "2006-12",
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 64,
+                "printType": "MAGAZINE",
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.0.1.0.preview.1",
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=XUkcJiu_AkYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=XUkcJiu_AkYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=XUkcJiu_AkYC&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=5&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=XUkcJiu_AkYC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Proceedings_of_the_Estonian_Academy_of_S.html?hl=&id=XUkcJiu_AkYC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "ALL_PAGES",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=XUkcJiu_AkYC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
                 "quoteSharingAllowed": false
             },
             "isFavorite": false
         },
         {
             "kind": "books#volume",
-            "id": "2KkLAAAAYAAJ",
-            "etag": "nPTt8jzQ4LU",
-            "selfLink": "https://www.googleapis.com/books/v1/volumes/2KkLAAAAYAAJ",
+            "id": "ogHCAgAAQBAJ",
+            "etag": "KFXVlGindaI",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/ogHCAgAAQBAJ",
             "volumeInfo": {
-                "title": "Elements of Physics",
-                "subtitle": "Or, Natural Philosophy, General and Medical ...",
+                "title": "Mathematics for Physicists",
                 "authors": [
-                    "Neil Arnott"
+                    "Philippe Dennery",
+                    "André Krzywicki"
                 ],
-                "publishedDate": "1856",
+                "publisher": "Courier Corporation",
+                "publishedDate": "2012-06-11",
+                "description": "Superb text provides math needed to understand today's more advanced topics in physics and engineering. Theory of functions of a complex variable, linear vector spaces, much more. Problems. 1967 edition.",
                 "industryIdentifiers": [
                     {
-                        "type": "OTHER",
-                        "identifier": "HARVARD:32044019693639"
+                        "type": "ISBN_13",
+                        "identifier": "9780486157122"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0486157121"
                     }
                 ],
                 "readingModes": {
-                    "text": false,
+                    "text": true,
                     "image": true
                 },
-                "pageCount": 510,
+                "pageCount": 416,
                 "printType": "BOOK",
                 "categories": [
-                    "Physics"
+                    "Science"
                 ],
                 "maturityRating": "NOT_MATURE",
-                "allowAnonLogging": false,
-                "contentVersion": "0.4.6.0.full.1",
+                "allowAnonLogging": true,
+                "contentVersion": "4.11.10.0.preview.3",
                 "panelizationSummary": {
                     "containsEpubBubbles": false,
                     "containsImageBubbles": false
                 },
                 "imageLinks": {
-                    "smallThumbnail": "http://books.google.com/books/content?id=2KkLAAAAYAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-                    "thumbnail": "http://books.google.com/books/content?id=2KkLAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                    "smallThumbnail": "http://books.google.com/books/content?id=ogHCAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=ogHCAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
                 },
                 "language": "en",
-                "previewLink": "http://books.google.com/books?id=2KkLAAAAYAAJ&printsec=frontcover&dq=physics&hl=&as_brr=7&cd=6&source=gbs_api",
-                "infoLink": "https://play.google.com/store/books/details?id=2KkLAAAAYAAJ&source=gbs_api",
-                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=2KkLAAAAYAAJ"
+                "previewLink": "http://books.google.com/books?id=ogHCAgAAQBAJ&pg=PP1&dq=physics&hl=&as_brr=3&cd=6&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=ogHCAgAAQBAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Mathematics_for_Physicists.html?hl=&id=ogHCAgAAQBAJ"
             },
             "saleInfo": {
                 "country": "IL",
-                "saleability": "FREE",
-                "isEbook": true,
-                "buyLink": "https://play.google.com/store/books/details?id=2KkLAAAAYAAJ&rdid=book-2KkLAAAAYAAJ&rdot=1&source=gbs_api"
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
             },
             "accessInfo": {
                 "country": "IL",
-                "viewability": "ALL_PAGES",
+                "viewability": "PARTIAL",
                 "embeddable": true,
-                "publicDomain": true,
+                "publicDomain": false,
                 "textToSpeechPermission": "ALLOWED",
                 "epub": {
-                    "isAvailable": false,
-                    "downloadLink": "http://books.google.com/books/download/Elements_of_Physics.epub?id=2KkLAAAAYAAJ&hl=&output=epub&source=gbs_api"
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Mathematics_for_Physicists-sample-epub.acsm?id=ogHCAgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
                 },
                 "pdf": {
                     "isAvailable": true,
-                    "downloadLink": "http://books.google.com/books/download/Elements_of_Physics.pdf?id=2KkLAAAAYAAJ&hl=&output=pdf&sig=ACfU3U3hbA5lCpAfOfnz_dNajDNhA9VPIw&source=gbs_api"
+                    "acsTokenLink": "http://books.google.com/books/download/Mathematics_for_Physicists-sample-pdf.acsm?id=ogHCAgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
                 },
-                "webReaderLink": "http://play.google.com/books/reader?id=2KkLAAAAYAAJ&hl=&as_brr=7&printsec=frontcover&source=gbs_api",
-                "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+                "webReaderLink": "http://play.google.com/books/reader?id=ogHCAgAAQBAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
                 "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Superb text provides math needed to understand today&#39;s more advanced topics in physics and engineering. Theory of functions of a complex variable, linear vector spaces, much more. Problems. 1967 edition."
             },
             "isFavorite": false
         },
         {
             "kind": "books#volume",
-            "id": "C1HPAAAAMAAJ",
-            "etag": "M/E06XvqzdQ",
-            "selfLink": "https://www.googleapis.com/books/v1/volumes/C1HPAAAAMAAJ",
+            "id": "VzgJN-XPTRsC",
+            "etag": "OQV6jzC6pXo",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/VzgJN-XPTRsC",
             "volumeInfo": {
-                "title": "A Text Book of the Principles of Physics",
+                "title": "Statistical Physics",
                 "authors": [
-                    "Alfred Daniell"
+                    "L D Landau",
+                    "E.M. Lifshitz"
                 ],
-                "publishedDate": "1884",
+                "publisher": "Elsevier",
+                "publishedDate": "2013-10-22",
+                "description": "A lucid presentation of statistical physics and thermodynamics which develops from the general principles to give a large number of applications of the theory.",
                 "industryIdentifiers": [
                     {
-                        "type": "OTHER",
-                        "identifier": "UOM:39015067307309"
+                        "type": "ISBN_13",
+                        "identifier": "9780080570464"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0080570461"
                     }
                 ],
                 "readingModes": {
-                    "text": false,
+                    "text": true,
                     "image": true
                 },
-                "pageCount": 653,
+                "pageCount": 544,
                 "printType": "BOOK",
                 "categories": [
-                    "Physics"
+                    "Science"
                 ],
                 "maturityRating": "NOT_MATURE",
-                "allowAnonLogging": false,
-                "contentVersion": "0.2.4.0.full.1",
+                "allowAnonLogging": true,
+                "contentVersion": "1.3.3.0.preview.3",
                 "panelizationSummary": {
                     "containsEpubBubbles": false,
                     "containsImageBubbles": false
                 },
                 "imageLinks": {
-                    "smallThumbnail": "http://books.google.com/books/content?id=C1HPAAAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-                    "thumbnail": "http://books.google.com/books/content?id=C1HPAAAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                    "smallThumbnail": "http://books.google.com/books/content?id=VzgJN-XPTRsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=VzgJN-XPTRsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
                 },
                 "language": "en",
-                "previewLink": "http://books.google.com/books?id=C1HPAAAAMAAJ&printsec=frontcover&dq=physics&hl=&as_brr=7&cd=7&source=gbs_api",
-                "infoLink": "https://play.google.com/store/books/details?id=C1HPAAAAMAAJ&source=gbs_api",
-                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=C1HPAAAAMAAJ"
+                "previewLink": "http://books.google.com/books?id=VzgJN-XPTRsC&pg=PP1&dq=physics&hl=&as_brr=3&cd=7&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=VzgJN-XPTRsC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Statistical_Physics.html?hl=&id=VzgJN-XPTRsC"
             },
             "saleInfo": {
                 "country": "IL",
-                "saleability": "FREE",
-                "isEbook": true,
-                "buyLink": "https://play.google.com/store/books/details?id=C1HPAAAAMAAJ&rdid=book-C1HPAAAAMAAJ&rdot=1&source=gbs_api"
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
             },
             "accessInfo": {
                 "country": "IL",
-                "viewability": "ALL_PAGES",
+                "viewability": "PARTIAL",
                 "embeddable": true,
-                "publicDomain": true,
+                "publicDomain": false,
                 "textToSpeechPermission": "ALLOWED",
                 "epub": {
-                    "isAvailable": false,
-                    "downloadLink": "http://books.google.com/books/download/A_Text_Book_of_the_Principles_of_Physics.epub?id=C1HPAAAAMAAJ&hl=&output=epub&source=gbs_api"
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Statistical_Physics-sample-epub.acsm?id=VzgJN-XPTRsC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
                 },
                 "pdf": {
                     "isAvailable": true,
-                    "downloadLink": "http://books.google.com/books/download/A_Text_Book_of_the_Principles_of_Physics.pdf?id=C1HPAAAAMAAJ&hl=&output=pdf&sig=ACfU3U0Njt3zaaX1zcznukUWa-P1LyilsQ&source=gbs_api"
+                    "acsTokenLink": "http://books.google.com/books/download/Statistical_Physics-sample-pdf.acsm?id=VzgJN-XPTRsC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
                 },
-                "webReaderLink": "http://play.google.com/books/reader?id=C1HPAAAAMAAJ&hl=&as_brr=7&printsec=frontcover&source=gbs_api",
-                "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+                "webReaderLink": "http://play.google.com/books/reader?id=VzgJN-XPTRsC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
                 "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "A lucid presentation of statistical physics and thermodynamics which develops from the general principles to give a large number of applications of the theory."
             },
             "isFavorite": false
         },
         {
             "kind": "books#volume",
-            "id": "lCdMAAAAMAAJ",
-            "etag": "GTUaNuaKib8",
-            "selfLink": "https://www.googleapis.com/books/v1/volumes/lCdMAAAAMAAJ",
+            "id": "mEHlZ9ZodFsC",
+            "etag": "2QET2DZs/FE",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/mEHlZ9ZodFsC",
             "volumeInfo": {
-                "title": "A Textbook of Physics",
+                "title": "The Physics of Foams",
                 "authors": [
-                    "John Henry Poynting",
-                    "Joseph John Thomson"
+                    "D. L. Weaire",
+                    "Stefan Hutzler"
                 ],
-                "publishedDate": "1904",
+                "publisher": "Oxford University Press",
+                "publishedDate": "2001",
+                "description": "A guide to further reading is provided through carefully selected references.\"--Jacket.",
                 "industryIdentifiers": [
                     {
-                        "type": "OTHER",
-                        "identifier": "UOM:39015068319964"
+                        "type": "ISBN_10",
+                        "identifier": "0198510977"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780198510970"
                     }
                 ],
                 "readingModes": {
                     "text": false,
+                    "image": true
+                },
+                "pageCount": 246,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "averageRating": 5,
+                "ratingsCount": 1,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.1.3.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=mEHlZ9ZodFsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=mEHlZ9ZodFsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=mEHlZ9ZodFsC&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=8&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=mEHlZ9ZodFsC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/The_Physics_of_Foams.html?hl=&id=mEHlZ9ZodFsC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=mEHlZ9ZodFsC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "A guide to further reading is provided through carefully selected references.&quot;--Jacket."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "koX0tGOyyxwC",
+            "etag": "paSLJ39zND0",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/koX0tGOyyxwC",
+            "volumeInfo": {
+                "title": "Physics",
+                "subtitle": "The Elements",
+                "authors": [
+                    "Norman Robert Campbell"
+                ],
+                "publisher": "Cambridge University Press",
+                "publishedDate": "2013-03-28",
+                "description": "In this 1920 book, English physicist Norman Robert Campbell presents a detailed critical analysis of various areas of physics. Aimed at the advanced reader, this book will be of value to anyone with an interest in the development of physics and the history of science.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781107630680"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1107630681"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 576,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.3.0.0.preview.1",
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=koX0tGOyyxwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=koX0tGOyyxwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=koX0tGOyyxwC&pg=PP1&dq=physics&hl=&as_brr=3&cd=9&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=koX0tGOyyxwC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Physics.html?hl=&id=koX0tGOyyxwC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=koX0tGOyyxwC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "In this 1920 book, English physicist Norman Robert Campbell presents a detailed critical analysis of various areas of physics."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "c60mCxGRMR8C",
+            "etag": "poyn6ReBNNE",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/c60mCxGRMR8C",
+            "volumeInfo": {
+                "title": "Handbook of Physics",
+                "authors": [
+                    "Walter Benenson",
+                    "John W. Harris",
+                    "Horst Stöcker",
+                    "Holger Lutz"
+                ],
+                "publisher": "Springer Science & Business Media",
+                "publishedDate": "2006-01-13",
+                "description": "Handbook of Physics is a veritable toolbox for rapid access to a wealth of physics information for everyday use in problem solving, homework, and examinations. This complete reference includes not only the fundamental formulas of physics but also experimental methods used in practice.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780387952697"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0387952691"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 1186,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "averageRating": 5,
+                "ratingsCount": 3,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.1.1.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=c60mCxGRMR8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=c60mCxGRMR8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=c60mCxGRMR8C&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=10&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=c60mCxGRMR8C&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Handbook_of_Physics.html?hl=&id=c60mCxGRMR8C"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Handbook_of_Physics-sample-pdf.acsm?id=c60mCxGRMR8C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=c60mCxGRMR8C&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Handbook of Physics is a veritable toolbox for rapid access to a wealth of physics information for everyday use in problem solving, homework, and examinations."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "ksH6aUYqqawC",
+            "etag": "uo1yu0sIs+0",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/ksH6aUYqqawC",
+            "volumeInfo": {
+                "title": "Review of Radiologic Physics",
+                "authors": [
+                    "Walter Huda",
+                    "Richard M. Slone"
+                ],
+                "publisher": "Lippincott Williams & Wilkins",
+                "publishedDate": "2003-01-01",
+                "description": "The \"purple book\" that helps residents and techs to prepare for the radiologic physics portion of board and registry exams is now in its Second Edition! Chapters outline key information and test the reader's understanding with board-type review questions, along with answers and rationale provided. Includes 500 multiple-choice questions. Topics covered include MRI, CT, US, mammography, radiography, fluoroscopy, nuclear medicine and more. New features include an 18% larger text, more test questions at the end of each chapter, new and revised illustrations, and an expanded glossary. New chapters include those on image quality and dose, digital imaging and PACS, computers and mathematics, and a separate chapter on CT.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0781736757"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780781736756"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 294,
+                "printType": "BOOK",
+                "categories": [
+                    "Medical"
+                ],
+                "averageRating": 5,
+                "ratingsCount": 2,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "8.9.3.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=ksH6aUYqqawC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=ksH6aUYqqawC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=ksH6aUYqqawC&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=11&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=ksH6aUYqqawC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Review_of_Radiologic_Physics.html?hl=&id=ksH6aUYqqawC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=ksH6aUYqqawC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "The &quot;purple book&quot; that helps residents and techs to prepare for the radiologic physics portion of board and registry exams is now in its Second Edition!"
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "0kfjBwAAQBAJ",
+            "etag": "4qQptsY+fy0",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/0kfjBwAAQBAJ",
+            "volumeInfo": {
+                "title": "Mathematics for Physicists",
+                "authors": [
+                    "Brian R. Martin",
+                    "Graham Shaw"
+                ],
+                "publisher": "John Wiley & Sons",
+                "publishedDate": "2015-06-22",
+                "description": "Mathematics for Physicists is a relatively short volume covering all the essential mathematics needed for a typical first degree in physics, from a starting point that is compatible with modern school mathematics syllabuses. Early chapters deliberately overlap with senior school mathematics, to a degree that will depend on the background of the individual reader, who may quickly skip over those topics with which he or she is already familiar. The rest of the book covers the mathematics that is usually compulsory for all students in their first two years of a typical university physics degree, plus a little more. There are worked examples throughout the text, and chapter-end problem sets. Mathematics for Physicists features: Interfaces with modern school mathematics syllabuses All topics usually taught in the first two years of a physics degree Worked examples throughout Problems in every chapter, with answers to selected questions at the end of the book and full solutions on a website This text will be an excellent resource for undergraduate students in physics and a quick reference guide for more advanced students, as well as being appropriate for students in other physical sciences, such as astronomy, chemistry and earth sciences.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780470660232"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0470660236"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 584,
+                "printType": "BOOK",
+                "categories": [
+                    "Mathematics"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.4.0.0.preview.1",
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=0kfjBwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=0kfjBwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=0kfjBwAAQBAJ&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=12&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=0kfjBwAAQBAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Mathematics_for_Physicists.html?hl=&id=0kfjBwAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=0kfjBwAAQBAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Mathematics for Physicists features: Interfaces with modern school mathematics syllabuses All topics usually taught in the first two years of a physics degree Worked examples throughout Problems in every chapter, with answers to selected ..."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "Mq1nlEKhNcsC",
+            "etag": "4TQQj+EsqQ4",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/Mq1nlEKhNcsC",
+            "volumeInfo": {
+                "title": "Mathematical Methods for Physics and Engineering",
+                "subtitle": "A Comprehensive Guide",
+                "authors": [
+                    "K. F. Riley",
+                    "M. P. Hobson",
+                    "S. J. Bence"
+                ],
+                "publisher": "Cambridge University Press",
+                "publishedDate": "2006-03-13",
+                "description": "The third edition of this highly acclaimed undergraduate textbook is suitable for teaching all the mathematics for an undergraduate course in any of the physical sciences. As well as lucid descriptions of all the topics and many worked examples, it contains over 800 exercises. New stand-alone chapters give a systematic account of the 'special functions' of physical science, cover an extended range of practical applications of complex variables, and give an introduction to quantum operators. Further tabulations, of relevance in statistics and numerical integration, have been added. In this edition, half of the exercises are provided with hints and answers and, in a separate manual available to both students and their teachers, complete worked solutions. The remaining exercises have no hints, answers or worked solutions and can be used for unaided homework; full solutions are available to instructors on a password-protected web site, www.cambridge.org/9780521679718.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781139450997"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1139450999"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
                     "image": true
                 },
                 "printType": "BOOK",
                 "categories": [
-                    "Electricity"
+                    "Science"
                 ],
+                "averageRating": 4,
+                "ratingsCount": 12,
                 "maturityRating": "NOT_MATURE",
-                "allowAnonLogging": false,
-                "contentVersion": "0.3.3.0.full.1",
+                "allowAnonLogging": true,
+                "contentVersion": "0.2.4.0.preview.3",
                 "panelizationSummary": {
                     "containsEpubBubbles": false,
                     "containsImageBubbles": false
                 },
                 "imageLinks": {
-                    "smallThumbnail": "http://books.google.com/books/content?id=lCdMAAAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-                    "thumbnail": "http://books.google.com/books/content?id=lCdMAAAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                    "smallThumbnail": "http://books.google.com/books/content?id=Mq1nlEKhNcsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=Mq1nlEKhNcsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
                 },
                 "language": "en",
-                "previewLink": "http://books.google.com/books?id=lCdMAAAAMAAJ&printsec=frontcover&dq=physics&hl=&as_brr=7&cd=8&source=gbs_api",
-                "infoLink": "https://play.google.com/store/books/details?id=lCdMAAAAMAAJ&source=gbs_api",
-                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=lCdMAAAAMAAJ"
+                "previewLink": "http://books.google.com/books?id=Mq1nlEKhNcsC&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=13&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=Mq1nlEKhNcsC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Mathematical_Methods_for_Physics_and_Eng.html?hl=&id=Mq1nlEKhNcsC"
             },
             "saleInfo": {
                 "country": "IL",
-                "saleability": "FREE",
-                "isEbook": true,
-                "buyLink": "https://play.google.com/store/books/details?id=lCdMAAAAMAAJ&rdid=book-lCdMAAAAMAAJ&rdot=1&source=gbs_api"
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
             },
             "accessInfo": {
                 "country": "IL",
-                "viewability": "ALL_PAGES",
+                "viewability": "PARTIAL",
                 "embeddable": true,
-                "publicDomain": true,
+                "publicDomain": false,
                 "textToSpeechPermission": "ALLOWED",
                 "epub": {
-                    "isAvailable": false,
-                    "downloadLink": "http://books.google.com/books/download/A_Textbook_of_Physics.epub?id=lCdMAAAAMAAJ&hl=&output=epub&source=gbs_api"
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Mathematical_Methods_for_Physics_and_Eng-sample-epub.acsm?id=Mq1nlEKhNcsC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
                 },
                 "pdf": {
                     "isAvailable": true,
-                    "downloadLink": "http://books.google.com/books/download/A_Textbook_of_Physics.pdf?id=lCdMAAAAMAAJ&hl=&output=pdf&sig=ACfU3U0uVVheE8RBcIzC7xtYtTqMq6tpjA&source=gbs_api"
+                    "acsTokenLink": "http://books.google.com/books/download/Mathematical_Methods_for_Physics_and_Eng-sample-pdf.acsm?id=Mq1nlEKhNcsC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
                 },
-                "webReaderLink": "http://play.google.com/books/reader?id=lCdMAAAAMAAJ&hl=&as_brr=7&printsec=frontcover&source=gbs_api",
-                "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+                "webReaderLink": "http://play.google.com/books/reader?id=Mq1nlEKhNcsC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
                 "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "In this edition, half of the exercises are provided with hints and answers and, in a separate manual available to both students and their teachers, complete worked solutions."
             },
             "isFavorite": false
         },
         {
             "kind": "books#volume",
-            "id": "S7TBNY0ds0oC",
-            "etag": "SUwKvLIQzog",
-            "selfLink": "https://www.googleapis.com/books/v1/volumes/S7TBNY0ds0oC",
+            "id": "l_MkBwAAQBAJ",
+            "etag": "bThl0+DZwug",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/l_MkBwAAQBAJ",
             "volumeInfo": {
-                "title": "A Text-book of medical physics",
+                "title": "A Dictionary of Physics",
                 "authors": [
-                    "John Christopher Draper"
+                    "Jonathan Law",
+                    "Richard Rennie"
                 ],
-                "publishedDate": "1885",
+                "publisher": "Oxford University Press, USA",
+                "publishedDate": "2015-04-29",
+                "description": "This is the most popular dictionary of physics available, and contains almost 4,000 entries covering all commonly encountered physics terms and concepts. It also defines many terms from the related fields of astronomy, astrophysics, and physical chemistry. With over 200 new entries and full revision of the existing text, A Dictionary of Physics is as essential a reference tool as before. The dictionary is generously illustrated with over 120 diagrams, graphs, and tables and it also contains biographies of important scientists. Recommended web links are also included to provide useful and relevant extra information, and are accessible and kept up to date via the Dictionary of Physics companion web page. Appendices include SI units, the solar system, and the electromagnetic spectrum, plus a list of Nobel Prize winners and a chronology of key dates in physics. This fully revised and updated A-Z is an ideal introduction to the subject for anyone with an interest in physics, and it remains an indispensable reference work for students of physics and physics-related subjects (either at school or at university), and professionals.",
                 "industryIdentifiers": [
                     {
-                        "type": "OTHER",
-                        "identifier": "STANFORD:24503380153"
+                        "type": "ISBN_13",
+                        "identifier": "9780198714743"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0198714742"
                     }
                 ],
                 "readingModes": {
                     "text": false,
                     "image": true
                 },
-                "pageCount": 733,
-                "printType": "BOOK",
-                "maturityRating": "NOT_MATURE",
-                "allowAnonLogging": false,
-                "contentVersion": "0.2.6.0.full.1",
-                "panelizationSummary": {
-                    "containsEpubBubbles": false,
-                    "containsImageBubbles": false
-                },
-                "imageLinks": {
-                    "smallThumbnail": "http://books.google.com/books/content?id=S7TBNY0ds0oC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-                    "thumbnail": "http://books.google.com/books/content?id=S7TBNY0ds0oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-                },
-                "language": "en",
-                "previewLink": "http://books.google.com/books?id=S7TBNY0ds0oC&pg=PP1&dq=physics&hl=&as_brr=7&cd=9&source=gbs_api",
-                "infoLink": "https://play.google.com/store/books/details?id=S7TBNY0ds0oC&source=gbs_api",
-                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=S7TBNY0ds0oC"
-            },
-            "saleInfo": {
-                "country": "IL",
-                "saleability": "FREE",
-                "isEbook": true,
-                "buyLink": "https://play.google.com/store/books/details?id=S7TBNY0ds0oC&rdid=book-S7TBNY0ds0oC&rdot=1&source=gbs_api"
-            },
-            "accessInfo": {
-                "country": "IL",
-                "viewability": "ALL_PAGES",
-                "embeddable": true,
-                "publicDomain": true,
-                "textToSpeechPermission": "ALLOWED",
-                "epub": {
-                    "isAvailable": false,
-                    "downloadLink": "http://books.google.com/books/download/A_Text_book_of_medical_physics.epub?id=S7TBNY0ds0oC&hl=&output=epub&source=gbs_api"
-                },
-                "pdf": {
-                    "isAvailable": true,
-                    "downloadLink": "http://books.google.com/books/download/A_Text_book_of_medical_physics.pdf?id=S7TBNY0ds0oC&hl=&output=pdf&sig=ACfU3U2UxbtsXvCViCQtB6NxhH01pd4zUQ&source=gbs_api"
-                },
-                "webReaderLink": "http://play.google.com/books/reader?id=S7TBNY0ds0oC&hl=&as_brr=7&printsec=frontcover&source=gbs_api",
-                "accessViewStatus": "FULL_PUBLIC_DOMAIN",
-                "quoteSharingAllowed": false
-            },
-            "isFavorite": false
-        },
-        {
-            "kind": "books#volume",
-            "id": "94JJAAAAIAAJ",
-            "etag": "IeThIsOCL0c",
-            "selfLink": "https://www.googleapis.com/books/v1/volumes/94JJAAAAIAAJ",
-            "volumeInfo": {
-                "title": "Lessons in Elementary Physics",
-                "authors": [
-                    "Balfour Stewart"
-                ],
-                "publishedDate": "1895",
-                "industryIdentifiers": [
-                    {
-                        "type": "OTHER",
-                        "identifier": "UCAL:$B266834"
-                    }
-                ],
-                "readingModes": {
-                    "text": false,
-                    "image": true
-                },
-                "pageCount": 502,
+                "pageCount": 672,
                 "printType": "BOOK",
                 "categories": [
-                    "Physics"
+                    "Reference"
                 ],
                 "maturityRating": "NOT_MATURE",
                 "allowAnonLogging": false,
-                "contentVersion": "0.6.8.0.full.1",
+                "contentVersion": "preview-1.0.0",
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=l_MkBwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=l_MkBwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=l_MkBwAAQBAJ&pg=PP1&dq=physics&hl=&as_brr=3&cd=14&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=l_MkBwAAQBAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/A_Dictionary_of_Physics.html?hl=&id=l_MkBwAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=l_MkBwAAQBAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "This edition has been fully revised and updated and includes recommended web links for many entries as well as a web-linked appendix."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "O89tgpOBO04C",
+            "etag": "OqXH19dMsAM",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/O89tgpOBO04C",
+            "volumeInfo": {
+                "title": "Group Theory in Physics",
+                "authors": [
+                    "Wu-Ki Tung"
+                ],
+                "publisher": "World Scientific",
+                "publishedDate": "1985",
+                "description": "An introductory text book for graduates and advanced undergraduates on group representation theory. It emphasizes group theory's role as the mathematical framework for describing symmetry properties of classical and quantum mechanical systems. Familiarity with basic group concepts and techniques is invaluable in the education of a modern-day physicist. This book emphasizes general features and methods which demonstrate the power of the group-theoretical approach in exposing the systematics of physical systems with associated symmetry. Particular attention is given to pedagogy. In developing the theory, clarity in presenting the main ideas and consequences is given the same priority as comprehensiveness and strict rigor. To preserve the integrity of the mathematics, enough technical information is included in the appendices to make the book almost self-contained. A set of problems and solutions has been published in a separate booklet.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9789971966560"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "9971966565"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 344,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "averageRating": 5,
+                "ratingsCount": 1,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
                 "panelizationSummary": {
                     "containsEpubBubbles": false,
                     "containsImageBubbles": false
                 },
                 "imageLinks": {
-                    "smallThumbnail": "http://books.google.com/books/content?id=94JJAAAAIAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-                    "thumbnail": "http://books.google.com/books/content?id=94JJAAAAIAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                    "smallThumbnail": "http://books.google.com/books/content?id=O89tgpOBO04C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=O89tgpOBO04C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
                 },
                 "language": "en",
-                "previewLink": "http://books.google.com/books?id=94JJAAAAIAAJ&printsec=frontcover&dq=physics&hl=&as_brr=7&cd=10&source=gbs_api",
-                "infoLink": "https://play.google.com/store/books/details?id=94JJAAAAIAAJ&source=gbs_api",
-                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=94JJAAAAIAAJ"
+                "previewLink": "http://books.google.com/books?id=O89tgpOBO04C&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=15&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=O89tgpOBO04C&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Group_Theory_in_Physics.html?hl=&id=O89tgpOBO04C"
             },
             "saleInfo": {
                 "country": "IL",
-                "saleability": "FREE",
-                "isEbook": true,
-                "buyLink": "https://play.google.com/store/books/details?id=94JJAAAAIAAJ&rdid=book-94JJAAAAIAAJ&rdot=1&source=gbs_api"
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=O89tgpOBO04C&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "This book emphasizes general features and methods which demonstrate the power of the group-theoretical approach in exposing the systematics of physical systems with associated symmetry. Particular attention is given to pedagogy."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "U1S6BQAAQBAJ",
+            "etag": "owK/U+nuF7w",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/U1S6BQAAQBAJ",
+            "volumeInfo": {
+                "title": "Modern Classical Physics",
+                "subtitle": "Optics, Fluids, Plasmas, Elasticity, Relativity, and Statistical Physics",
+                "authors": [
+                    "Kip S. Thorne",
+                    "Roger D. Blandford"
+                ],
+                "publisher": "Princeton University Press",
+                "publishedDate": "2017-09-05",
+                "description": "A groundbreaking text and reference book on twenty-first-century classical physics and its applications This first-year graduate-level text and reference book covers the fundamental concepts and twenty-first-century applications of six major areas of classical physics that every masters- or PhD-level physicist should be exposed to, but often isn't: statistical physics, optics (waves of all sorts), elastodynamics, fluid mechanics, plasma physics, and special and general relativity and cosmology. Growing out of a full-year course that the eminent researchers Kip Thorne and Roger Blandford taught at Caltech for almost three decades, this book is designed to broaden the training of physicists. Its six main topical sections are also designed so they can be used in separate courses, and the book provides an invaluable reference for researchers. Presents all the major fields of classical physics except three prerequisites: classical mechanics, electromagnetism, and elementary thermodynamics Elucidates the interconnections between diverse fields and explains their shared concepts and tools Focuses on fundamental concepts and modern, real-world applications Takes applications from fundamental, experimental, and applied physics; astrophysics and cosmology; geophysics, oceanography, and meteorology; biophysics and chemical physics; engineering and optical science and technology; and information science and technology Emphasizes the quantum roots of classical physics and how to use quantum techniques to elucidate classical concepts or simplify classical calculations Features hundreds of color figures, some five hundred exercises, extensive cross-references, and a detailed index An online illustration package is available",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781400848898"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "140084889X"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 1552,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.6.3.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=U1S6BQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=U1S6BQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=U1S6BQAAQBAJ&pg=PP1&dq=physics&hl=&as_brr=3&cd=16&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=U1S6BQAAQBAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Modern_Classical_Physics.html?hl=&id=U1S6BQAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Modern_Classical_Physics-sample-pdf.acsm?id=U1S6BQAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=U1S6BQAAQBAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Growing out of a full-year course that the eminent researchers Kip Thorne and Roger Blandford taught at Caltech for almost three decades, this book is designed to broaden the training of physicists."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "eGmYDwAAQBAJ",
+            "etag": "HTHYuZLsWAo",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/eGmYDwAAQBAJ",
+            "volumeInfo": {
+                "title": "Modern Classical Physics",
+                "subtitle": "Optics, Fluids, Plasmas, Elasticity, Relativity, and Statistical Physics",
+                "authors": [
+                    "Kip S. Thorne",
+                    "Roger D. Blandford"
+                ],
+                "publisher": "Princeton University Press",
+                "publishedDate": "2017-09-05",
+                "description": "A groundbreaking text and reference book on twenty-first-century classical physics and its applications This first-year graduate-level text and reference book covers the fundamental concepts and twenty-first-century applications of six major areas of classical physics that every masters- or PhD-level physicist should be exposed to, but often isn't: statistical physics, optics (waves of all sorts), elastodynamics, fluid mechanics, plasma physics, and special and general relativity and cosmology. Growing out of a full-year course that the eminent researchers Kip Thorne and Roger Blandford taught at Caltech for almost three decades, this book is designed to broaden the training of physicists. Its six main topical sections are also designed so they can be used in separate courses, and the book provides an invaluable reference for researchers. Presents all the major fields of classical physics except three prerequisites: classical mechanics, electromagnetism, and elementary thermodynamics Elucidates the interconnections between diverse fields and explains their shared concepts and tools Focuses on fundamental concepts and modern, real-world applications Takes applications from fundamental, experimental, and applied physics; astrophysics and cosmology; geophysics, oceanography, and meteorology; biophysics and chemical physics; engineering and optical science and technology; and information science and technology Emphasizes the quantum roots of classical physics and how to use quantum techniques to elucidate classical concepts or simplify classical calculations Features hundreds of color figures, some five hundred exercises, extensive cross-references, and a detailed index An online illustration package is available",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780691159027"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0691159025"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 1511,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.2.0.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=eGmYDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=eGmYDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=eGmYDwAAQBAJ&pg=PR1&dq=physics&hl=&as_brr=3&cd=17&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=eGmYDwAAQBAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Modern_Classical_Physics.html?hl=&id=eGmYDwAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=eGmYDwAAQBAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Growing out of a full-year course that the eminent researchers Kip Thorne and Roger Blandford taught at Caltech for almost three decades, this book is designed to broaden the training of physicists."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "RpLYCQAAQBAJ",
+            "etag": "Et4oHrAK/lc",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/RpLYCQAAQBAJ",
+            "volumeInfo": {
+                "title": "CRC Handbook of Chemistry and Physics, 96th Edition",
+                "authors": [
+                    "William M. Haynes"
+                ],
+                "publisher": "CRC Press",
+                "publishedDate": "2015-06-09",
+                "description": "Proudly serving the scientific community for over a century, this 96th edition of the CRC Handbook of Chemistry and Physics is an update of a classic reference, mirroring the growth and direction of science. This venerable work continues to be the most accessed and respected scientific reference in the world. An authoritative resource consisting of tables of data and current international recommendations on nomenclature, symbols, and units, its usefulness spans not only the physical sciences but also related areas of biology, geology, and environmental science. The 96th edition of the Handbook includes 18 new or updated tables along with other updates and expansions. A new series highlighting the achievements of some of the major historical figures in chemistry and physics was initiated with the 94th edition. This series is continued with this edition, which is focused on Lord Kelvin, Michael Faraday, John Dalton, and Robert Boyle. This series, which provides biographical information, a list of major achievements, and notable quotations attributed to each of the renowned chemists and physicists, will be continued in succeeding editions. Each edition will feature two chemists and two physicists. The 96th edition now includes a complimentary eBook with purchase of the print version. This reference puts physical property data and mathematical formulas used in labs and classrooms every day within easy reach. New Tables: Section 1: Basic Constants, Units, and Conversion Factors Descriptive Terms for Solubility Section 8: Analytical Chemistry Stationary Phases for Porous Layer Open Tubular Columns Coolants for Cryotrapping Instability of HPLC Solvents Chlorine-Bromine Combination Isotope Intensities Section 16: Health and Safety Information Materials Compatible with and Resistant to 72 Percent Perchloric Acid Relative Dose Ranges from Ionizing Radiation Updated and Expanded Tables Section 6: Fluid Properties Sublimation Pressure of Solids Vapor Pressure of Fluids at Temperatures Below 300 K Section 7: Biochemistry Structure and Functions of Some Common Drugs Section 9: Molecular Structure and Spectroscopy Bond Dissociation Energies Section 11: Nuclear and Particle Physics Summary Tables of Particle Properties Table of the Isotopes Section 14: Geophysics, Astronomy, and Acoustics Major World Earthquakes Atmospheric Concentration of Carbon Dioxide, 1958-2014 Global Temperature Trend, 1880-2014 Section 15: Practical Laboratory Data Dependence of Boiling Point on Pressure Section 16: Health and Safety Information Threshold Limits for Airborne Contaminants",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781482260977"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1482260972"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 2677,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.1.1.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=RpLYCQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=RpLYCQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=RpLYCQAAQBAJ&pg=PP1&dq=physics&hl=&as_brr=3&cd=18&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=RpLYCQAAQBAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/CRC_Handbook_of_Chemistry_and_Physics_96.html?hl=&id=RpLYCQAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/CRC_Handbook_of_Chemistry_and_Physics_96-sample-pdf.acsm?id=RpLYCQAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=RpLYCQAAQBAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Proudly serving the scientific community for over a century, this 96th edition of the CRC Handbook of Chemistry and Physics is an update of a classic reference, mirroring the growth and direction of science."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "R3BzWYQqNGsC",
+            "etag": "iWEsNF6svtw",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/R3BzWYQqNGsC",
+            "volumeInfo": {
+                "title": "Theoretical Nuclear Physics",
+                "authors": [
+                    "John Markus Blatt",
+                    "Victor Frederick Weisskopf"
+                ],
+                "publisher": "Courier Corporation",
+                "publishedDate": "1991-01-01",
+                "description": "A classic work by two leading physicists and scientific educators endures as an uncommonly clear and cogent investigation and correlation of key aspects of theoretical nuclear physics. It is probably the most widely adopted book on the subject. The authors approach the subject as \"the theoretical concepts, methods, and considerations which have been devised in order to interpret the experimental material and to advance our ability to predict and control nuclear phenomena.\" The present volume does not pretend to cover all aspects of theoretical nuclear physics. Its coverage is restricted to phenomena involving energies below about 50 Mev, a region sometimes called classical nuclear physics. Topics include studies of the nucleus, nuclear forces, nuclear spectroscopy and two-, three- and four-body problems, as well as explorations of nuclear reactions, beta-decay, and nuclear shell structure. The authors have designed the book for the experimental physicist working in nuclear physics or graduate students who have had at least a one-term course in quantum mechanics and who know the essential concepts and problems of nuclear physics.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0486668274"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780486668277"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 900,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "averageRating": 5,
+                "ratingsCount": 2,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "2.2.6.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=R3BzWYQqNGsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=R3BzWYQqNGsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=R3BzWYQqNGsC&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=19&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=R3BzWYQqNGsC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Theoretical_Nuclear_Physics.html?hl=&id=R3BzWYQqNGsC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Theoretical_Nuclear_Physics-sample-pdf.acsm?id=R3BzWYQqNGsC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=R3BzWYQqNGsC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "The authors have designed the book for the experimental physicist working in nuclear physics or graduate students who have had at least a one-term course in quantum mechanics and who know the essential concepts and problems of nuclear ..."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "bNDMBQAAQBAJ",
+            "etag": "mgkIUesLexc",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/bNDMBQAAQBAJ",
+            "volumeInfo": {
+                "title": "CRC Handbook of Chemistry and Physics",
+                "authors": [
+                    "William M. Haynes"
+                ],
+                "publisher": "CRC Press",
+                "publishedDate": "2014-06-04",
+                "description": "Proudly serving the scientific community for over a century, this 95th edition of the CRC Handbook of Chemistry and Physics is an update of a classic reference, mirroring the growth and direction of science. This venerable work continues to be the most accessed and respected scientific reference in the world. An authoritative resource consisting of tables of data and current international recommendations on nomenclature, symbols, and units, its usefulness spans not only the physical sciences but also related areas of biology, geology, and environmental science. The 95th Edition of the Handbook includes 22 new tables and major updates and expansions. A new series highlighting the achievements of some of the major historical figures in chemistry and physics was initiated with the 94th edition. This series is continued with this edition, which is focused on Galileo Galilei, James Clerk Maxwell, Marie Sklodowska Curie, and Linus Carl Pauling. This series, which provides biographical information, a list of major achievements, and notable quotations attributed to each of the renowned chemists and physicists, will be continued in succeeding editions. Each edition will feature two chemists and two physicists. Available in traditional print format, as an eBook, and online, this reference puts physical property data and mathematical formulas used in labs and classrooms every day within easy reach. New tables: Section 8: Analytical Chemistry Figures of Merit Common Symbols Used in Gas and Liquid Chromatographic Schematic Diagrams Varieties of Hyphenated Gas Chromatography with Mass Spectrometry Section 15: Practical Laboratory Data Standard Fittings for Compressed Gas Cylinders Plug and Outlet Configurations for Common Laboratory Devices Section 16: Health and Safety Information Abbreviations Used in the Assessment and Presentation of Laboratory Hazards Incompatible Chemicals Explosion (Shock) Hazards Water-Reactive Chemicals Testing Requirements for Peroxidizable Compounds Tests for the Presence of Peroxides Pyrophoric Compounds - Compounds That Are Reactive with Air Flammability Hazards of Common Solvents Selection of Laboratory Gloves Selection of Respirator Cartridges and Filters Selection of Protective Laboratory Garments Protective Clothing Levels Chemical Fume Hoods and Biological Safety Cabinets Gas Cylinder Safety and Stamped Markings Laser Hazards in the Laboratory General Characteristics of Ionizing Radiation for the Purpose of Practical Application of Radiation Protection Radiation Safety Units Significantly updated and expanded tables: Section 1: Basic Constants, Units, and Conversion Factors Update of Standard Atomic Weights (2013) Update of Atomic Masses and Abundances Section 8: Analytical Chemistry Expansion of Abbreviations and Symbols Used in Analytical Chemistry Section 9: Molecular Structure and Spectroscopy Update of Bond Dissociation Energies Section 12: Properties of Solids Major update and Expansion of Electron Stopping Powers Section 14: Geophysics, Astronomy, and Acoustics Major Update of Interstellar Molecules Update of Atmospheric Concentration of Carbon Dioxide, 1958-2013 Update of Global Temperature Trend, 1880-2013 Section 15: Practical Laboratory Data Major update of Reference Points on the ITS-90 Temperature Scale Update of Laboratory Solvents and Other Liquid Reagents Section 16: Health and Safety Information Update of Flammability of Chemical Substances Update of Threshold Limits for Airborne Contaminants to 2013 values Appendix B: Update of Sources of Physical and Chemical Data",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781482208689"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1482208687"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 2704,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "averageRating": 4,
+                "ratingsCount": 1,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "1.2.1.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=bNDMBQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=bNDMBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=bNDMBQAAQBAJ&pg=PP1&dq=physics&hl=&as_brr=3&cd=20&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=bNDMBQAAQBAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/CRC_Handbook_of_Chemistry_and_Physics.html?hl=&id=bNDMBQAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/CRC_Handbook_of_Chemistry_and_Physics-sample-pdf.acsm?id=bNDMBQAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=bNDMBQAAQBAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "The 95th Edition of the Handbook includes 22 new tables and major updates and expansions. A new series highlighting the achievements of some of the major historical figures in chemistry and physics was initiated with the 94th edition."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "rSg4AAAAIAAJ",
+            "etag": "yyfwIoJ/+qY",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/rSg4AAAAIAAJ",
+            "volumeInfo": {
+                "title": "The Evolution of Physics",
+                "authors": [
+                    "Einstein"
+                ],
+                "publisher": "Cambridge University Press",
+                "publishedDate": "1971-11-30",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0521083710"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780521083713"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 302,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "averageRating": 3.5,
+                "ratingsCount": 11,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.2.3.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=rSg4AAAAIAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=rSg4AAAAIAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=rSg4AAAAIAAJ&pg=PP1&dq=physics&hl=&as_brr=3&cd=21&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=rSg4AAAAIAAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/The_Evolution_of_Physics.html?hl=&id=rSg4AAAAIAAJ"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=rSg4AAAAIAAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "lWEmNBaHCJMC",
+            "etag": "oCcx9r98wik",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/lWEmNBaHCJMC",
+            "volumeInfo": {
+                "title": "Evolution of Physics",
+                "authors": [
+                    "Albert Einstein",
+                    "Leopold Infeld"
+                ],
+                "publisher": "Simon and Schuster",
+                "publishedDate": "1966",
+                "description": "Clear and concise explanations of the development of theories explaining physical phenomena.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780671201562"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0671201565"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": false
+                },
+                "pageCount": 302,
+                "printType": "BOOK",
+                "categories": [
+                    "Reference"
+                ],
+                "averageRating": 4.5,
+                "ratingsCount": 4,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.2.0.0.preview.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=lWEmNBaHCJMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=lWEmNBaHCJMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=lWEmNBaHCJMC&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=22&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=lWEmNBaHCJMC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Evolution_of_Physics.html?hl=&id=lWEmNBaHCJMC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=lWEmNBaHCJMC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Clear and concise explanations of the development of theories explaining physical phenomena."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "JYTCAgAAQBAJ",
+            "etag": "IbbrEHe/dyw",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/JYTCAgAAQBAJ",
+            "volumeInfo": {
+                "title": "Methods of Quantum Field Theory in Statistical Physics",
+                "authors": [
+                    "A. A. Abrikosov",
+                    "L. P. Gorkov",
+                    "I. E. Dzyaloshinski"
+                ],
+                "publisher": "Courier Corporation",
+                "publishedDate": "2012-05-04",
+                "description": "This comprehensive introduction to the many-body theory was written by three renowned physicists and acclaimed by American Scientist as \"a classic text on field theoretic methods in statistical physics.\"",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780486140155"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0486140156"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 384,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.9.8.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=JYTCAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=JYTCAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=JYTCAgAAQBAJ&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=23&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=JYTCAgAAQBAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Methods_of_Quantum_Field_Theory_in_Stati.html?hl=&id=JYTCAgAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Methods_of_Quantum_Field_Theory_in_Stati-sample-epub.acsm?id=JYTCAgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Methods_of_Quantum_Field_Theory_in_Stati-sample-pdf.acsm?id=JYTCAgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=JYTCAgAAQBAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "This comprehensive introduction to the many-body theory was written by three renowned physicists and acclaimed by American Scientist as &quot;a classic text on field theoretic methods in statistical physics.&quot;"
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "EHODwuD73XMC",
+            "etag": "l+Zt+KYwstk",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/EHODwuD73XMC",
+            "volumeInfo": {
+                "title": "Farr's Physics for Medical Imaging",
+                "authors": [
+                    "Penelope Allisy-Roberts",
+                    "Jerry R. Williams"
+                ],
+                "publisher": "Elsevier Health Sciences",
+                "publishedDate": "2007",
+                "description": "Previous ed. published as: Physics for medical imaging / R.F. Farr. c1997.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780702028441"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0702028444"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 207,
+                "printType": "BOOK",
+                "categories": [
+                    "Medical"
+                ],
+                "averageRating": 4,
+                "ratingsCount": 3,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=EHODwuD73XMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=EHODwuD73XMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=EHODwuD73XMC&pg=PR1&dq=physics&hl=&as_brr=3&cd=24&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=EHODwuD73XMC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Farr_s_Physics_for_Medical_Imaging.html?hl=&id=EHODwuD73XMC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=EHODwuD73XMC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "The new edition has been fully updated to reflect the latest advances in technology and legislation and the needs of today&#39;s radiology trainees."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "W-cbw-QdcHUC",
+            "etag": "uikpuqpUaqk",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/W-cbw-QdcHUC",
+            "volumeInfo": {
+                "title": "Physics",
+                "subtitle": "Imagination and Reality",
+                "authors": [
+                    "Philip Russell Wallace"
+                ],
+                "publisher": "World Scientific",
+                "publishedDate": "1991",
+                "description": "Physics: Imagination and Reality introduces the reader to major ideas and the conceptual structure of modern physics, by tracing its development from the introduction of fields into physics by Faraday and Maxwell in the last century. Because the approach is historical, the book provides a comprehensive overview of the subjects. It should appeal to anyone interested in a basic understanding of the contemporary physicists view of the physical world. It avoids all but the simplest mathematics and presents ideas and concepts in everyday language.Physics: Imagination and Reality attempts to provide educated citizens with an understanding of contemporary physics and, at the same time, shows that its ideas have a grandeur, a challenge to the imagination and an aesthetic appeal which merit its recognition as an integral part of our culture.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "9971509296"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9789971509293"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 567,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.7.1.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=W-cbw-QdcHUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=W-cbw-QdcHUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=W-cbw-QdcHUC&pg=PP1&dq=physics&hl=&as_brr=3&cd=25&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=W-cbw-QdcHUC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Physics.html?hl=&id=W-cbw-QdcHUC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=W-cbw-QdcHUC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Because the approach is historical, the book provides a comprehensive overview of the subjects. It should appeal to anyone interested in a basic understanding of the contemporary physicists view of the physical world."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "qpCbDwAAQBAJ",
+            "etag": "bHj4vDPQWWI",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/qpCbDwAAQBAJ",
+            "volumeInfo": {
+                "title": "Physics: a Crash Course",
+                "authors": [
+                    "BRIAN. CLEGG"
+                ],
+                "publishedDate": "2019-07-30",
+                "description": "Physics is the most fundamental of the sciences - it tells us how the universe works. It's behind most of our exciting technology, from space rockets and satellites to cell phones, from electric cars to MRI scanners. Divided into 52 sections and grouped into four chapters Physics: A Crash Course is the quickest way to get up to speed with the fundamentals. Matter and Light outlines the forms different matter can take and the qualities of light. Energy and Heat explores different types of energy, and the specific form of kinetic energy that is heat. Quantum Physics brings in the central structures and implications, and developments in quantum theory. Motion and Relativity outlines the concepts of mechanics and the other greater transformer of physics, relativity. Taking you from inside an atom to the edge of the universe. What else could it be but a crash course in physics?",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781782408673"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1782408673"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 160,
+                "printType": "BOOK",
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=qpCbDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=qpCbDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=qpCbDwAAQBAJ&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=26&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=qpCbDwAAQBAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Physics_a_Crash_Course.html?hl=&id=qpCbDwAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=qpCbDwAAQBAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Physics is the most fundamental of the sciences - it tells us how the universe works."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "1vOhDwAAQBAJ",
+            "etag": "A9WCgUaTrvM",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/1vOhDwAAQBAJ",
+            "volumeInfo": {
+                "title": "Physics: A Crash Course",
+                "subtitle": "Become An Instant Expert",
+                "authors": [
+                    "Brian Clegg"
+                ],
+                "publisher": "Ivy Press",
+                "publishedDate": "2019-07-30",
+                "description": "Physics: A Crash Course is the quickest way to get up to speed with the most fundamental of the sciences. Physics tells us how the universe works – it’s behind most of our exciting technology, from space rockets and satellites to cell phones, from electric cars to MRI scanners. This book distils the current body of knowledge into 52 manageable chunks, allowing you to to skim-read or delve in a bit deeper. There are four chapters, each prefaced by a set of biographies of the leading physicists and timelines of key events in the history of physics: • Matter & Light outlines the forms different matter can take and the qualities of light. • Energy & Heat explores different types of energy, and the specific form of kinetic energy that is heat. • Quantum Physics brings in the central structures and implications, and developments in quantum theory. • Motion & Relativity outlines the concepts of mechanics and the other greater transformer of physics, relativity. Taking you from inside an atom to the edge of the universe. What else could it be but a crash course in physics? If you like this, you might also be interested in 30-Second Physics, 30-Second Quantum Physics and Quantum Theory: A Crash Course.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781782408680"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1782408681"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 160,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "1.4.3.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=1vOhDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=1vOhDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=1vOhDwAAQBAJ&pg=PP1&dq=physics&hl=&as_brr=3&cd=27&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=1vOhDwAAQBAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Physics_A_Crash_Course.html?hl=&id=1vOhDwAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Physics_A_Crash_Course-sample-epub.acsm?id=1vOhDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Physics_A_Crash_Course-sample-pdf.acsm?id=1vOhDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=1vOhDwAAQBAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "This book distils the current body of knowledge into 52 manageable chunks, allowing you to to skim-read or delve in a bit deeper."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "Yl1rwzeX72YC",
+            "etag": "ZYooBAWE7CY",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/Yl1rwzeX72YC",
+            "volumeInfo": {
+                "title": "Group Theory in Physics",
+                "subtitle": "An Introduction",
+                "authors": [
+                    "John F. Cornwell"
+                ],
+                "publisher": "Academic Press",
+                "publishedDate": "1997-07-11",
+                "description": "This book, an abridgment of Volumes I and II of the highly respected Group Theory in Physics, presents a carefully constructed introduction to group theory and its applications in physics. The book provides anintroduction to and description of the most important basic ideas and the role that they play in physical problems. The clearly written text contains many pertinent examples that illustrate the topics, even for those with no background in group theory. This work presents important mathematical developments to theoretical physicists in a form that is easy to comprehend and appreciate. Finite groups, Lie groups, Lie algebras, semi-simple Lie algebras, crystallographic point groups and crystallographic space groups, electronic energy bands in solids, atomic physics, symmetry schemes for fundamental particles, and quantum mechanics are all covered in this compact new edition. Covers both group theory and the theory of Lie algebras Includes studies of solid state physics, atomic physics, and fundamental particle physics Contains a comprehensive index Provides extensive examples",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0080532667"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780080532660"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 349,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "2.8.4.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=Yl1rwzeX72YC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=Yl1rwzeX72YC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=Yl1rwzeX72YC&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=28&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=Yl1rwzeX72YC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Group_Theory_in_Physics.html?hl=&id=Yl1rwzeX72YC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Group_Theory_in_Physics-sample-epub.acsm?id=Yl1rwzeX72YC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Group_Theory_in_Physics-sample-pdf.acsm?id=Yl1rwzeX72YC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=Yl1rwzeX72YC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "This book, an abridgment of Volumes I and II of the highly respected Group Theory in Physics, presents a carefully constructed introduction to group theory and its applications in physics."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "PULCAgAAQBAJ",
+            "etag": "vnqcMV4TnSU",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/PULCAgAAQBAJ",
+            "volumeInfo": {
+                "title": "Physics of Shock Waves and High-Temperature Hydrodynamic Phenomena",
+                "authors": [
+                    "Ya. B. Zel’dovich",
+                    "Yu. P. Raizer"
+                ],
+                "publisher": "Courier Corporation",
+                "publishedDate": "2012-08-29",
+                "description": "Physical, chemical processes in gases at high temperatures are focus of outstanding text, which combines material from gas dynamics, shock-wave theory, thermodynamics and statistical physics, other fields. 284 illustrations. 1966–1967 edition.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780486135083"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "048613508X"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 944,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "2.5.4.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=PULCAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=PULCAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=PULCAgAAQBAJ&pg=PP1&dq=physics&hl=&as_brr=3&cd=29&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=PULCAgAAQBAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Physics_of_Shock_Waves_and_High_Temperat.html?hl=&id=PULCAgAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Physics_of_Shock_Waves_and_High_Temperat-sample-epub.acsm?id=PULCAgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Physics_of_Shock_Waves_and_High_Temperat-sample-pdf.acsm?id=PULCAgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=PULCAgAAQBAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Physical, chemical processes in gases at high temperatures are focus of outstanding text, which combines material from gas dynamics, shock-wave theory, thermodynamics and statistical physics, other fields. 284 illustrations. 1966–1967 ..."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "DJKNmZ-uETsC",
+            "etag": "sTKsQLS8Aeg",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/DJKNmZ-uETsC",
+            "volumeInfo": {
+                "title": "Dr Faustus of Modern Physics",
+                "publisher": "Claes Johnson",
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "printType": "BOOK",
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.0.2.0.preview.3",
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=DJKNmZ-uETsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=DJKNmZ-uETsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=DJKNmZ-uETsC&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=30&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=DJKNmZ-uETsC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Dr_Faustus_of_Modern_Physics.html?hl=&id=DJKNmZ-uETsC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
             },
             "accessInfo": {
                 "country": "IL",
                 "viewability": "ALL_PAGES",
                 "embeddable": true,
-                "publicDomain": true,
+                "publicDomain": false,
                 "textToSpeechPermission": "ALLOWED",
                 "epub": {
-                    "isAvailable": false,
-                    "downloadLink": "http://books.google.com/books/download/Lessons_in_Elementary_Physics.epub?id=94JJAAAAIAAJ&hl=&output=epub&source=gbs_api"
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Dr_Faustus_of_Modern_Physics-sample-epub.acsm?id=DJKNmZ-uETsC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
                 },
                 "pdf": {
                     "isAvailable": true,
-                    "downloadLink": "http://books.google.com/books/download/Lessons_in_Elementary_Physics.pdf?id=94JJAAAAIAAJ&hl=&output=pdf&sig=ACfU3U21imRBDRN8J3Euv78A62y5nxeXig&source=gbs_api"
+                    "acsTokenLink": "http://books.google.com/books/download/Dr_Faustus_of_Modern_Physics-sample-pdf.acsm?id=DJKNmZ-uETsC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
                 },
-                "webReaderLink": "http://play.google.com/books/reader?id=94JJAAAAIAAJ&hl=&as_brr=7&printsec=frontcover&source=gbs_api",
-                "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+                "webReaderLink": "http://play.google.com/books/reader?id=DJKNmZ-uETsC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
                 "quoteSharingAllowed": false
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "77lNQDdk6KUC",
+            "etag": "b5SFXLs4Pfg",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/77lNQDdk6KUC",
+            "volumeInfo": {
+                "title": "Dr Faustus of Modern Physics",
+                "publisher": "Claes Johnson",
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "printType": "BOOK",
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.0.2.0.preview.3",
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=77lNQDdk6KUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=77lNQDdk6KUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=77lNQDdk6KUC&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=31&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=77lNQDdk6KUC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Dr_Faustus_of_Modern_Physics.html?hl=&id=77lNQDdk6KUC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Dr_Faustus_of_Modern_Physics-sample-epub.acsm?id=77lNQDdk6KUC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=77lNQDdk6KUC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "y7lYHi4OZB0C",
+            "etag": "63Z5I+le51A",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/y7lYHi4OZB0C",
+            "volumeInfo": {
+                "title": "Fundamentals of Physics",
+                "authors": [
+                    "David Halliday",
+                    "Robert Resnick",
+                    "Jearl Walker"
+                ],
+                "publisher": "John Wiley & Sons",
+                "publishedDate": "2010-03-15",
+                "description": "This book arms engineers with the tools to apply key physics concepts in the field. A number of the key figures in the new edition are revised to provide a more inviting and informative treatment. The figures are broken into component parts with supporting commentary so that they can more readily see the key ideas. Material from The Flying Circus is incorporated into the chapter opener puzzlers, sample problems, examples and end-of-chapter problems to make the subject more engaging. Checkpoints enable them to check their understanding of a question with some reasoning based on the narrative or sample problem they just read. Sample Problems also demonstrate how engineers can solve problems with reasoned solutions. INCLUDES PARTS 1-4 PART 5 IN FUNDAMENTALS OF PHYSICS, EXTENDED",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780470469118"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0470469110"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 1136,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "averageRating": 4.5,
+                "ratingsCount": 3,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.6.2.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=y7lYHi4OZB0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=y7lYHi4OZB0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=y7lYHi4OZB0C&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=32&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=y7lYHi4OZB0C&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Fundamentals_of_Physics.html?hl=&id=y7lYHi4OZB0C"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=y7lYHi4OZB0C&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "This book arms engineers with the tools to apply key physics concepts in the field. A number of the key figures in the new edition are revised to provide a more inviting and informative treatment."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "qKjxtZvnBKQC",
+            "etag": "i9XlEzd/ArY",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/qKjxtZvnBKQC",
+            "volumeInfo": {
+                "title": "Before Big Science",
+                "subtitle": "The Pursuit of Modern Chemistry and Physics, 1800-1940",
+                "authors": [
+                    "Mary Jo Nye"
+                ],
+                "publisher": "Harvard University Press",
+                "publishedDate": "1999",
+                "description": "Notable features of the book include an insightful analysis of the parallel trajectories of modern chemistry and physics and the work of scientists - such as John Dalton, Michael Faraday, Hermann von Helmholtz, Marie Curie, Ernest Rutherford, Dorothy Hodgkin, and Linus Pauling - who played prominent roles in the development of both disciplines.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0674063821"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780674063822"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 282,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "averageRating": 4,
+                "ratingsCount": 1,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.1.5.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=qKjxtZvnBKQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=qKjxtZvnBKQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=qKjxtZvnBKQC&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=33&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=qKjxtZvnBKQC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Before_Big_Science.html?hl=&id=qKjxtZvnBKQC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Before_Big_Science-sample-epub.acsm?id=qKjxtZvnBKQC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=qKjxtZvnBKQC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Notable features of the book include an insightful analysis of the parallel trajectories of modern chemistry and physics and the work of scientists - such as John Dalton, Michael Faraday, Hermann von Helmholtz, Marie Curie, Ernest ..."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "cH-XQB0Ex5wC",
+            "etag": "DcfIAPfQrO0",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/cH-XQB0Ex5wC",
+            "volumeInfo": {
+                "title": "Geometry, Topology and Physics, Second Edition",
+                "authors": [
+                    "Mikio Nakahara"
+                ],
+                "publisher": "CRC Press",
+                "publishedDate": "2003-06-04",
+                "description": "Differential geometry and topology have become essential tools for many theoretical physicists. In particular, they are indispensable in theoretical studies of condensed matter physics, gravity, and particle physics. Geometry, Topology and Physics, Second Edition introduces the ideas and techniques of differential geometry and topology at a level suitable for postgraduate students and researchers in these fields. The second edition of this popular and established text incorporates a number of changes designed to meet the needs of the reader and reflect the development of the subject. The book features a considerably expanded first chapter, reviewing aspects of path integral quantization and gauge theories. Chapter 2 introduces the mathematical concepts of maps, vector spaces, and topology. The following chapters focus on more elaborate concepts in geometry and topology and discuss the application of these concepts to liquid crystals, superfluid helium, general relativity, and bosonic string theory. Later chapters unify geometry and topology, exploring fiber bundles, characteristic classes, and index theorems. New to this second edition is the proof of the index theorem in terms of supersymmetric quantum mechanics. The final two chapters are devoted to the most fascinating applications of geometry and topology in contemporary physics, namely the study of anomalies in gauge field theories and the analysis of Polakov's bosonic string theory from the geometrical point of view. Geometry, Topology and Physics, Second Edition is an ideal introduction to differential geometry and topology for postgraduate students and researchers in theoretical and mathematical physics.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0750306068"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780750306065"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 596,
+                "printType": "BOOK",
+                "categories": [
+                    "Mathematics"
+                ],
+                "averageRating": 4.5,
+                "ratingsCount": 9,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.1.4.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=cH-XQB0Ex5wC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=cH-XQB0Ex5wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=cH-XQB0Ex5wC&pg=PR1&dq=physics&hl=&as_brr=3&cd=34&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=cH-XQB0Ex5wC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Geometry_Topology_and_Physics_Second_Edi.html?hl=&id=cH-XQB0Ex5wC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=cH-XQB0Ex5wC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Later chapters unify geometry and topology, exploring fiber bundles, characteristic classes, and index theorems. New to this second edition is the proof of the index theorem in terms of supersymmetric quantum mechanics."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "WQtkYCWTcicC",
+            "etag": "QW8W6NXcULg",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/WQtkYCWTcicC",
+            "volumeInfo": {
+                "title": "Nuclear Physics",
+                "subtitle": "A Course Given by Enrico Fermi at the University of Chicago",
+                "authors": [
+                    "Enrico Fermi"
+                ],
+                "publisher": "University of Chicago Press",
+                "publishedDate": "1950",
+                "description": "This volume presents, with some amplification, the notes on the lectures on nuclear physics given by Enrico Fermi at the University of Chicago in 1949. \"The compilers of this publication may be warmly congratulated. . . . The scope of this course is amazing: within 240 pages it ranges from the general properties of atomic nuclei and nuclear forces to mesons and cosmic rays, and includes an account of fission and elementary pile theory. . . . The course addresses itself to experimenters rather than to specialists in nuclear theory, although the latter will also greatly profit from its study on account of the sound emphasis laid everywhere on the experimental approach to problems. . . . There is a copious supply of problems.\"—Proceedings of the Physical Society \"Only a relatively few students are privileged to attend Professor Fermi's brilliant lectures at the University of Chicago; it is therefore a distinct contribution to the followers of nuclear science that his lecture material has been systematically organized in a publication and made available to a much wider audience.\"—Nucelonics",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0226243656"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780226243658"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 246,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "averageRating": 5,
+                "ratingsCount": 1,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "2.3.3.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=WQtkYCWTcicC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=WQtkYCWTcicC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=WQtkYCWTcicC&pg=PP1&dq=physics&hl=&as_brr=3&cd=35&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=WQtkYCWTcicC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Nuclear_Physics.html?hl=&id=WQtkYCWTcicC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=WQtkYCWTcicC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "This volume presents, with some amplification, the notes on the lectures on nuclear physics given by Enrico Fermi at the University of Chicago in 1949."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "i3Lga9KPghwC",
+            "etag": "UeH8Jp1bV4I",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/i3Lga9KPghwC",
+            "volumeInfo": {
+                "title": "Curvature in Mathematics and Physics",
+                "authors": [
+                    "Shlomo Sternberg"
+                ],
+                "publisher": "Courier Corporation",
+                "publishedDate": "2012",
+                "description": "As astronaut Donald K. Slayton notes in his Foreword, this chronicle emphasizes the cooperation of \"humans on space and on the ground. It realistically balances the role of the highly visible astronaut with the mammoth supporting team.\" An official NASA publication, Suddenly, Tomorrow Came is profusely illustrated with forty-four figures and tables, plus sixty-three photographs. Historian Paul Dickson brings the narrative up to date with an informative new Introduction.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780486478555"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0486478556"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 405,
+                "printType": "BOOK",
+                "categories": [
+                    "Mathematics"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=i3Lga9KPghwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=i3Lga9KPghwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=i3Lga9KPghwC&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=36&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=i3Lga9KPghwC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Curvature_in_Mathematics_and_Physics.html?hl=&id=i3Lga9KPghwC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=i3Lga9KPghwC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "As astronaut Donald K. Slayton notes in his Foreword, this chronicle emphasizes the cooperation of &quot;humans on space and on the ground."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "O7Rbx4ptxqsC",
+            "etag": "tP+6yC6ECxQ",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/O7Rbx4ptxqsC",
+            "volumeInfo": {
+                "title": "Symplectic Techniques in Physics",
+                "authors": [
+                    "Victor Guillemin",
+                    "Shlomo Sternberg"
+                ],
+                "publisher": "Cambridge University Press",
+                "publishedDate": "1990-05-25",
+                "description": "Symplectic geometry is very useful for clearly and concisely formulating problems in classical physics and also for understanding the link between classical problems and their quantum counterparts. It is thus a subject of interest to both mathematicians and physicists, though they have approached the subject from different view points. This is the first book that attempts to reconcile these approaches. The authors use the uncluttered, coordinate-free approach to symplectic geometry and classical mechanics that has been developed by mathematicians over the course of the last thirty years, but at the same time apply the apparatus to a great number of concrete problems. In the first chapter, the authors provide an elementary introduction to symplectic geometry and explain the key concepts and results in a way accessible to physicists and mathematicians. The remainder of the book is devoted to the detailed analysis and study of the ideas discussed in Chapter 1. Some of the themes emphasized in the book include the pivotal role of completely integrable systems, the importance of symmetries, analogies between classical dynamics and optics, the importance of symplectic tools in classical variational theory, symplectic features of classical field theories, and the principle of general covariance. This work can be used as a textbook for graduate courses, but the depth of coverage and the wealth of information and application means that it will be of continuing interest to, and of lasting significance for mathematicians and mathematically minded physicists.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0521389909"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780521389907"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 468,
+                "printType": "BOOK",
+                "categories": [
+                    "Mathematics"
+                ],
+                "averageRating": 5,
+                "ratingsCount": 1,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "2.1.3.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=O7Rbx4ptxqsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=O7Rbx4ptxqsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=O7Rbx4ptxqsC&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=37&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=O7Rbx4ptxqsC&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Symplectic_Techniques_in_Physics.html?hl=&id=O7Rbx4ptxqsC"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=O7Rbx4ptxqsC&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "This work can be used as a textbook for graduate courses, but the depth of coverage and the wealth of information and application means that it will be of continuing interest to, and of lasting significance for mathematicians and ..."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "Urz3CwAAQBAJ",
+            "etag": "R3mhjmOYnfY",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/Urz3CwAAQBAJ",
+            "volumeInfo": {
+                "title": "Lightning",
+                "subtitle": "Physics and Effects",
+                "authors": [
+                    "Vladimir A. Rakov",
+                    "Martin A. Uman"
+                ],
+                "publisher": "Cambridge University Press",
+                "publishedDate": "2007-01-08",
+                "description": "Lightning: Physics and Effects is the first book that covers essentially all aspects of lightning, including lightning physics, lightning protection and the interaction of lightning with a variety of objects and systems as well as with the environment. It is written in a style that will be accessible to the technical non-expert and is addressed to anyone interested in lightning and its effects. This will include physicists, engineers working in the power, communications, computer and aviation industries, meteorologists, atmospheric chemists, foresters, ecologists, physicians working in the area of electrical trauma and architects. This comprehensive reference volume contains over 300 illustrations, 70 tables containing quantitative information and a bibliography of more than 6000 references.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781107268555"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1107268559"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "averageRating": 5,
+                "ratingsCount": 1,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=Urz3CwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=Urz3CwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=Urz3CwAAQBAJ&pg=PP1&dq=physics&hl=&as_brr=3&cd=38&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=Urz3CwAAQBAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Lightning.html?hl=&id=Urz3CwAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Lightning-sample-epub.acsm?id=Urz3CwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Lightning-sample-pdf.acsm?id=Urz3CwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=Urz3CwAAQBAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "This comprehensive reference volume contains over 300 illustrations, 70 tables containing quantitative information and a bibliography of more than 6000 references."
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "NviMsvVOHJ4C",
+            "etag": "19LbVJc4l6c",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/NviMsvVOHJ4C",
+            "volumeInfo": {
+                "title": "Lightning",
+                "subtitle": "Physics and Effects",
+                "authors": [
+                    "Vladimir A. Rakov",
+                    "Martin A. Uman"
+                ],
+                "publisher": "Cambridge University Press",
+                "publishedDate": "2003-08-04",
+                "description": "Table of contents",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0521583276"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780521583275"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 734,
+                "printType": "BOOK",
+                "categories": [
+                    "Science"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.4.2.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=NviMsvVOHJ4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=NviMsvVOHJ4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=NviMsvVOHJ4C&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=39&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=NviMsvVOHJ4C&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Lightning.html?hl=&id=NviMsvVOHJ4C"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Lightning-sample-pdf.acsm?id=NviMsvVOHJ4C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=NviMsvVOHJ4C&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Table of contents"
+            },
+            "isFavorite": false
+        },
+        {
+            "kind": "books#volume",
+            "id": "8_-tDwAAQBAJ",
+            "etag": "2bTOgGH6Pd0",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/8_-tDwAAQBAJ",
+            "volumeInfo": {
+                "title": "The World According to Physics",
+                "authors": [
+                    "Jim Al-Khalili"
+                ],
+                "publisher": "Princeton University Press",
+                "publishedDate": "2020-03-10",
+                "description": "Scale -- Space and time -- Energy and matter -- The quantum world -- Thermodynamics and the arrow of time -- Unification -- The future of physics -- The usefulness of physics -- Thinking like a physicist.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780691182308"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0691182302"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 336,
+                "printType": "BOOK",
+                "categories": [
+                    "History"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "1.3.1.0.preview.1",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=8_-tDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=8_-tDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=8_-tDwAAQBAJ&printsec=frontcover&dq=physics&hl=&as_brr=3&cd=40&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=8_-tDwAAQBAJ&dq=physics&hl=&as_brr=3&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/The_World_According_to_Physics.html?hl=&id=8_-tDwAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=8_-tDwAAQBAJ&hl=&as_brr=3&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Scale -- Space and time -- Energy and matter -- The quantum world -- Thermodynamics and the arrow of time -- Unification -- The future of physics -- The usefulness of physics -- Thinking like a physicist."
             },
             "isFavorite": false
         }
