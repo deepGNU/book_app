@@ -11,20 +11,23 @@ const Books = () => {
     const booksUnfiltered = useSelector((s) => s.book.books);
     const filter = useSelector((s) => s.book.filter);
     const lang = useSelector((s) => s.book.lang);
-    const query = useSelector((s) => s.book.query);
+    // const query = useSelector((s) => s.book.query);
     const langName = new Intl.DisplayNames(['en'], { type: 'language' });
     const [searchBarVal, setSearchBarVal] = useState('');
-    const [datePrior, setDatePrior] = useState(Date.parse("1980-01-20"));
+    const [datePrior, setDatePrior] = useState();
     let books = booksUnfiltered;
 
     if (datePrior) {
-        console.log(datePrior)
         books = booksUnfiltered.filter((b) => {
             return Date.parse(b.volumeInfo.publishedDate) < datePrior;
         });
-        console.log(books)
     }
 
+    const { search } = window.location;
+    console.log(search)
+    const query = new URLSearchParams(search).get('search_query');
+    console.log(query)
+    dispatch(changeQuery(query));
 
 
     return (
@@ -33,16 +36,17 @@ const Books = () => {
                 <div className='filters'>
                     <ImFilter />
                     <span>&nbsp;Filters&nbsp;</span>
-                    {/* <form action="" onSubmit={() => dispatch(changeQuery(searchBarVal))}>
+                    <form action="/" method="get">
                         <input
+                            name='search_query'
                             id='search'
                             type="text"
                             placeholder='Search'
-                            value={searchBarVal}
-                            onChange={(e) => setSearchBarVal(e.target.value)}
+                        // value={searchBarVal}
+                        // onChange={(e) => setSearchBarVal(e.target.value)}
                         />
+                        <button>Search</button>
                     </form>
-                    <button onClick={() => dispatch(changeQuery(searchBarVal))}>Search</button> */}
 
                     {/* <select
                         className="drop-down-list"
@@ -64,10 +68,16 @@ const Books = () => {
                         {langCodes.map((langCode) => <option key={langCode} value={langCode}>{langName.of(langCode)}</option>)}
                     </select> */}
                     <label htmlFor="published-prior">Published before:</label>
-                    <input id='published-prior' type="date" onChange={(e) => {
+                    {/* <input id='published-prior' type="number" min="1960" max="2022" step="1" onChange={(e) => {
                         console.log("entered change function");
                         setDatePrior(Date.parse(e.target.value));
-                    }} />
+                    }} /> */}
+                    <input list='years' onChange={(e) => setDatePrior(Date.parse(e.target.value))} />
+                    <datalist id='years'>
+
+                        {Array.from({ length: 500 }, (_, i) => new Date().getFullYear() - i).map((y) => <option key={y} value={y} />)}
+                        {/* [...Array(new Date().getFullYear()).keys()] */}
+                    </datalist>
                 </div>
 
                 <button className='btn btn-add-book'

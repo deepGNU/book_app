@@ -34,7 +34,7 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
     // const query = "history";
     // const query = "american history";
     const { query, filter, lang } = getState().book;
-    console.log(query, filter, lang)
+
     return fetch(
         `https://www.googleapis.com/books/v1/volumes` +
         // (query ?? `q=${query}`) +
