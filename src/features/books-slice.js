@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-// import { useSelector } from "react-redux";
 
 const initialState = {
     books: [],
@@ -11,8 +10,6 @@ const initialState = {
 };
 
 export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) => {
-    // console.log(filter);
-    // console.log("lang " + lang)
 
     // return fetch('../data.json', {
     //     headers: {
@@ -27,12 +24,6 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
     //         isFavorite: false
     //     })));
 
-    //    const query = "flowers+inauthor:keyes";
-    // const query = "Isaac Newton";
-    // const query = useSelector((s) => s.books.query);
-    // const query = "physics";
-    // const query = "history";
-    // const query = "american history";
     const { query, filter, lang } = getState().book;
 
     return fetch(

@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     editing: false,
-    editingId: null
+    editingId: null,
+    adding: false,
 };
 
 const modeSlice = createSlice({
@@ -15,9 +16,12 @@ const modeSlice = createSlice({
         },
         leaveEditMode: (state) => {
             state.editing = false;
+        },
+        toggleAddMode: (state) => {
+            state.adding = !state.adding;
         }
     }
 });
 
 export default modeSlice.reducer;
-export const { enterEditMode, leaveEditMode } = modeSlice.actions;
+export const { enterEditMode, leaveEditMode, toggleAddMode } = modeSlice.actions;
