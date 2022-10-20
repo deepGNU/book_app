@@ -2,11 +2,12 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
     books: [],
+    filteredBooks: [],
     loading: false,
     error: '',
-    query: 'physics',
-    filter: 'Partial',
-    lang: 'en'
+    query: null,
+    filter: null,
+    lang: null
 };
 
 export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) => {
@@ -28,11 +29,9 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
 
     return fetch(
         `https://www.googleapis.com/books/v1/volumes` +
-        // (query ?? `q=${query}`) +
         `?q=${query}` +
-        `&langRestrict=${lang}` +
-        // (filter ?? `&filter=${filter}`) +
-        `&filter=${filter}` +
+        (lang != undefined ?? `&langRestrict=${lang}`) +
+        (filter != undefined ?? `&filter=${filter}`) +
         `&maxResults=40` +
         `&key=AIzaSyBvRxCh4SRMHlh1s87QhItZwqVOEqKNyR0`
     )
@@ -48,6 +47,9 @@ const booksSlice = createSlice({
     name: "book",
     initialState,
     reducers: {
+        updateBooks: (state, { payload }) => {
+            state.filteredBooks = payload;
+        },
         addBook: (state, { payload }) => {
             state.books.splice(0, 0, payload);
         },
@@ -81,6 +83,7 @@ const booksSlice = createSlice({
         });
         builder.addCase(fetchBooks.fulfilled, (state, { payload }) => {
             state.books = payload;
+            state.filteredBooks = payload;
             state.loading = false;
             state.error = false;
         });
@@ -94,4 +97,4 @@ const booksSlice = createSlice({
 });
 
 export default booksSlice.reducer;
-export const { addBook, editBook, deleteBook, toggleFavorite, changeFilter, changeLang, changeQuery } = booksSlice.actions;
+export const { updateBooks, addBook, editBook, deleteBook, toggleFavorite, changeFilter, changeLang, changeQuery } = booksSlice.actions;

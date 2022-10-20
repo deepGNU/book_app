@@ -1,0 +1,90 @@
+.btn.btn-top {
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: monospace;
+    height: auto;
+    width: fit-content;
+    margin: 15px;
+    border: solid white 1px;
+}
+
+.btn.btn-top:hover {
+    color: #fff;
+    background-color: #444;
+    border: solid white 1px;
+}
+
+.button-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 20%;
+}
+
+.top {
+    position: sticky;
+    top: var(--nav-height);
+    color: white;
+    margin-bottom: 10px;
+    background-color: #333;
+}
+
+.filters {
+    color: white;
+    font-size: 1.2rem;
+    position: relative;
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.invisible {
+    display: none;
+}
+
+.visible {
+}
+
+.bg-dark-gray {
+    background-color: #222;
+}
+
+.search-bar-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    font-size: 2rem;
+    width: fit-content;
+    height: fit-content;
+    max-width: 80%;
+    margin: 10px;
+}
+
+.search-bar input {
+    max-width: 50vw;
+}
+
+.drop-down-list {
+    
+}
+
+@media screen and (max-width: 950px) {
+    .btn.btn-top {
+        font-size: 1rem;
+    }
+
+    .search-bar-wrapper {
+        justify-content: flex-start;
+    }
+
+    .filters {
+        margin-top: 25px;
+    }
+}

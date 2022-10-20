@@ -19,7 +19,7 @@ const BookItem = ({ book }) => {
   return (
     <div onClick={() => navigate(`/books/${book.id}`)} className='book-card' title='See Details'>
       <div className='top-book-card'>
-        <img className='img-book-card' src={book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail} alt="" />
+        <img className='img-book-card' src={book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail} alt="" />
         <div className='text-book-card'>
           <hr />
           <h5 className='book-title'>{book.volumeInfo.title} <FiExternalLink /></h5>

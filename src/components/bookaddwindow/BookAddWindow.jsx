@@ -17,6 +17,7 @@ const BookAddWindow = () => {
   // console.log(editingId);
   const [title, setTitle] = useState("Title");
   const [authors, setAuthors] = useState("Authors");
+  const [cover, setCover] = useState();
   // useEffect(() => {
   //     setTitle(book.volumeInfo.title);
   //     setAuthors(book.volumeInfo.authors);
@@ -40,6 +41,9 @@ const BookAddWindow = () => {
             "volumeInfo": {
               title,
               authors,
+              "imageLinks": {
+                "thumbnail": cover
+              }
             }
           }));
         dispatch(toggleAddMode());
@@ -56,6 +60,9 @@ const BookAddWindow = () => {
         {/* <input id='authors' type="text" /> */}
 
         <input id='authors' type="text" defaultValue={authors} onChange={(e) => setAuthors(e.target.value)} />
+
+        <label htmlFor="cover">Cover Image URL</label>
+        <input id='cover' type="text" onChange={(e) => setCover(e.target.value)} />
 
         <button>Submit</button>
       </form>
