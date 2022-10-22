@@ -35,12 +35,20 @@
 .filters {
     color: white;
     font-size: 1.2rem;
-    position: relative;
+    position: absolute;
     display: flex;
+    /* flex-direction: column; */
     gap: 2vw;
-    align-items: center;
+    /* align-items: center; */
     padding: 10px;
     border-radius: 10px;
+    width: fit-content;
+}
+
+.filters div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .invisible {

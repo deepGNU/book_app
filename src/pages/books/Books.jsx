@@ -1,6 +1,6 @@
 import './Books.css';
 import { useSelector } from "react-redux";
-import TopBar from '../../components/topbar/TopBar';
+import BooksHeader from '../../components/topbar/BooksHeader';
 import BookItem from '../../components/bookitem/BookItem';
 
 const Books = () => {
@@ -8,7 +8,7 @@ const Books = () => {
 
     return (
         <>
-            <TopBar />
+            <BooksHeader />
 
             <div className='books-div'>
                 {books.map((b) =>

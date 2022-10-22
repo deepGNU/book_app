@@ -1,4 +1,4 @@
-import './TopBar.css';
+import './BooksHeader.css';
 import { useSelector, useDispatch } from "react-redux";
 import { changeFilter, changeLang, changeQuery } from '../../features/books-slice';
 import { toggleAddMode } from '../../features/mode-slice';
@@ -9,7 +9,7 @@ import { SlMagnifier } from 'react-icons/sl';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const TopBar = () => {
+const BooksHeader = () => {
     const dispatch = useDispatch();
     const booksUnfiltered = useSelector((s) => s.book.books);
     const filter = useSelector((s) => s.book.filter);
@@ -39,6 +39,48 @@ const TopBar = () => {
 
     return (
         <div className="top">
+            <button
+                onClick={() => { setShowFilters(!showFilters) }}
+                className='btn btn-top'
+                title='Filters'
+            >
+                <ImFilter />
+                <span>&nbsp;Filters&nbsp;</span>
+            </button>
+
+            {showFilters && <div className={`filters ${showFilters ? "visible bg-dark-gray" : ""}`}>
+                <div>
+                    <label htmlFor="published-after">Year From&nbsp;</label>
+                    <label htmlFor="published-prior">Year To:&nbsp;</label>
+                    <label htmlFor="rating">Minimal Rating:&nbsp;</label>
+                </div>
+
+                <div>
+                    <select name="" id="published-after"
+                        value={new Date(dateAfter).getFullYear().toString()}
+                        onChange={(e) => setDateAfter(Date.parse(e.target.value))}
+                    >
+                        <option value="">No Filter</option>
+                        {Array.from({ length: 500 }, (_, i) => new Date().getFullYear() - i).map((y) => <option key={y} value={y}>{y}</option>)}
+                    </select>
+
+                    <select name="" id="published-prior"
+                        value={new Date(datePrior).getFullYear().toString()}
+                        onChange={(e) => setDatePrior(Date.parse(e.target.value))}
+                    >
+                        <option value="">No Filter</option>
+                        {Array.from({ length: 500 }, (_, i) => new Date().getFullYear() - i).map((y) => <option key={y} value={y}>{y}</option>)}
+                    </select>
+
+                    <select name="" id="rating" value={filterRating}
+                        onChange={(e) => setFilterRating(e.target.value)}
+                    >
+                        <option value="">No Filter</option>
+                        {[...Array(5).keys()].map((x) => <option key={x} value={x + 1}>{x + 1}</option>)}
+                    </select>
+                </div>
+            </div>}
+
             <div className="search-bar-wrapper">
                 <form action="/" method="get" className='search-bar'>
                     <input
@@ -53,55 +95,7 @@ const TopBar = () => {
                 </form>
             </div>
 
-            {<div className={`filters ${showFilters ? "visible bg-dark-gray" : ""}`}>
-                <div>
-                    <label htmlFor="published-after">Year From&nbsp;</label>
-                    <select name="" id="published-after"
-                        value={new Date(dateAfter).getFullYear().toString()}
-                        onChange={(e) => setDateAfter(Date.parse(e.target.value))}
-                    >
-                        <option value="">No Filter</option>
-                        {Array.from({ length: 500 }, (_, i) => new Date().getFullYear() - i).map((y) => <option key={y} value={y}>{y}</option>)}
-                    </select>
-                </div>
-
-                <div>
-                    <label htmlFor="published-prior">Year To:&nbsp;</label>
-                    <select name="" id="published-prior"
-                        value={new Date(datePrior).getFullYear().toString()}
-                        onChange={(e) => setDatePrior(Date.parse(e.target.value))}
-                    >
-                        <option value="">No Filter</option>
-                        {Array.from({ length: 500 }, (_, i) => new Date().getFullYear() - i).map((y) => <option key={y} value={y}>{y}</option>)}
-                    </select>
-                    {/* <input list='years' onChange={(e) => setDatePrior(Date.parse(e.target.value))} />
-                <datalist id='years'>
-
-                    {Array.from({ length: 500 }, (_, i) => new Date().getFullYear() - i).map((y) => <option key={y} value={y} />)}
-                    {/* [...Array(new Date().getFullYear()).keys()] 
-                </datalist> */}
-                </div>
-
-                <div>
-                    <label htmlFor="rating">Minimal Rating:&nbsp;</label>
-                    <select name="" id="rating" value={filterRating}
-                        onChange={(e) => setFilterRating(e.target.value)}
-                    >
-                        <option value="">No Filter</option>
-                        {[...Array(5).keys()].map((x) => <option key={x} value={x + 1}>{x + 1}</option>)}
-                    </select>
-                </div>
-            </div>}
-
             <div className="button-bar">
-                {/* <button
-                onClick={() => { setShowFilters(!showFilters) }}
-                className='btn btn-top'
-                title={showFilters ? "Hide Filters" : "Show Filters"}
-            >
-                <ImFilter />
-                <span>&nbsp;{showFilters ? "Hide Filters" : "Show Filters"}&nbsp;</span>
-            </button> */}
 
 
                 {/* <select
@@ -139,4 +133,4 @@ const TopBar = () => {
     )
 }
 
-export default TopBar
+export default BooksHeader;
