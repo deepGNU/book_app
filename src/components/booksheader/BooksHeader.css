@@ -48,6 +48,10 @@
     gap: 10px;
 }
 
+.hide {
+    display: none;
+}
+
 .search-bar {
     font-size: 1.5rem;
     width: fit-content;
@@ -81,10 +85,6 @@
 }
 
 @media screen and (max-width: 950px) {
-    .search-bar-wrapper {
-        justify-content: flex-start;
-    }
-
     .books-header {
         flex-direction: column;
     }

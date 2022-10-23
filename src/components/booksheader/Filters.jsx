@@ -5,6 +5,7 @@ import { updateBooks } from '../../features/books-slice';
 const Filters = () => {
     const dispatch = useDispatch();
     const booksUnfiltered = useSelector((s) => s.book.books);
+    const showFilters = useSelector((s) => s.mode.showFilters);
     const [datePrior, setDatePrior] = useState();
     const [dateAfter, setDateAfter] = useState();
     const [filterRating, setFilterRating] = useState();
@@ -20,7 +21,7 @@ const Filters = () => {
     }, [dateAfter, datePrior, filterRating]);
 
     return (
-        <div className='filters'>
+        <div className={`${showFilters ? 'filters' : 'hide'}`}>
             <div>
                 <label htmlFor="published-after">Published After:&nbsp;</label>
                 <label htmlFor="published-prior">Published Before:&nbsp;</label>
