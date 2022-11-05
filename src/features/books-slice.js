@@ -3,6 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 const initialState = {
     books: [],
     filteredBooks: [],
+    favoriteBooks: [],
     loading: false,
     error: '',
     query: null,
@@ -47,7 +48,7 @@ const booksSlice = createSlice({
     name: "book",
     initialState,
     reducers: {
-        updateBooks: (state, { payload }) => {
+        filterBooks: (state, { payload }) => {
             state.filteredBooks = payload;
         },
         addBook: (state, { payload }) => {
@@ -62,8 +63,20 @@ const booksSlice = createSlice({
             state.books.splice(index, 1);
         },
         toggleFavorite: (state, { payload }) => {
-            const index = state.books.findIndex((b) => b.id === payload);
-            state.books[index].isFavorite = !state.books[index].isFavorite;
+            const indexBooks = state.books.findIndex((b) => b.id === payload);
+            state.books[indexBooks].isFavorite = !state.books[indexBooks].isFavorite;
+        },
+        updateFavorites: (state) => {
+            state.books.forEach(b => {
+                const indexInFavs = state.favoriteBooks.findIndex(f => f.id === b.id);
+                const isInFavs = indexInFavs !== -1;
+
+                if (b.isFavorite) {
+                    if (isInFavs) state.favoriteBooks[indexInFavs] = b;
+                    else state.favoriteBooks.splice(0, 0, b);
+                }
+                else if (isInFavs) state.favoriteBooks.splice(indexInFavs, 1);
+            });
         },
         changeFilter: (state, { payload }) => {
             state.filter = payload;
@@ -97,4 +110,4 @@ const booksSlice = createSlice({
 });
 
 export default booksSlice.reducer;
-export const { updateBooks, addBook, editBook, deleteBook, toggleFavorite, changeFilter, changeLang, changeQuery } = booksSlice.actions;
+export const { filterBooks, addBook, editBook, deleteBook, toggleFavorite, updateFavorites, changeFilter, changeLang, changeQuery } = booksSlice.actions;

@@ -1,6 +1,6 @@
 import './BookItem.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleFavorite, editBook, deleteBook } from '../../features/books-slice';
+import { toggleFavorite, updateFavorites, editBook, deleteBook } from '../../features/books-slice';
 import { enterEditMode } from '../../features/mode-slice';
 import { useNavigate } from 'react-router-dom';
 import { RiDeleteBin5Line } from 'react-icons/ri';
@@ -38,6 +38,7 @@ const BookItem = ({ book }) => {
           onClick={(e) => {
             e.stopPropagation();
             dispatch(toggleFavorite(book.id));
+            // dispatch(updateFavorites());
             toast(book.volumeInfo.title + (book.isFavorite ? " removed from favorites." : " added to favorites."));
           }}>
           {book.isFavorite ? <MdFavorite /> : <MdFavoriteBorder />}

@@ -1,27 +1,34 @@
+import { useRef } from 'react';
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { updateBooks } from '../../features/books-slice';
+import { filterBooks } from '../../features/books-slice';
+import { toggleShowFilters } from '../../features/mode-slice';
+import useOutsideAlerter from '../../hooks/useOutsideClick';
+import { AiFillCloseCircle } from 'react-icons/ai';
 
 const Filters = () => {
     const dispatch = useDispatch();
-    const booksUnfiltered = useSelector((s) => s.book.books);
+    const books = useSelector((s) => s.book.books);
     const showFilters = useSelector((s) => s.mode.showFilters);
     const [datePrior, setDatePrior] = useState();
     const [dateAfter, setDateAfter] = useState();
     const [filterRating, setFilterRating] = useState();
 
+    const ref = useRef();
+    // useOutsideAlerter(ref, () => dispatch(toggleShowFilters()));
+
     useEffect(() => {
-        const booksFiltered = booksUnfiltered.filter((b) => {
+        const booksFiltered = books.filter((b) => {
             return (!dateAfter || Date.parse(b.volumeInfo.publishedDate) > dateAfter) &&
                 (!datePrior || Date.parse(b.volumeInfo.publishedDate) < datePrior) &&
                 (!filterRating || b.volumeInfo.averageRating >= filterRating);
         });
 
-        dispatch(updateBooks(booksFiltered));
-    }, [dateAfter, datePrior, filterRating]);
+        dispatch(filterBooks(booksFiltered));
+    }, [books, dateAfter, datePrior, filterRating]);
 
     return (
-        <div className={`${showFilters ? 'filters' : 'hide'}`}>
+        <div ref={ref} className={`${showFilters ? 'filters' : 'hide'}`}>
             <div>
                 <label htmlFor="published-after">Published After:&nbsp;</label>
                 <label htmlFor="published-prior">Published Before:&nbsp;</label>
@@ -52,6 +59,14 @@ const Filters = () => {
                     {[...Array(5).keys()].map((x) => <option key={x} value={x + 1}>{x + 1}</option>)}
                 </select>
             </div>
+
+            <button
+                className='btn btn-close-filters'
+                onClick={() => dispatch(toggleShowFilters())}
+                title='Hide Filters'
+            >
+                <AiFillCloseCircle />
+            </button>
         </div>
     );
 };

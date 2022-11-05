@@ -1,15 +1,22 @@
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import BookItem from "../../components/bookitem/BookItem";
+import { updateFavorites } from "../../features/books-slice";
 
 const Favorites = () => {
-  const favorites = useSelector((s) => s.book.books).filter((b) => b.isFavorite);
+  const dispatch = useDispatch();
+  const books = useSelector((s) => s.book.books);
+  const favorites = useSelector((s) => s.book.favoriteBooks);
+
+  useEffect(() => {
+    dispatch(updateFavorites());
+  }, [books]);
 
   return (
     <div className="books-div">
-      <h1>Favorites</h1>
       {favorites.map((b) => <BookItem key={b.id} book={b} />)}
     </div>
-  )
-}
+  );
+};
 
-export default Favorites
+export default Favorites;
