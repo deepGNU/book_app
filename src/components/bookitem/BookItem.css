@@ -43,7 +43,7 @@
     margin: 10px;
 }
 
-.book-title {
+.book-card:hover .book-title {
     text-decoration: underline;
 }
 

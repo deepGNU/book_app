@@ -31,11 +31,7 @@ const Filters = () => {
         <div ref={ref} className={`${showFilters ? 'filters' : 'hide'}`}>
             <div>
                 <label htmlFor="published-after">Published After:&nbsp;</label>
-                <label htmlFor="published-prior">Published Before:&nbsp;</label>
-                <label htmlFor="rating">Minimal Rating:&nbsp;</label>
-            </div>
 
-            <div>
                 <select name="" id="published-after"
                     value={new Date(dateAfter).getFullYear().toString()}
                     onChange={(e) => setDateAfter(Date.parse(e.target.value))}
@@ -43,6 +39,10 @@ const Filters = () => {
                     <option value="">No Filter</option>
                     {Array.from({ length: 500 }, (_, i) => new Date().getFullYear() - i).map((y) => <option key={y} value={y}>{y}</option>)}
                 </select>
+            </div>
+
+            <div>
+                <label htmlFor="published-prior">Published Before:&nbsp;</label>
 
                 <select name="" id="published-prior"
                     value={new Date(datePrior).getFullYear().toString()}
@@ -51,6 +51,9 @@ const Filters = () => {
                     <option value="">No Filter</option>
                     {Array.from({ length: 500 }, (_, i) => new Date().getFullYear() - i).map((y) => <option key={y} value={y}>{y}</option>)}
                 </select>
+            </div>
+            <div>
+                <label htmlFor="rating">Minimal Rating:&nbsp;</label>
 
                 <select name="" id="rating" value={filterRating}
                     onChange={(e) => setFilterRating(e.target.value)}
@@ -60,13 +63,13 @@ const Filters = () => {
                 </select>
             </div>
 
-            <button
+            {/* <button
                 className='btn btn-close-filters'
                 onClick={() => dispatch(toggleShowFilters())}
                 title='Hide Filters'
             >
                 <AiFillCloseCircle />
-            </button>
+            </button> */}
         </div>
     );
 };

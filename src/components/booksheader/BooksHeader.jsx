@@ -6,9 +6,11 @@ import BooksBtns from './BooksBtns';
 const BooksHeader = () => {
     return (
         <div className='books-header'>
-            <BooksBtns />
+            <div className='top-books-header'>
+                <SearchBar />
+                <BooksBtns />
+            </div>
             <Filters />
-            <SearchBar />
         </div>
     );
 };

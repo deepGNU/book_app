@@ -2,13 +2,23 @@
     position: sticky;
     top: var(--nav-height);
     color: white;
+    padding: 10px;
     margin-bottom: 10px;
     background-color: #333;
+    /* display: flex;
+    justify-content: space-between; */
+    /* display: grid;
+    grid-template-rows: 2;
+    grid-template-columns: 2; */
+    /* gap: 5px; */
+}
+
+.top-books-header {
     display: flex;
-    justify-content: space-between;
 }
 
 .button-bar {
+    /* grid-row: 1; */
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -30,22 +40,30 @@
 }
 
 .filters {
+    /* grid-row: 2; */
     color: white;
     font-size: 1.2rem;
-    position: absolute;
+    /* position: absolute;
     bottom: 1px;
-    transform: translate(0, 100%);
+    transform: translate(0, 100%); */
     display: flex;
-    gap: 5px;
-    background-color: #222;
-    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    /* background-color: #222; */
+    /* padding: 10px; */
     border-radius: 0 10px 10px 0;
+    width: 100%;
 }
 
 .filters div {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 10px;
+    padding: 5px;
+    border: solid #fff 1px;
+    border-radius: 10px;
+    margin: 5px;
 }
 
 .btn-close-filters {
@@ -63,6 +81,7 @@
 }
 
 .search-bar {
+    /* grid-row: 1; */
     font-size: 1.5rem;
     width: fit-content;
     height: fit-content;
@@ -96,11 +115,11 @@
 }
 
 @media screen and (max-width: 950px) {
-    .books-header {
+    .top-books-header {
         flex-direction: column;
     }
 
-    .filters {
+    /* .filters {
         margin-top: 25px;
-    }
+    } */
 }
