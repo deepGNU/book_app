@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import Swal from 'sweetalert2';
 
 const initialState = {
     books: [],
@@ -100,11 +101,15 @@ const booksSlice = createSlice({
             state.loading = false;
             state.error = false;
         });
-        builder.addCase(fetchBooks.rejected, (state, { error }) => {
+        builder.addCase(fetchBooks.rejected, (state, action) => {
             state.books = [];
             state.loading = false;
-            state.error = error ?? "Something went wrong.";
-            console.log(error);
+            state.error = action.error ?? "Something went wrong.";
+            // console.log(error);
+            Swal.fire({
+                icon: "error",
+                title: "Unable to load books.",
+            });
         });
     }
 });

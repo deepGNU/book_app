@@ -1,6 +1,7 @@
 import './BookDetails.css';
 import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { IoCaretBack } from 'react-icons/io5';
 
 const BookDetails = () => {
     const { bookId } = useParams();
@@ -15,6 +16,15 @@ const BookDetails = () => {
 
     return (
         <div className='book-details-div'>
+            <button
+                title='Go Back'
+                className='btn btn-back'
+                onClick={() => navigate(-1)}
+            >
+                <IoCaretBack /> 
+                Back
+            </button>
+
             {book.volumeInfo.imageLinks && <img className='img-details' src={book.volumeInfo.imageLinks.thumbnail} alt="Book Cover" />}
 
             <div className="text-details">
@@ -26,7 +36,7 @@ const BookDetails = () => {
                 <p>Published date: {book.volumeInfo.publishedDate ?? "unavailable."}</p>
                 <p>Language: {languageName.of(book.volumeInfo.language) ?? "unavailable."}</p>
             </div>
-            
+
             <div className='btns-details'>
                 <a href={book.volumeInfo.previewLink ?? "unavailable."}>Preview at Google Books</a>
                 <br />
@@ -44,7 +54,6 @@ const BookDetails = () => {
                             </a>}
                     </>
                 }
-                <button onClick={() => navigate(-1)}>Go Back</button>
             </div>
         </div>
     );

@@ -21,8 +21,8 @@ function App() {
     <div className="App">
       <ToastContainer />
       <TopNav />
-     {editing && <BookEditWindow />}
-     {adding && <BookAddWindow />}
+      {editing && <BookEditWindow />}
+      {adding && <BookAddWindow />}
       <Routes>
         <Route path="/" element={<Books />} />
         <Route path="/books" element={<Books />} />
