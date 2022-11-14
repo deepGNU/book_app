@@ -5,6 +5,7 @@ const initialState = {
     editingId: null,
     adding: false,
     showFilters: false,
+    selecting: false,
 };
 
 const modeSlice = createSlice({
@@ -21,11 +22,14 @@ const modeSlice = createSlice({
         toggleAddMode: (state) => {
             state.adding = !state.adding;
         },
+        toggleSelectMode: (state) => {
+            state.selecting = !state.selecting;
+        },
         toggleShowFilters: (state) => {
-            state.showFilters = ! state.showFilters;
+            state.showFilters = !state.showFilters;
         }
     }
 });
 
 export default modeSlice.reducer;
-export const { enterEditMode, leaveEditMode, toggleAddMode, toggleShowFilters } = modeSlice.actions;
+export const { enterEditMode, leaveEditMode, toggleAddMode, toggleSelectMode, toggleShowFilters } = modeSlice.actions;

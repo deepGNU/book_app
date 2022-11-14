@@ -41,7 +41,8 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
         .then((json) => json.items)
         .then((books) => books.map((b) => ({
             ...b,
-            isFavorite: false
+            isFavorite: false,
+            isSelected: false,
         })));
 });
 
@@ -62,6 +63,17 @@ const booksSlice = createSlice({
         deleteBook: (state, { payload }) => {
             const index = state.books.findIndex((b) => b.id === payload);
             state.books.splice(index, 1);
+        },
+        deleteSelected: (state) => {
+            state.books = state.books.filter((b) => !b.isSelected);
+        },
+        cancelSelection: (state) => {
+            state.books.forEach((b) =>
+                b.isSelected = false);
+        },
+        toggleSelect: (state, { payload }) => {
+            const indexBooks = state.books.findIndex((b) => b.id === payload);
+            state.books[indexBooks].isSelected = !state.books[indexBooks].isSelected;
         },
         toggleFavorite: (state, { payload }) => {
             const indexBooks = state.books.findIndex((b) => b.id === payload);
@@ -105,7 +117,6 @@ const booksSlice = createSlice({
             state.books = [];
             state.loading = false;
             state.error = action.error ?? "Something went wrong.";
-            // console.log(error);
             Swal.fire({
                 icon: "error",
                 title: "Unable to load books.",
@@ -115,4 +126,4 @@ const booksSlice = createSlice({
 });
 
 export default booksSlice.reducer;
-export const { filterBooks, addBook, editBook, deleteBook, toggleFavorite, updateFavorites, changeFilter, changeLang, changeQuery } = booksSlice.actions;
+export const { filterBooks, addBook, editBook, deleteBook, toggleFavorite, updateFavorites, changeFilter, changeLang, changeQuery, toggleSelect, cancelSelection, deleteSelected } = booksSlice.actions;

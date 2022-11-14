@@ -1,12 +1,13 @@
 import './BookItem.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleFavorite, updateFavorites, editBook, deleteBook } from '../../features/books-slice';
+import { toggleFavorite, updateFavorites, editBook, deleteBook, toggleSelect } from '../../features/books-slice';
 import { enterEditMode } from '../../features/mode-slice';
 import { useNavigate } from 'react-router-dom';
 import { RiDeleteBin5Line } from 'react-icons/ri';
 import { AiOutlineEdit } from 'react-icons/ai';
 import { FiExternalLink } from 'react-icons/fi';
 import { MdFavoriteBorder, MdFavorite } from 'react-icons/md';
+import { ImCheckboxChecked as Checked, ImCheckboxUnchecked as Unchecked } from 'react-icons/im';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -15,9 +16,19 @@ const BookItem = ({ book }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const editing = useSelector((s) => s.mode.editing);
-
+  const selecting = useSelector((s) => s.mode.selecting);
   return (
-    <div onClick={() => navigate(`/books/${book.id}`)} className='book-card' title='See Details'>
+    <div
+      onClick={() => selecting ? dispatch(toggleSelect(book.id)) :
+        navigate(`/books/${book.id}`)}
+      className='book-card'
+      title={selecting ? 'Select Item' : 'See Details'}
+    >
+      {selecting &&
+        <div className="selected-icon">
+          {book.isSelected ? <Checked /> : <Unchecked />}
+        </div>}
+
       <div className='top-book-card'>
         <img className='img-book-card' src={book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail} alt="" />
         <div className='text-book-card'>
