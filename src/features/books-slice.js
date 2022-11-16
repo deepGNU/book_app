@@ -32,8 +32,8 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
     return fetch(
         `https://www.googleapis.com/books/v1/volumes` +
         `?q=${query}` +
-        (lang != undefined ?? `&langRestrict=${lang}`) +
-        (filter != undefined ?? `&filter=${filter}`) +
+        (lang !== undefined ?? `&langRestrict=${lang}`) +
+        (filter !== undefined ?? `&filter=${filter}`) +
         `&maxResults=40` +
         `&key=AIzaSyBvRxCh4SRMHlh1s87QhItZwqVOEqKNyR0`
     )
@@ -117,6 +117,7 @@ const booksSlice = createSlice({
             state.books = [];
             state.loading = false;
             state.error = action.error ?? "Something went wrong.";
+            console.log("error")
             Swal.fire({
                 icon: "error",
                 title: "Unable to load books.",

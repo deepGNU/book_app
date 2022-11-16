@@ -22,7 +22,6 @@ const BookDetails = () => {
                 onClick={() => navigate(-1)}
             >
                 <IoCaretBack /> 
-                Back
             </button>
 
             {book.volumeInfo.imageLinks && <img className='img-details' src={book.volumeInfo.imageLinks.thumbnail} alt="Book Cover" />}

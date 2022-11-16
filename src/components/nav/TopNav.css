@@ -2,6 +2,33 @@
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    z-index: 1;
+    color: #fff;
+    background-color: var(--cafe-noir);
     padding: var(--nav-padding);
+    z-index: 1;
+}
+
+.top-nav .navbar-ham {
+    background-color: var(--brown-yellow);
+    margin-bottom: 10px;
+}
+
+.top-nav .nav-link {
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+.top-nav .nav-link.active {
+    color: #000;
+    background-color: var(--brown-yellow);
+    border: solid #fff 1px;
+    border-radius: 5px;
+}
+
+.top-nav .navbar-brand {
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    margin-right: 10%;
 }

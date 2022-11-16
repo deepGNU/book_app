@@ -23,7 +23,7 @@ const BookEditWindow = () => {
     }, [editingId]);
 
     return (
-        <div className='book-edit-window'>
+        <div className='book-edit-window position-fixed-centered'>
             <button
                 className='btn close'
                 title='Close'

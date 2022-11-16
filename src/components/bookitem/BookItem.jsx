@@ -1,27 +1,27 @@
 import './BookItem.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleFavorite, updateFavorites, editBook, deleteBook, toggleSelect } from '../../features/books-slice';
+import { toggleFavorite, deleteBook, toggleSelect } from '../../features/books-slice';
 import { enterEditMode } from '../../features/mode-slice';
 import { useNavigate } from 'react-router-dom';
 import { RiDeleteBin5Line } from 'react-icons/ri';
 import { AiOutlineEdit } from 'react-icons/ai';
-import { FiExternalLink } from 'react-icons/fi';
 import { MdFavoriteBorder, MdFavorite } from 'react-icons/md';
 import { ImCheckboxChecked as Checked, ImCheckboxUnchecked as Unchecked } from 'react-icons/im';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const BookItem = ({ book }) => {
-  // console.log(book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const editing = useSelector((s) => s.mode.editing);
+  // const editing = useSelector((s) => s.mode.editing);
   const selecting = useSelector((s) => s.mode.selecting);
+
   return (
     <div
       onClick={() => selecting ? dispatch(toggleSelect(book.id)) :
         navigate(`/books/${book.id}`)}
-      className='book-card'
+      className={`book-card ${(selecting && !book.isSelected) ? 'faded' : ''}
+      ${book.isSelected && ' book-selected'} ${!selecting ? ' not-selecting' : ''}`}
       title={selecting ? 'Select Item' : 'See Details'}
     >
       {selecting &&
@@ -33,7 +33,7 @@ const BookItem = ({ book }) => {
         <img className='img-book-card' src={book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail} alt="" />
         <div className='text-book-card'>
           <hr />
-          <h5 className='book-title'>{book.volumeInfo.title} <FiExternalLink /></h5>
+          <h5 className='book-title'>{book.volumeInfo.title}</h5>
           <p>
             {book.volumeInfo.authors}
             &nbsp;&#9679;&nbsp;
@@ -42,15 +42,20 @@ const BookItem = ({ book }) => {
           <hr />
         </div>
       </div>
-      <div className="book-btns">
+     {!selecting && <div className="book-btns">
         <button
           className='btn btn-book-item'
           title={book.isFavorite ? "Remove from Favorites" : "Add to Favorites"}
           onClick={(e) => {
             e.stopPropagation();
             dispatch(toggleFavorite(book.id));
-            // dispatch(updateFavorites());
-            toast(book.volumeInfo.title + (book.isFavorite ? " removed from favorites." : " added to favorites."));
+            if (book.isFavorite)
+              toast.warning(`${book.volumeInfo.title} removed from favorites.`,
+                { position: toast.POSITION.TOP_CENTER });
+            else
+              toast.success(book.volumeInfo.title +
+                (book.isFavorite ? " removed from favorites." : " added to favorites."),
+                { position: toast.POSITION.TOP_CENTER });
           }}>
           {book.isFavorite ? <MdFavorite /> : <MdFavoriteBorder />}
         </button>
@@ -59,17 +64,7 @@ const BookItem = ({ book }) => {
           title='Edit'
           onClick={(e) => {
             e.stopPropagation();
-            // if (!editing) {
             dispatch(enterEditMode(book.id));
-            // dispatch(editBook(
-            //   {
-            //     ...book,
-            //     volumeInfo: {
-            //       ...book.volumeInfo,
-            //       title: book.volumeInfo.title + " EDITED"
-            //     }
-            //   }));
-            // }
           }}>
           <AiOutlineEdit />
         </button>
@@ -84,9 +79,7 @@ const BookItem = ({ book }) => {
           }}>
           <RiDeleteBin5Line />
         </button>
-        {/* {book.saleInfo.saleability == "FREE" && <h1>FREE</h1>} */}
-        {/* <button className='btn btn-book-item' onClick={() => navigate(`/books/${book.id}`)}>See Details</button> */}
-      </div>
+      </div>}
     </div>
   )
 }

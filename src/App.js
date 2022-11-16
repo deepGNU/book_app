@@ -16,9 +16,10 @@ function App() {
   useBooks();
   const editing = useSelector((s) => s.mode.editing);
   const adding = useSelector((s) => s.mode.adding);
+  const loading = useSelector((s) => s.book.loading);
 
   return (
-    <div className="App">
+    <div className={`App ${loading && 'overflow-hidden'}`}>
       <ToastContainer />
       <TopNav />
       {editing && <BookEditWindow />}

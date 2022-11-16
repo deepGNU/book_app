@@ -16,12 +16,20 @@ const TopNav = () => {
     }, [height]);
 
     return (
-        <Navbar ref={ref} bg="light" expand="lg" className="top-nav">
+        <Navbar
+            ref={ref}
+            // bg="light"
+            expand="lg"
+            className="top-nav">
             <Container>
-                <NavLink to="/" className="navbar-brand">
-                    <span className="text-muted">Book App</span>
+                <NavLink to="/"
+                 className="navbar-brand"
+                 >
+                    {/* <span className="text-muted color-white"> */}
+                        Book App
+                        {/* </span> */}
                 </NavLink>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-ham" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <TopNavLink to="/" label="Home" />

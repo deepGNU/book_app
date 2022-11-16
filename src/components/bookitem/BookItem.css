@@ -4,22 +4,33 @@
     cursor: pointer;
     text-align: center;
     background-color: #ccc;
-    /* width: 350px; */
-    width: 300px;
+    width: 250px;
+    /* width: 300px; */
     height: fit-content;
-    /* padding: 5px; */
-    /* box-sizing: border-box; */
     box-sizing: content-box;
     border: solid black 1px;
     border-radius: 10px;
 }
 
-.book-card:hover {
+.not-selecting.book-card:hover {
     /* width: 250px; */
     /* transform: scale(102%); */
     /* border: solid white 1px; */
     background-color: #eee;
+    /* background-color: var(--brown-yellow); */
     /* background-color: rgb(255, 255, 255); */
+    /* background-color: #ddd; */
+}
+
+.faded {
+    opacity: 85%;
+    /* background-color: #888; */
+    /* border: none; */
+}
+
+.book-selected {
+    background-color: #fff;
+    /* border: solid #000 5px; */
 }
 
 .selected-icon {
@@ -55,12 +66,12 @@
     margin: 10px;
 }
 
-.book-card:hover .book-title {
+.not-selecting.book-card:hover .book-title {
     text-decoration: underline;
+    color: #555;
 }
 
 .book-card:hover .book-title{
-    color: #555;
 }
 
 .book-btns {

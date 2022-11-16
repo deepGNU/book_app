@@ -62,14 +62,6 @@ const Filters = () => {
                     {[...Array(5).keys()].map((x) => <option key={x} value={x + 1}>{x + 1}</option>)}
                 </select>
             </div>
-
-            {/* <button
-                className='btn btn-close-filters'
-                onClick={() => dispatch(toggleShowFilters())}
-                title='Hide Filters'
-            >
-                <AiFillCloseCircle />
-            </button> */}
         </div>
     );
 };

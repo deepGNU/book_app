@@ -1,5 +1,4 @@
 .books-div {
-    min-height: 90vh;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

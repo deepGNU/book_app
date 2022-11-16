@@ -4,13 +4,8 @@
     color: white;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #333;
-    /* display: flex;
-    justify-content: space-between; */
-    /* display: grid;
-    grid-template-rows: 2;
-    grid-template-columns: 2; */
-    /* gap: 5px; */
+    background-color: var(--seal-brown);
+    z-index: 1;
 }
 
 .top-books-header {
@@ -18,8 +13,8 @@
 }
 
 .button-bar {
-    /* grid-row: 1; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
 }
@@ -31,49 +26,33 @@
     width: fit-content;
     margin: 15px;
     border: solid white 1px;
+    background-color: var(--cafe-noir);
 }
 
 .btn.btn-top:hover {
-    color: #fff;
-    background-color: #444;
+    color: #000;
+    background-color: var(--brown-yellow);
     border: solid white 1px;
 }
 
 .filters {
-    /* grid-row: 2; */
-    color: white;
-    font-size: 1.2rem;
-    /* position: absolute;
-    bottom: 1px;
-    transform: translate(0, 100%); */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5%;
-    /* background-color: #222; */
-    /* padding: 10px; */
-    border-radius: 0 10px 10px 0;
     width: 100%;
+    font-size: 1.2rem;
+    gap: 5%;
+    border-radius: 0 10px 10px 0;
 }
 
 .filters div {
     display: flex;
-    /* flex-direction: column; */
     gap: 10px;
     padding: 5px;
+    background-color: var(--cafe-noir);
     border: solid #fff 1px;
     border-radius: 10px;
     margin: 5px;
-}
-
-.btn-close-filters {
-    color: white;
-    font-size: 1.5rem;
-    /* border: solid white 1px; */
-    height: 5%;
-    width: auto;
-    /* padding: 0; */
-    margin: 0 0 0 5px;
 }
 
 .hide {
@@ -81,7 +60,8 @@
 }
 
 .search-bar {
-    /* grid-row: 1; */
+    display: flex;
+    flex-wrap: nowrap;
     font-size: 1.5rem;
     width: fit-content;
     height: fit-content;
@@ -102,12 +82,13 @@
 .search-bar button {
     color: #fff;
     border: solid #fff 1px;
-    background-color: #222;
+    background-color: var(--cafe-noir);
     border-radius: 0 10px 10px 0;
 }
 
 .search-bar button:hover {
-    background-color: #555;
+    color: #000;
+    background-color: var(--brown-yellow);
 }
 
 .bg-dark-gray {

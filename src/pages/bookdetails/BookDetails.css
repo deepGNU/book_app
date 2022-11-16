@@ -24,12 +24,16 @@
     top: 0;
     left: 0;
     font-size: 1.2rem;
+    color: #fff;
+    background-color: #333;
     border: solid black 1px;
 }
 
 .btn.btn-back:hover {
     font-weight: bold;
-    border: solid black 3px;
+    color: #fff;
+    background-color: #555;
+    border: solid black 1px;
 }
 
 .img-details {

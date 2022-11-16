@@ -5,10 +5,26 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+.overflow-hidden {
   overflow: hidden;
 }
 
 :root {
   --nav-height: 40px;
   --nav-padding: 8px;
+  --crayolas-tan: #DF9D6C;
+  --raw-sienna: #D0814E;
+  --deep-champagne: #F7D3AA;
+  --chamoisee: #9F7159;
+  --rose-ebony: #634739;
+
+
+  --seal-brown: #592b14;
+  --russet: #7b3f21;
+  --chestnut: #8d4f2c;
+  --dark-gold: #a36740;
+  --brown-yellow: #c58f5f;
+  --cafe-noir: #523828;
 }
