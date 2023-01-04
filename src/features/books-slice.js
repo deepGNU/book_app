@@ -13,7 +13,6 @@ const initialState = {
 };
 
 export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) => {
-
     // return fetch('../data.json', {
     //     headers: {
     //         "Content-Type": "application/json",
@@ -29,7 +28,7 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
     const API_KEY = 'AIzaSyBvRxCh4SRMHlh1s87QhItZwqVOEqKNyR0';
     const { query, filter, lang } = getState().book;
     const { favBooks } = getState().favorite;
-    const idIsInFavs = (id) => favBooks.findIndex((f) => f.id === id) !== -1;
+    const isInFavs = (id) => favBooks.findIndex((f) => f.id === id) !== -1;
 
     return fetch(
         `https://www.googleapis.com/books/v1/volumes` +
@@ -43,8 +42,7 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
         .then((json) => json.items)
         .then((books) => books.map((b) => ({
             ...b,
-            // isFavorite: (favBooks.findIndex((f) => f.id === b.id) !== -1),
-            isFavorite: idIsInFavs(b.id),
+            isFavorite: isInFavs(b.id),
             isSelected: false,
         })));
 });

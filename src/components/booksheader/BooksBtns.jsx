@@ -13,16 +13,17 @@ const BooksBtns = () => {
 
     return (
         <div className="button-bar">
+            {!selecting &&
             <button
                 className='btn btn-top btn-expand'
                 title={hideBtnsWhenNarrow ? 'Show Buttons' : 'Hide Buttons'}
                 onClick={() => setHideBtnsWhenNarrow(!hideBtnsWhenNarrow)}
             >
                 <Kebab />
-            </button>
+            </button>}
 
 
-            <div className={hideBtnsWhenNarrow ? 'hide-when-narrow' : ''}>
+            <div className={(hideBtnsWhenNarrow && !selecting) ? 'hide-when-narrow' : ''}>
                 {selecting &&
                     <button
                         className='btn btn-top'
@@ -34,36 +35,39 @@ const BooksBtns = () => {
                             }
                         }}
                     >
-                        Delete Selected
+                        Delete
                     </button>}
 
                 <button
                     className='btn btn-top'
-                    title='Select Items'
+                    title={`${selecting ? 'Cancel Selection' : 'Select Items'}`}
                     onClick={() => {
                         if (selecting) dispatch(cancelSelection());
                         dispatch(toggleSelectMode());
                     }}
                 >
-                    {selecting ? 'Cancel Selection' : 'Select'}
+                    {selecting ? 'Cancel' : 'Select'}
                 </button>
 
-                <button
-                    className='btn btn-top'
-                    title='Filters'
-                    onClick={() => dispatch(toggleShowFilters())}
-                >
-                    <ImFilter />
-                    <span>&nbsp;Filters&nbsp;</span>
-                </button>
+                {!selecting &&
+                    <>
+                        <button
+                            className='btn btn-top'
+                            title='Filters'
+                            onClick={() => dispatch(toggleShowFilters())}
+                        >
+                            <ImFilter />
+                            <span>&nbsp;Filters&nbsp;</span>
+                        </button>
 
-                <button
-                    className='btn btn-top'
-                    title='Add Book'
-                    onClick={() => dispatch(toggleAddMode())}
-                >
-                    Add Book
-                </button>
+                        <button
+                            className='btn btn-top'
+                            title='Add Book'
+                            onClick={() => dispatch(toggleAddMode())}
+                        >
+                            Add Book
+                        </button>
+                    </>}
             </div>
         </div>
     );
