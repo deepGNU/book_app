@@ -2,9 +2,9 @@ import { useRef } from 'react';
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { filterBooks } from '../../features/books-slice';
-import { toggleShowFilters } from '../../features/mode-slice';
-import useOutsideAlerter from '../../hooks/useOutsideClick';
-import { AiFillCloseCircle } from 'react-icons/ai';
+// import { toggleShowFilters } from '../../features/mode-slice';
+// import useOutsideAlerter from '../../hooks/useOutsideClick';
+// import { AiFillCloseCircle } from 'react-icons/ai';
 
 const Filters = () => {
     const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const Filters = () => {
         });
 
         dispatch(filterBooks(booksFiltered));
-    }, [books, dateAfter, datePrior, filterRating]);
+    }, [dispatch, books, dateAfter, datePrior, filterRating]);
 
     return (
         <div ref={ref} className={`${showFilters ? 'filters' : 'hide'}`}>

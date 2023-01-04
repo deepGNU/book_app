@@ -1,17 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { favoriteBooks: [] };
+const initialState = { books: [], };
 
 const favoritesSlice = createSlice({
-    name: 'fav',
+    name: 'favorite',
     initialState,
     reducers: {
         addFavorite: (state, { payload }) => {
-            state.favoriteBooks = [payload, ...state.favoriteBooks];
+            payload = {...payload, isFavorite: true};
+            state.books = [payload, ...state.books];
         },
         removeFavorite: (state, { payload }) => {
-            const index = state.favoriteBooks.findIndex(payload);
-            state.favoriteBooks.splice(index, 1);
+            const index = state.books.findIndex((b) => b.id == payload);
+            if (index !== -1)
+                state.books.splice(index, 1);
         }
     }
 });

@@ -1,6 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import Swal from 'sweetalert2';
 
+const API_KEY = 'AIzaSyBvRxCh4SRMHlh1s87QhItZwqVOEqKNyR0';
+
 const initialState = {
     books: [],
     filteredBooks: [],
@@ -35,7 +37,7 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
         (lang !== undefined ?? `&langRestrict=${lang}`) +
         (filter !== undefined ?? `&filter=${filter}`) +
         `&maxResults=40` +
-        `&key=AIzaSyBvRxCh4SRMHlh1s87QhItZwqVOEqKNyR0`
+        `&key=${API_KEY}`
     )
         .then((response) => response.json())
         .then((json) => json.items)
@@ -77,7 +79,9 @@ const booksSlice = createSlice({
         },
         toggleFavorite: (state, { payload }) => {
             const indexBooks = state.books.findIndex((b) => b.id === payload);
-            state.books[indexBooks].isFavorite = !state.books[indexBooks].isFavorite;
+            if (indexBooks !== -1) {
+                state.books[indexBooks].isFavorite = !state.books[indexBooks].isFavorite;
+            }
         },
         updateFavorites: (state) => {
             state.books.forEach(b => {

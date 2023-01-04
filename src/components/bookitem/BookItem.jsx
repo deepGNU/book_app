@@ -1,6 +1,7 @@
 import './BookItem.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleFavorite, deleteBook, toggleSelect } from '../../features/books-slice';
+import { addFavorite, removeFavorite } from '../../features/favorites-slice';
 import { enterEditMode } from '../../features/mode-slice';
 import { useNavigate } from 'react-router-dom';
 import { RiDeleteBin5Line } from 'react-icons/ri';
@@ -42,20 +43,23 @@ const BookItem = ({ book }) => {
           <hr />
         </div>
       </div>
-     {!selecting && <div className="book-btns">
+      {!selecting && <div className="book-btns">
         <button
           className='btn btn-book-item'
           title={book.isFavorite ? "Remove from Favorites" : "Add to Favorites"}
           onClick={(e) => {
             e.stopPropagation();
             dispatch(toggleFavorite(book.id));
-            if (book.isFavorite)
+            if (book.isFavorite) {
+              dispatch(removeFavorite(book.id));
               toast.warning(`${book.volumeInfo.title} removed from favorites.`,
                 { position: toast.POSITION.TOP_CENTER });
-            else
-              toast.success(book.volumeInfo.title +
-                (book.isFavorite ? " removed from favorites." : " added to favorites."),
+            }
+            else {
+              dispatch(addFavorite(book));
+              toast.success(`${book.volumeInfo.title} added to favorites.`,
                 { position: toast.POSITION.TOP_CENTER });
+            }
           }}>
           {book.isFavorite ? <MdFavorite /> : <MdFavoriteBorder />}
         </button>

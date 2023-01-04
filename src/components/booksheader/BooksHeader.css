@@ -16,7 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    /* gap: 15px; */
 }
 
 .btn.btn-top {
@@ -24,7 +24,7 @@
     font-family: monospace;
     height: auto;
     width: fit-content;
-    margin: 15px;
+    margin: 10px;
     border: solid white 1px;
     background-color: var(--cafe-noir);
 }
@@ -33,6 +33,10 @@
     color: #000;
     background-color: var(--brown-yellow);
     border: solid white 1px;
+}
+
+.btn.btn-top.btn-expand {
+    display: none;
 }
 
 .filters {
@@ -103,4 +107,29 @@
     /* .filters {
         margin-top: 25px;
     } */
+}
+
+@media screen and (max-width: 785px) {
+    .top-books-header {
+        flex-direction: row;
+    }
+
+    .button-bar {
+        /* position: absolute; */
+        /* top: 0; */
+        /* right: 10px; */
+        /* transform: translate(0, 50%); */
+        flex-direction: column;
+        background-color: var(--seal-brown);
+        border: solid #000 1px;
+        border-radius: 10px;
+    }
+
+    .hide-when-narrow {
+        display: none;
+    }
+
+    .btn.btn-top.btn-expand {
+        display: block;
+    }
 }

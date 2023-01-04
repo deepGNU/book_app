@@ -5,14 +5,16 @@ import { updateFavorites } from "../../features/books-slice";
 
 const Favorites = () => {
   const dispatch = useDispatch();
-  const books = useSelector((s) => s.book.books);
-  const favorites = useSelector((s) => s.book.favoriteBooks);
+  const favorites = useSelector((s) => s.favorite.books);
+  // const books = useSelector((s) => s.book.books);
+  // const favorites = useSelector((s) => s.book.favoriteBooks);
 
-  useEffect(() => {
-    dispatch(updateFavorites());
-  }, [books]);
+  // useEffect(() => {
+  //   dispatch(updateFavorites());
+  // }, [books]);
 
   return (
+    favorites  &&
     <div className="books-div">
       {favorites.map((b) => <BookItem key={b.id} book={b} />)}
     </div>
