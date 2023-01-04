@@ -13,7 +13,7 @@ const useEsc = (onEsc) => {
     return () => {
       window.removeEventListener("keydown", handleEsc);
     };
-  }, []);
+  }, [onEsc]);
 };
 
 export default useEsc;

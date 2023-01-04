@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { books: [], };
+const initialState = { favBooks: [], };
 
 const favoritesSlice = createSlice({
     name: 'favorite',
@@ -8,12 +8,12 @@ const favoritesSlice = createSlice({
     reducers: {
         addFavorite: (state, { payload }) => {
             payload = {...payload, isFavorite: true};
-            state.books = [payload, ...state.books];
+            state.favBooks = [payload, ...state.favBooks];
         },
         removeFavorite: (state, { payload }) => {
-            const index = state.books.findIndex((b) => b.id == payload);
+            const index = state.favBooks.findIndex((b) => b.id === payload);
             if (index !== -1)
-                state.books.splice(index, 1);
+                state.favBooks.splice(index, 1);
         }
     }
 });

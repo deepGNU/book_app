@@ -1,11 +1,11 @@
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+// import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import BookItem from "../../components/bookitem/BookItem";
-import { updateFavorites } from "../../features/books-slice";
+// import { updateFavorites } from "../../features/books-slice";
 
 const Favorites = () => {
-  const dispatch = useDispatch();
-  const favorites = useSelector((s) => s.favorite.books);
+  // const dispatch = useDispatch();
+  const favorites = useSelector((s) => s.favorite.favBooks);
   // const books = useSelector((s) => s.book.books);
   // const favorites = useSelector((s) => s.book.favoriteBooks);
 

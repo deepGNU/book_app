@@ -5,8 +5,7 @@ import { leaveEditMode } from '../../features/mode-slice';
 import { editBook } from '../../features/books-slice';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { AiFillCloseSquare, AiFillCloseCircle } from 'react-icons/ai';
-import { FaWindowClose } from 'react-icons/fa';
+import { AiFillCloseCircle } from 'react-icons/ai';
 import useEsc from '../../hooks/useEsc';
 
 const BookEditWindow = () => {
@@ -20,7 +19,7 @@ const BookEditWindow = () => {
     useEffect(() => {
         setTitle(book.volumeInfo.title);
         setAuthors(book.volumeInfo.authors);
-    }, [editingId]);
+    }, [editingId, book.volumeInfo.authors, book.volumeInfo.title]); // What's the deal with this? Check later.
 
     return (
         <div className='book-edit-window position-fixed-centered'>

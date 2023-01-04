@@ -1,12 +1,10 @@
 import React from 'react'
 import '../bookeditwindow/BookEditWindow.css';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { toggleAddMode } from '../../features/mode-slice';
 import { addBook } from '../../features/books-slice';
 import { useState } from 'react';
-import { useEffect } from 'react';
-import { AiFillCloseSquare, AiFillCloseCircle } from 'react-icons/ai';
-import { FaWindowClose } from 'react-icons/fa';
+import { AiFillCloseCircle } from 'react-icons/ai';
 import useEsc from '../../hooks/useEsc';
 
 const BookAddWindow = () => {

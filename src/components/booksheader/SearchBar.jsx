@@ -12,7 +12,7 @@ const SearchBar = () => {
 
     useEffect(() => {
         dispatch(changeQuery(query));
-    }, [query]);
+    }, [dispatch, query]);
 
     return (
             <form action="/" method="get" className='search-bar'>

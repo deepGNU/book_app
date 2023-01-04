@@ -1,8 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import Swal from 'sweetalert2';
 
-const API_KEY = 'AIzaSyBvRxCh4SRMHlh1s87QhItZwqVOEqKNyR0';
-
 const initialState = {
     books: [],
     filteredBooks: [],
@@ -28,8 +26,10 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
     //         ...b,
     //         isFavorite: false
     //     })));
-
+    const API_KEY = 'AIzaSyBvRxCh4SRMHlh1s87QhItZwqVOEqKNyR0';
     const { query, filter, lang } = getState().book;
+    const { favBooks } = getState().favorite;
+    const idIsInFavs = (id) => favBooks.findIndex((f) => f.id === id) !== -1;
 
     return fetch(
         `https://www.googleapis.com/books/v1/volumes` +
@@ -43,7 +43,8 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
         .then((json) => json.items)
         .then((books) => books.map((b) => ({
             ...b,
-            isFavorite: false,
+            // isFavorite: (favBooks.findIndex((f) => f.id === b.id) !== -1),
+            isFavorite: idIsInFavs(b.id),
             isSelected: false,
         })));
 });
