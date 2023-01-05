@@ -6,7 +6,7 @@ import { IoCaretBack } from 'react-icons/io5';
 const BookDetails = () => {
     const { bookId } = useParams();
     const navigate = useNavigate();
-    const book = useSelector((s) => s.book.books).find((b) => b.id === bookId);
+    const book = useSelector((s) => [...s.book.books, ...s.favorite.favBooks]).find((b) => b.id === bookId);
 
     if (!book) {
         return <Navigate to='/books' />;

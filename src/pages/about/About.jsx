@@ -14,10 +14,8 @@ const About = () => {
 
       <h2>Shortcuts</h2>
       <p>
-        <div>
           <span className="bold">/</span>
           Go to search bar.
-        </div>
       </p>
     </div>
   )

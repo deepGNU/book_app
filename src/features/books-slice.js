@@ -59,11 +59,13 @@ const booksSlice = createSlice({
         },
         editBook: (state, { payload }) => {
             const index = state.books.findIndex((b) => b.id === payload.id);
-            state.books[index] = payload;
+            if (index !== -1)
+                state.books[index] = payload;
         },
         deleteBook: (state, { payload }) => {
             const index = state.books.findIndex((b) => b.id === payload);
-            state.books.splice(index, 1);
+            if (index !== -1)
+                state.books.splice(index, 1);
         },
         deleteSelected: (state) => {
             state.books = state.books.filter((b) => !b.isSelected);

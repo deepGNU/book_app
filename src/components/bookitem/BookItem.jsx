@@ -78,7 +78,8 @@ const BookItem = ({ book }) => {
           onClick={(e) => {
             e.stopPropagation();
             if (window.confirm(`Are you sure you want to delete ${book.volumeInfo.title}?`)) {
-              dispatch(deleteBook(book.id))
+              dispatch(deleteBook(book.id));
+              dispatch(removeFavorite(book.id));
             }
           }}>
           <RiDeleteBin5Line />

@@ -9,18 +9,19 @@ import { useState } from 'react';
 const BooksBtns = () => {
     const dispatch = useDispatch();
     const selecting = useSelector((s) => s.mode.selecting);
+    const showFilters = useSelector((s) => s.mode.showFilters);
     const [hideBtnsWhenNarrow, setHideBtnsWhenNarrow] = useState(true);
 
     return (
         <div className="button-bar">
             {!selecting &&
-            <button
-                className='btn btn-top btn-expand'
-                title={hideBtnsWhenNarrow ? 'Show Buttons' : 'Hide Buttons'}
-                onClick={() => setHideBtnsWhenNarrow(!hideBtnsWhenNarrow)}
-            >
-                <Kebab />
-            </button>}
+                <button
+                    className='btn btn-top btn-expand'
+                    title={hideBtnsWhenNarrow ? 'Show Buttons' : 'Hide Buttons'}
+                    onClick={() => setHideBtnsWhenNarrow(!hideBtnsWhenNarrow)}
+                >
+                    <Kebab />
+                </button>}
 
 
             <div className={(hideBtnsWhenNarrow && !selecting) ? 'hide-when-narrow' : ''}>
@@ -43,6 +44,7 @@ const BooksBtns = () => {
                     title={`${selecting ? 'Cancel Selection' : 'Select Items'}`}
                     onClick={() => {
                         if (selecting) dispatch(cancelSelection());
+                        if (showFilters) dispatch(toggleShowFilters());
                         dispatch(toggleSelectMode());
                     }}
                 >
