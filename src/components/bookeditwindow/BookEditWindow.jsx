@@ -14,6 +14,7 @@ const BookEditWindow = () => {
     useEsc(() => dispatch(leaveEditMode()));
     const editingId = useSelector((s) => s.mode.editingId);
     const book = useSelector((s) => [...s.book.books, ...s.favorite.favBooks]).find((b) => b.id === editingId);
+    if (!book) dispatch(leaveEditMode());
     const [title, setTitle] = useState(book.volumeInfo.title);
     const [authors, setAuthors] = useState(book.volumeInfo.authors);
     useEffect(() => {
