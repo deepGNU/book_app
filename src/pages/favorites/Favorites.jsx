@@ -16,7 +16,7 @@ const Favorites = () => {
   return (
     favorites  &&
     <div className="books-div">
-      {favorites.map((b) => <Book key={b.id} book={b} />)}
+      {favorites.map((b) => <Book key={b.id} book={b} isOnSelectingMode={false} />)}
     </div>
   );
 };

@@ -5,19 +5,19 @@ import { useNavigate } from 'react-router-dom';
 import BookBtns from './BookBtns';
 import SelectingIcon from './SelectingIcon';
 
-const Book = ({ book }) => {
+const Book = ({ book, isOnSelectingMode }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const selecting = useSelector((s) => s.mode.selecting);
+  // const selecting = useSelector((s) => s.mode.selecting);
 
   return (
     <div
       className={`book-card
-        ${selecting && !book.isSelected && ' faded'}
+        ${isOnSelectingMode && !book.isSelected && ' faded'}
         ${book.isSelected && ' book-selected'}
-        ${!selecting && ' not-selecting'}`}
-      title={selecting ? 'Select Item' : 'See Details'}
-      onClick={() => selecting ? dispatch(toggleSelect(book.id))
+        ${!isOnSelectingMode && ' not-selecting'}`}
+      title={isOnSelectingMode ? 'Select Item' : 'See Details'}
+      onClick={() => isOnSelectingMode ? dispatch(toggleSelect(book.id))
         : navigate(`/books/${book.id}`)}
     >
 
@@ -39,7 +39,7 @@ const Book = ({ book }) => {
         </div>
       </div>
 
-      {selecting ?
+      {isOnSelectingMode ?
         <SelectingIcon isChecked={book.isSelected} />
         : <BookBtns book={book} />}
     </div>

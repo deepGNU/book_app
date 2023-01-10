@@ -6,6 +6,7 @@ import Book from '../../components/book/Book';
 
 const Books = () => {
     const loading = useSelector((s) => s.book.loading);
+    const selecting = useSelector((s) => s.mode.selecting);
     const books = useSelector((s) => s.book.filteredBooks);
 
     return (
@@ -15,7 +16,7 @@ const Books = () => {
 
             <div className='books-div'>
                 {books.map((b) =>
-                    <Book key={b.id} book={b} />
+                    <Book key={b.id} book={b} isOnSelectingMode={selecting} />
                 )}
             </div>
         </>
