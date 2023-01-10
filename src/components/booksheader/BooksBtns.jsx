@@ -8,9 +8,17 @@ import { useState } from 'react';
 const BooksBtns = () => {
     const dispatch = useDispatch();
     const selecting = useSelector((s) => s.mode.selecting);
+    const numSelected = useSelector((s) => s.book.numSelected);
     const showFilters = useSelector((s) => s.mode.showFilters);
     const [hideBtnsWhenNarrow, setHideBtnsWhenNarrow] = useState(true);
     const getHideNarrowClass = () => (hideBtnsWhenNarrow && !selecting) ? 'hide-when-narrow' : '';
+
+    const handleDeleteClick = () => {
+        if (window.confirm(`Are you sure you want to delete ${numSelected > 1 ? numSelected + ' items' : 'item'}?`)) {
+            dispatch(deleteSelected());
+            dispatch(toggleSelectMode());
+        }
+    };
 
     return (
         <div className="button-bar">
@@ -28,18 +36,14 @@ const BooksBtns = () => {
                 </button>
 
                 {selecting ?
+                    (numSelected > 0 &&
                     <button
                         className='btn btn-top'
                         title='Delete Selected Items'
-                        onClick={() => {
-                            if (window.confirm(`Are you sure you want to delete selected item?`)) {
-                                dispatch(deleteSelected());
-                                dispatch(toggleSelectMode());
-                            }
-                        }}
+                        onClick={handleDeleteClick}
                     >
                         Delete
-                    </button>
+                    </button>)
                     :
                     <>
                         <button

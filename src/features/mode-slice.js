@@ -22,14 +22,15 @@ const modeSlice = createSlice({
         toggleAddMode: (state) => {
             state.adding = !state.adding;
         },
-        toggleSelectMode: (state) => {
-            state.selecting = !state.selecting;
-        },
         toggleShowFilters: (state) => {
             state.showFilters = !state.showFilters;
-        }
+        },
+        toggleSelectMode: (state) => {
+            state.selecting = !state.selecting;
+            state.numSelected = 0;
+        },
     }
 });
 
 export default modeSlice.reducer;
-export const { enterEditMode, leaveEditMode, toggleAddMode, toggleSelectMode, toggleShowFilters } = modeSlice.actions;
+export const { enterEditMode, leaveEditMode, toggleAddMode, toggleSelectMode, toggleShowFilters, incrementNumSelected, decrementNumSelected } = modeSlice.actions;

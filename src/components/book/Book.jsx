@@ -8,7 +8,6 @@ import SelectingIcon from './SelectingIcon';
 const Book = ({ book, isOnSelectingMode }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const selecting = useSelector((s) => s.mode.selecting);
 
   return (
     <div

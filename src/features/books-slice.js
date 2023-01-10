@@ -12,7 +12,8 @@ const initialState = {
     error: '',
     query: null,
     filter: null,
-    lang: null
+    lang: null,
+    numSelected: 0,
 };
 
 export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) => {
@@ -73,14 +74,18 @@ const booksSlice = createSlice({
         },
         deleteSelected: (state) => {
             state.books = state.books.filter((b) => !b.isSelected);
+            state.numSelected = 0;
         },
         cancelSelection: (state) => {
             state.books.forEach((b) =>
                 b.isSelected = false);
+            state.numSelected = 0;
         },
         toggleSelect: (state, { payload }) => {
             const indexBooks = state.books.findIndex((b) => b.id === payload);
-            state.books[indexBooks].isSelected = !state.books[indexBooks].isSelected;
+            const isSelected = state.books[indexBooks].isSelected;
+            isSelected ? state.numSelected-- : state.numSelected++;
+            state.books[indexBooks].isSelected = !isSelected;
         },
         toggleFavorite: (state, { payload }) => {
             const indexBooks = state.books.findIndex((b) => b.id === payload);
@@ -114,17 +119,20 @@ const booksSlice = createSlice({
         builder.addCase(fetchBooks.pending, (state) => {
             state.books = [];
             state.loading = true;
+            state.numSelected = 0;
             state.error = '';
         });
         builder.addCase(fetchBooks.fulfilled, (state, { payload }) => {
             state.books = payload;
             state.filteredBooks = payload;
             state.loading = false;
+            state.numSelected = 0;
             state.error = false;
         });
         builder.addCase(fetchBooks.rejected, (state, action) => {
             state.books = [];
             state.loading = false;
+            state.numSelected = 0;
             state.error = action.error ?? "Something went wrong.";
             console.log("error")
             Swal.fire({
