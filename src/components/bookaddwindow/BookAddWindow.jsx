@@ -6,6 +6,7 @@ import { addBook } from '../../features/books-slice';
 import { useState } from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import useEsc from '../../hooks/useEsc';
+import uuid from 'react-uuid';
 
 const BookAddWindow = () => {
   const dispatch = useDispatch();
@@ -26,7 +27,7 @@ const BookAddWindow = () => {
       <form className='book-edit-form' action="" onSubmit={() => {
         dispatch(addBook(
           {
-            "id": Math.random().toString(),
+            "id": uuid(),
             "volumeInfo": {
               title,
               authors,
