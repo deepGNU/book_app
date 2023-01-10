@@ -115,22 +115,25 @@
     }
 
     .button-bar {
-        /* position: absolute; */
-        /* top: 0; */
-        /* right: 10px; */
-        /* transform: translate(0, 50%); */
-        flex-direction: column;
-        background-color: var(--seal-brown);
-        border: solid #000 1px;
-        border-radius: 10px;
-        position: relative;
+        flex-direction: column-reverse;
+        z-index: 1;
     }
 
-    .hide-when-narrow {
+    .btns-collapsed {
         display: none;
     }
 
     .btn.btn-top.btn-expand {
-        display: inline-block;
+        display: block;
+        font-size: 2rem;
+        padding: 0 5px 0 8px;
+        line-height: 1rem;
+    }
+
+    .filters {
+        position: absolute;
+        top: 80px;
+        justify-content: flex-start;
+        max-width: 70%;
     }
 }
