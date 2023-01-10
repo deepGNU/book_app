@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { ImFilter } from 'react-icons/im';
-// import { RiDeleteBin5Fill as Delete } from 'react-icons/ri';+
 import { GoKebabHorizontal as Kebab } from 'react-icons/go';
 import { toggleSelectMode, toggleAddMode, toggleShowFilters } from '../../features/mode-slice';
 import { cancelSelection, deleteSelected } from '../../features/books-slice';
@@ -11,21 +10,24 @@ const BooksBtns = () => {
     const selecting = useSelector((s) => s.mode.selecting);
     const showFilters = useSelector((s) => s.mode.showFilters);
     const [hideBtnsWhenNarrow, setHideBtnsWhenNarrow] = useState(true);
+    const getHideNarrowClass = () => (hideBtnsWhenNarrow && !selecting) ? 'hide-when-narrow' : '';
 
     return (
         <div className="button-bar">
-            {!selecting &&
+            <div>
                 <button
-                    className='btn btn-top btn-expand'
-                    title={hideBtnsWhenNarrow ? 'Show Buttons' : 'Hide Buttons'}
-                    onClick={() => setHideBtnsWhenNarrow(!hideBtnsWhenNarrow)}
+                    className={`btn btn-top ${getHideNarrowClass()}`}
+                    title={`${selecting ? 'Cancel Selection' : 'Select Items'}`}
+                    onClick={() => {
+                        if (selecting) dispatch(cancelSelection());
+                        if (showFilters) dispatch(toggleShowFilters());
+                        dispatch(toggleSelectMode());
+                    }}
                 >
-                    <Kebab />
-                </button>}
+                    {selecting ? 'Cancel' : 'Select'}
+                </button>
 
-
-            <div className={(hideBtnsWhenNarrow && !selecting) ? 'hide-when-narrow' : ''}>
-                {selecting &&
+                {selecting ?
                     <button
                         className='btn btn-top'
                         title='Delete Selected Items'
@@ -37,24 +39,11 @@ const BooksBtns = () => {
                         }}
                     >
                         Delete
-                    </button>}
-
-                <button
-                    className='btn btn-top'
-                    title={`${selecting ? 'Cancel Selection' : 'Select Items'}`}
-                    onClick={() => {
-                        if (selecting) dispatch(cancelSelection());
-                        if (showFilters) dispatch(toggleShowFilters());
-                        dispatch(toggleSelectMode());
-                    }}
-                >
-                    {selecting ? 'Cancel' : 'Select'}
-                </button>
-
-                {!selecting &&
+                    </button>
+                    :
                     <>
                         <button
-                            className='btn btn-top'
+                            className={`btn btn-top ${getHideNarrowClass()}`}
                             title='Filters'
                             onClick={() => dispatch(toggleShowFilters())}
                         >
@@ -63,13 +52,25 @@ const BooksBtns = () => {
                         </button>
 
                         <button
-                            className='btn btn-top'
+                            className={`btn btn-top ${getHideNarrowClass()}`}
                             title='Add Book'
                             onClick={() => dispatch(toggleAddMode())}
                         >
                             Add Book
                         </button>
-                    </>}
+
+                        <button
+                            className='btn btn-top btn-expand'
+                            title={hideBtnsWhenNarrow ? 'Show Buttons' : 'Hide Buttons'}
+                            onClick={() => {
+                                setHideBtnsWhenNarrow(!hideBtnsWhenNarrow);
+                                if (showFilters) dispatch(toggleShowFilters());
+                            }}
+                        >
+                            <Kebab />
+                        </button>
+                    </>
+                }
             </div>
         </div>
     );

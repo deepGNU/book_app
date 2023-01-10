@@ -1,5 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import Swal from 'sweetalert2';
+// import favoritesSlice from "./favorites-slice";
+import * as favSlice from './favorites-slice';
+// import { editFavorite } from "./favorites-slice";
 
 const initialState = {
     books: [],
@@ -40,11 +43,12 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
     )
         .then((response) => response.json())
         .then((json) => json.items)
-        .then((books) => books.map((b) => ({
-            ...b,
-            isFavorite: isInFavs(b.id),
-            isSelected: false,
-        })));
+        .then((books) => books.map((b) => isInFavs(b.id) ? favBooks.find((f) => f.id === b.id) :
+            ({
+                ...b,
+                isFavorite: false,
+                isSelected: false,
+            })));
 });
 
 const booksSlice = createSlice({
@@ -57,7 +61,7 @@ const booksSlice = createSlice({
         addBook: (state, { payload }) => {
             state.books.splice(0, 0, payload);
         },
-        editBook: (state, { payload }) => {
+        editBook: (state, { payload }, dispatch) => {
             const index = state.books.findIndex((b) => b.id === payload.id);
             if (index !== -1)
                 state.books[index] = payload;

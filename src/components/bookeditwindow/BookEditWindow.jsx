@@ -3,6 +3,7 @@ import './BookEditWindow.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { leaveEditMode } from '../../features/mode-slice';
 import { editBook } from '../../features/books-slice';
+import { editFavorite } from '../../features/favorites-slice';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai';
@@ -13,7 +14,6 @@ const BookEditWindow = () => {
     useEsc(() => dispatch(leaveEditMode()));
     const editingId = useSelector((s) => s.mode.editingId);
     const book = useSelector((s) => [...s.book.books, ...s.favorite.favBooks]).find((b) => b.id === editingId);
-    console.log(editingId);
     const [title, setTitle] = useState(book.volumeInfo.title);
     const [authors, setAuthors] = useState(book.volumeInfo.authors);
     useEffect(() => {
@@ -28,8 +28,6 @@ const BookEditWindow = () => {
                 title='Close'
                 onClick={() => dispatch(leaveEditMode())}
             >
-                {/* <AiFillCloseSquare /> */}
-                {/* <FaWindowClose /> */}
                 <AiFillCloseCircle />
             </button>
             <form className='book-edit-form' action="" onSubmit={() => {
@@ -42,6 +40,16 @@ const BookEditWindow = () => {
                             authors,
                         }
                     }));
+                dispatch(editFavorite(
+                    {
+                        ...book,
+                        volumeInfo: {
+                            ...book.volumeInfo,
+                            title,
+                            authors,
+                        }
+                    }
+                ));
                 dispatch(leaveEditMode());
             }}>
                 {/* <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
@@ -57,6 +65,6 @@ const BookEditWindow = () => {
             </form>
         </div>
     )
-}
+};
 
-export default BookEditWindow
+export default BookEditWindow;

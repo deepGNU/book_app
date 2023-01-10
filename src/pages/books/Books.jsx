@@ -1,8 +1,8 @@
 import './Books.css';
 import { useSelector } from "react-redux";
 import BooksHeader from '../../components/booksheader/BooksHeader';
-import BookItem from '../../components/bookitem/BookItem';
 import LoaderSpinner from '../../components/loaderspinner/LoaderSpinner';
+import Book from '../../components/book/Book';
 
 const Books = () => {
     const loading = useSelector((s) => s.book.loading);
@@ -15,7 +15,7 @@ const Books = () => {
 
             <div className='books-div'>
                 {books.map((b) =>
-                    <BookItem key={b.id} book={b} />
+                    <Book key={b.id} book={b} />
                 )}
             </div>
         </>

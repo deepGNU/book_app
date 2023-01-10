@@ -123,6 +123,7 @@
         background-color: var(--seal-brown);
         border: solid #000 1px;
         border-radius: 10px;
+        position: relative;
     }
 
     .hide-when-narrow {
@@ -130,6 +131,6 @@
     }
 
     .btn.btn-top.btn-expand {
-        display: block;
+        display: inline-block;
     }
 }

@@ -1,6 +1,6 @@
 // import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import BookItem from "../../components/bookitem/BookItem";
+import Book from "../../components/book/Book";
 // import { updateFavorites } from "../../features/books-slice";
 
 const Favorites = () => {
@@ -16,7 +16,7 @@ const Favorites = () => {
   return (
     favorites  &&
     <div className="books-div">
-      {favorites.map((b) => <BookItem key={b.id} book={b} />)}
+      {favorites.map((b) => <Book key={b.id} book={b} />)}
     </div>
   );
 };
