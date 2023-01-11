@@ -11,31 +11,35 @@ import { combineReducers } from 'redux';
 import bookReducer from "../features/books-slice";
 import modeReducer from "../features/mode-slice";
 import favReducer from '../features/favorites-slice';
-
-const rootReducer = combineReducers({
-    book: bookReducer,
-    favorite: favReducer,
-    mode: modeReducer,
-});
+import thunk from "redux-thunk";
 
 const persistedReducer = persistReducer(
-    {
-        key: 'root', // The key for the persisted state
-        storage, // The storage engine to use (e.g. localStorage)
-    },
-    rootReducer,
-);
+  {
+    key: 'root', // The key for the persisted state
+    storage, // The storage engine to use (e.g. localStorage)
+  },
+  favReducer,
+  );
+  
+  const rootReducer = combineReducers({
+      book: bookReducer,
+      // favorite: favReducer,
+      favorite: persistedReducer,
+      mode: modeReducer,
+  });
 
 // const store = configureStore(persistedReducer);
 
 const store = configureStore({
-    reducer: persistedReducer,
-    middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware({
-        serializableCheck: {
-          ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-        },
-      }),
+    // reducer: persistedReducer,
+    reducer: rootReducer,
+    middleware: [thunk],
+    // middleware: (getDefaultMiddleware) =>
+    //   getDefaultMiddleware({
+    //     serializableCheck: {
+    //       ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+    //     },
+    //   }),
 });
 
 export const persistor = persistStore(store);
