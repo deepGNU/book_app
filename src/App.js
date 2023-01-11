@@ -11,9 +11,11 @@ import BookEditWindow from "./components/bookeditwindow/BookEditWindow";
 import { useSelector } from "react-redux";
 import { ToastContainer } from 'react-toastify';
 import BookAddWindow from "./components/bookaddwindow/BookAddWindow";
+import useScrollToTopOfNewPage from "./hooks/useScrollToTopOfNewPage";
 
 function App() {
   useBooks();
+  useScrollToTopOfNewPage();
   const editing = useSelector((s) => s.mode.editing);
   const adding = useSelector((s) => s.mode.adding);
   const loading = useSelector((s) => s.book.loading);
