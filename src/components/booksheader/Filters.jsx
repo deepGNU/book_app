@@ -30,6 +30,17 @@ const Filters = () => {
     return (
         <div ref={ref} className={`${showFilters ? 'filters' : 'hide'}`}>
             <div>
+                <label htmlFor="rating">Minimal Rating:&nbsp;</label>
+
+                <select name="" id="rating" value={filterRating}
+                    onChange={(e) => setFilterRating(e.target.value)}
+                >
+                    <option value="">No Filter</option>
+                    {[...Array(5).keys()].map((x) => <option key={x} value={x + 1}>{x + 1}</option>)}
+                </select>
+            </div>
+            
+            <div>
                 <label htmlFor="published-after">Published After:&nbsp;</label>
 
                 <select name="" id="published-after"
@@ -50,16 +61,6 @@ const Filters = () => {
                 >
                     <option value="">No Filter</option>
                     {Array.from({ length: 500 }, (_, i) => new Date().getFullYear() - i).map((y) => <option key={y} value={y}>{y}</option>)}
-                </select>
-            </div>
-            <div>
-                <label htmlFor="rating">Minimal Rating:&nbsp;</label>
-
-                <select name="" id="rating" value={filterRating}
-                    onChange={(e) => setFilterRating(e.target.value)}
-                >
-                    <option value="">No Filter</option>
-                    {[...Array(5).keys()].map((x) => <option key={x} value={x + 1}>{x + 1}</option>)}
                 </select>
             </div>
         </div>

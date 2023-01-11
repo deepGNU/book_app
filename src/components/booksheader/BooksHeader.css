@@ -139,12 +139,22 @@
 }
 
 @media screen and (max-width: 450px) {
+
+    .books-header {
+        margin-bottom: 2px;
+        padding: 0;
+    }
+
     .filters div, .btn.btn-top {
         font-size: 0.8rem;
     }
 
     .search-bar {
         font-size: 1rem;
+    }
+
+    .filters {
+        top: 55px;
     }
 
     .btn.btn-top {
