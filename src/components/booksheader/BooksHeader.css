@@ -137,3 +137,22 @@
         max-width: 70%;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .filters div, .btn.btn-top {
+        font-size: 0.8rem;
+    }
+
+    .search-bar {
+        font-size: 1rem;
+    }
+
+    .btn.btn-top {
+        font-size: 0.7rem;
+        padding: 5px;
+    }
+
+    .btn.btn-top.btn-expand {
+        font-size: 1.5rem;
+    }
+}
