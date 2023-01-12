@@ -127,18 +127,18 @@ const booksSlice = createSlice({
             state.filteredBooks = payload;
             state.loading = false;
             state.numSelected = 0;
-            state.error = false;
+            state.error = '';
         });
         builder.addCase(fetchBooks.rejected, (state, action) => {
             state.books = [];
             state.loading = false;
             state.numSelected = 0;
             state.error = action.error ?? "Something went wrong.";
-            console.log("error")
-            Swal.fire({
-                icon: "error",
-                title: "Unable to load books.",
-            });
+            // console.log("error")
+            // Swal.fire({
+            //     icon: "error",
+            //     title: "Unable to load books.",
+            // });
         });
     }
 });
