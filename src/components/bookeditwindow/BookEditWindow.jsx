@@ -58,10 +58,9 @@ const BookEditWindow = () => {
                 <label htmlFor="title">Title</label>
                 <input id='title' type="text" defaultValue={title} onChange={(e) => setTitle(e.target.value)} />
                 <hr />
-
                 <label htmlFor="authors">Authors</label>
                 <input id='authors' type="text" defaultValue={authors} onChange={(e) => setAuthors(e.target.value)} />
-
+                <hr />
                 <button>Submit</button>
             </form>
         </div>

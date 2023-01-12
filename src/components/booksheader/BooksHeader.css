@@ -145,7 +145,8 @@
         padding: 0;
     }
 
-    .filters div, .btn.btn-top {
+    .filters div,
+    .btn.btn-top {
         font-size: 0.8rem;
     }
 
@@ -165,4 +166,38 @@
     .btn.btn-top.btn-expand {
         font-size: 1.5rem;
     }
+}
+
+@media screen and (max-width: 300px) {
+
+    .books-header *,
+    .btn.btn-top {
+        font-size: 0.5rem;
+    }
+
+    .button-bar {}
+
+    .btn.btn-top {
+        padding: 1px;
+        margin: 1px;
+    }
+
+    .filters {
+        background: var(--seal-brown);
+        top: 35px;
+        /* height: 8px; */
+    }
+
+    .filters div {
+        padding: 2px;
+        margin: 0;
+    }
+
+    .filters * {
+        font-size: 0.4rem;
+    }
+
+    /* .search-bar * {
+        font-size: 0.5rem;
+    } */
 }

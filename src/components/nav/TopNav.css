@@ -33,3 +33,15 @@
     margin-right: 10%;
     margin-left: 50px;
 }
+
+@media screen and (max-width: 300px) {
+    .top-nav * {
+        font-size: 0.5rem;
+        max-width: 100vw;
+    }
+
+    .top-nav .navbar-brand {
+        font-size: 0.8rem;
+        margin-left: 2px;
+    }
+}
