@@ -6,10 +6,8 @@ import BooksBtns from './BooksBtns';
 const BooksHeader = () => {
     return (
         <div className='books-header'>
-            <div className='top-books-header'>
-                <SearchBar />
-                <BooksBtns />
-            </div>
+            <SearchBar />
+            <BooksBtns />
             <Filters />
         </div>
     );

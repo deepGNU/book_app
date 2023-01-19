@@ -1,10 +1,6 @@
-import { useRef } from 'react';
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { filterBooks } from '../../features/books-slice';
-// import { toggleShowFilters } from '../../features/mode-slice';
-// import useOutsideAlerter from '../../hooks/useOutsideClick';
-// import { AiFillCloseCircle } from 'react-icons/ai';
 
 const Filters = () => {
     const dispatch = useDispatch();
@@ -13,9 +9,6 @@ const Filters = () => {
     const [datePrior, setDatePrior] = useState();
     const [dateAfter, setDateAfter] = useState();
     const [filterRating, setFilterRating] = useState();
-
-    const ref = useRef();
-    // useOutsideAlerter(ref, () => dispatch(toggleShowFilters()));
 
     useEffect(() => {
         const booksFiltered = books.filter((b) => {
@@ -28,22 +21,22 @@ const Filters = () => {
     }, [dispatch, books, dateAfter, datePrior, filterRating]);
 
     return (
-        <div ref={ref} className={`${showFilters ? 'filters' : 'hide'}`}>
-            <div>
+        <div className={`${showFilters ? 'filters' : 'hide'}`}>
+            <div className='filter-div'>
                 <label htmlFor="rating">Minimal Rating:&nbsp;</label>
-
-                <select name="" id="rating" value={filterRating}
+                <select
+                    name="" id="rating" value={filterRating}
                     onChange={(e) => setFilterRating(e.target.value)}
                 >
                     <option value="">No Filter</option>
                     {[...Array(5).keys()].map((x) => <option key={x} value={x + 1}>{x + 1}</option>)}
                 </select>
             </div>
-            
-            <div>
-                <label htmlFor="published-after">Published After:&nbsp;</label>
 
-                <select name="" id="published-after"
+            <div className='filter-div'>
+                <label htmlFor="published-after">Published After:&nbsp;</label>
+                <select
+                    name="" id="published-after"
                     value={new Date(dateAfter).getFullYear().toString()}
                     onChange={(e) => setDateAfter(Date.parse(e.target.value))}
                 >
@@ -52,10 +45,10 @@ const Filters = () => {
                 </select>
             </div>
 
-            <div>
+            <div className='filter-div'>
                 <label htmlFor="published-prior">Published Before:&nbsp;</label>
-
-                <select name="" id="published-prior"
+                <select
+                    name="" id="published-prior"
                     value={new Date(datePrior).getFullYear().toString()}
                     onChange={(e) => setDatePrior(Date.parse(e.target.value))}
                 >

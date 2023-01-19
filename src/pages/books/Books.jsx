@@ -17,7 +17,7 @@ const Books = () => {
             {loading && <LoaderSpinner />}
 
             <div className='books-div'>
-                {books.map((b) =>
+                {books && books.map((b) =>
                     <Book key={b.id} book={b} isOnSelectingMode={selecting} />
                 )}
             </div>

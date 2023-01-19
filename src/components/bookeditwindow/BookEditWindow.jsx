@@ -4,8 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { leaveEditMode } from '../../features/mode-slice';
 import { editBook } from '../../features/books-slice';
 import { editFavorite } from '../../features/favorites-slice';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import useEsc from '../../hooks/useEsc';
 

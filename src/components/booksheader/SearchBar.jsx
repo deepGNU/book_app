@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { SlMagnifier } from 'react-icons/sl';
+import { SlMagnifier as SearchIcon } from 'react-icons/sl';
 import { changeQuery } from '../../features/books-slice';
 import useFocus from '../../hooks/useFocus';
 
@@ -24,7 +24,7 @@ const SearchBar = () => {
                     ref={ref}
                 />
                 <button title='Search'>
-                    <SlMagnifier />
+                    <SearchIcon />
                 </button>
             </form>
     );
