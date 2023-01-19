@@ -9,10 +9,11 @@ import { useState } from 'react';
 const BooksBtns = () => {
     const dispatch = useDispatch();
     const selecting = useSelector((s) => s.mode.selecting);
+    const adding = useSelector((s) => s.mode.adding);
     const numSelected = useSelector((s) => s.book.numSelected);
     const showFilters = useSelector((s) => s.mode.showFilters);
     const books = useSelector((s) => s.book.books);
-    const [isMenuCollapsed, setIsMenuCollapsed] = useState(true);
+    const [isMenuCollapsed, setIsMenuCollapsed] = useState(!showFilters);
 
     const handleSelectClick = () => {
         if (selecting) dispatch(cancelSelection());
@@ -21,7 +22,7 @@ const BooksBtns = () => {
     };
 
     const handleDeleteClick = () => {
-        if (window.confirm(`Are you sure you want to delete ${numSelected > 1 ? numSelected + ' items' : 'item'}?`)) {
+        if (window.confirm(`Delete ${numSelected > 1 ? numSelected + ' items' : 'item'}?`)) {
             for (const b of books.filter((b) => b.isSelected))
                 dispatch(removeFavorite(b.id));
             dispatch(deleteSelected());
@@ -29,7 +30,10 @@ const BooksBtns = () => {
         }
     };
 
-    const handleFilterClick = () => dispatch(toggleShowFilters());
+    const handleFilterClick = () => {
+        if (!showFilters) setIsMenuCollapsed(false);
+        dispatch(toggleShowFilters());
+    }
 
     const handleAddBookClick = () => dispatch(toggleAddMode());
 
@@ -38,26 +42,44 @@ const BooksBtns = () => {
         if (showFilters) dispatch(toggleShowFilters());
     };
 
+    let filterBtnClasses =
+        `btn btn-top${(isMenuCollapsed ? ' hide-if-narrow' : '') +
+        (selecting ? ' hide' : '') + (showFilters ? ' btn-active' : '')}`;
+
+    let addBtnClasses =
+        `btn btn-top${(isMenuCollapsed ? ' hide-if-narrow' : '') +
+        (selecting ? ' hide' : '') + (adding ? ' btn-active' : '')}`;
+
+    let selectBtnClasses =
+        `btn btn-top${(isMenuCollapsed && !selecting) ?
+            ' hide-if-narrow' : '' + (selecting ? ' btn-active' : '')}`;
+
+    let deleteBtnClasses =
+        `btn btn-top${!selecting ? ' hide' : ''}`;
+
+    let expandBtnClasses =
+        `btn btn-top btn-expand${selecting ? ' hide' : ''}`;
+
     return (
         <div className="button-bar">
             <button
-                className={`btn btn-top ${isMenuCollapsed && 'hide-if-narrow'} ${selecting && 'hide'}`}
-                title='Filters'
+                className={filterBtnClasses}
+                title={`${showFilters ? 'Hide ' : ''}Filters`}
                 onClick={handleFilterClick}
             >
                 <ImFilter /> Filters
             </button>
 
             <button
-                className={`btn btn-top ${isMenuCollapsed && 'hide-if-narrow'} ${selecting && 'hide'}`}
-                title='Add Book'
+                className={addBtnClasses}
+                title={adding ? 'Close Form' : 'Add Book'}
                 onClick={handleAddBookClick}
             >
                 Add Book
             </button>
 
             <button
-                className={`btn btn-top ${isMenuCollapsed && !selecting && 'hide-if-narrow'}`}
+                className={selectBtnClasses}
                 title={`${selecting ? 'Cancel Selection' : 'Select Items'}`}
                 onClick={handleSelectClick}
             >
@@ -65,15 +87,16 @@ const BooksBtns = () => {
             </button>
 
             <button
-                className={`btn btn-top ${(!selecting || numSelected == 0) && 'hide'}`}
+                className={deleteBtnClasses}
                 title='Delete Selected Items'
                 onClick={handleDeleteClick}
+                disabled={numSelected === 0}
             >
                 Delete
             </button>
 
             <button
-                className={`btn btn-top btn-expand ${selecting && 'hide'}`}
+                className={expandBtnClasses}
                 title={isMenuCollapsed ? 'Expand' : 'Collapse'}
                 onClick={handleExpandCollapseClick}
             >
