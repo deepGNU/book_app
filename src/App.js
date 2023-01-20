@@ -32,7 +32,7 @@ function App() {
         <Route path="/books/:bookId" element={<BookDetails />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/about" element={<About />} />
-        <Route path="/notfound404" element={<NotFound404 />} />
+        <Route path="*" element={<NotFound404 />} />
       </Routes>
     </div>
   );
