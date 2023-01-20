@@ -9,7 +9,7 @@ const BookDetails = () => {
     const book = useSelector((s) => [...s.book.books, ...s.favorite.favBooks]).find((b) => b.id === bookId);
 
     if (!book) {
-        return <Navigate to='/books' />;
+        return <Navigate to='/notfound404' />;
     }
 
     const languageName = new Intl.DisplayNames(['en'], { type: 'language' });
