@@ -1,4 +1,11 @@
 .about-div {
+    height: calc(100vh - var(--nav-height));
     background-color: antiquewhite;
-    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.about-txt {
+    width: 80%;
+    margin: auto;
 }
