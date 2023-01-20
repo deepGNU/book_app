@@ -1,6 +1,6 @@
 import './Books.css';
 import { useSelector } from "react-redux";
-import BooksHeader from '../../components/booksheader/BooksHeader';
+import BooksHeader from '../../components/books-header/BooksHeader';
 import LoaderSpinner from '../../components/loaderspinner/LoaderSpinner';
 import Book from '../../components/book/Book';
 import useError from '../../hooks/useError';
