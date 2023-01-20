@@ -1,7 +1,7 @@
 import './BooksHeader.css';
 import SearchBar from './SearchBar';
-import Filters from './Filters';
 import BooksBtns from './BooksBtns';
+import Filters from './Filters';
 
 const BooksHeader = () => {
     return (

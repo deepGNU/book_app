@@ -15,18 +15,18 @@ const SearchBar = () => {
     }, [dispatch, query]);
 
     return (
-            <form action="/" method="get" className='search-bar'>
-                <input
-                    name='search_query'
-                    id='search'
-                    type="text"
-                    placeholder='Search'
-                    ref={ref}
-                />
-                <button title='Search'>
-                    <SearchIcon />
-                </button>
-            </form>
+        <form action='/' method='get' className='search-bar'>
+            <input
+                name='search_query'
+                id='search'
+                type='text'
+                placeholder='Search'
+                ref={ref}
+            />
+            <button title='Search'>
+                <SearchIcon />
+            </button>
+        </form>
     );
 };
 
