@@ -21,26 +21,30 @@ const BookDetails = () => {
                 className='btn btn-back'
                 onClick={() => navigate(-1)}
             >
-                <IoCaretBack /> 
+                <IoCaretBack />
             </button>
 
             {book.volumeInfo.imageLinks && <img className='img-details' src={book.volumeInfo.imageLinks.thumbnail} alt="Book Cover" />}
 
             <div className="text-details">
                 <h1>{book.volumeInfo.title}</h1>
-                <h2>{book.volumeInfo.subtitle}</h2>
+                <h2>{book.volumeInfo.subtitle ?? ""}</h2>
                 <p>Authors: {book.volumeInfo.authors}</p>
                 <p>Desciption: {book.volumeInfo.description ?? "unavailable."}</p>
                 <p>Publisher: {book.volumeInfo.publisher ?? "unavailable."}</p>
-                <p>Published date: {book.volumeInfo.publishedDate ?? "unavailable."}</p>
-                <p>Language: {languageName.of(book.volumeInfo.language) ?? "unavailable."}</p>
+                <p>Published Date: {book.volumeInfo.publishedDate ?? "unavailable."}</p>
+                <p>Language: {(book.volumeInfo.language && languageName.of(book.volumeInfo.language)) ?? "unavailable."}</p>
+                <p>Average Rating: {book.volumeInfo.averageRating ?? "unavailable"}</p>
             </div>
 
             <div className='btns-details'>
-                <a href={book.volumeInfo.previewLink ?? "unavailable."}>Preview at Google Books</a>
+                {book.volumeInfo.previewLink &&
+                    <a href={book.volumeInfo.previewLink}>Preview at Google Books</a>}
                 <br />
-                <a href={book.volumeInfo.infoLink ?? "unavailable."}>Info at Google Books</a>
-                {book.saleInfo.isEbook &&
+                {book.volumeInfo.infoLink &&
+                    <a href={book.volumeInfo.infoLink}>Info at Google Books</a>}
+
+                {book.saleInfo && book.accessInfo && book.saleInfo.isEbook &&
                     <>
                         {book.accessInfo.epub.isAvailable &&
                             <a href={book.accessInfo.epub.downloadLink}>
