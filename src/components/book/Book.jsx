@@ -1,13 +1,15 @@
 import './Book.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { toggleSelect } from '../../features/books-slice';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import BookBtns from './BookBtns';
 import SelectingIcon from './SelectingIcon';
 
 const Book = ({ book, isOnSelectingMode }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
+  const path = location.pathname === '/' ? '/books' : location.pathname;
 
   return (
     <div
@@ -17,7 +19,7 @@ const Book = ({ book, isOnSelectingMode }) => {
         ${!isOnSelectingMode && ' not-selecting'}`}
       title={isOnSelectingMode ? 'Select Item' : 'See Details'}
       onClick={() => isOnSelectingMode ? dispatch(toggleSelect(book.id))
-        : navigate(`/books/${book.id}`)}
+        : navigate(`${path}/${book.id}`)}
     >
 
       <div className='top-book-card'>

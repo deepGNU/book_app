@@ -7,10 +7,10 @@ import BookDetails from "./pages/bookdetails/BookDetails";
 import Books from "./pages/books/Books";
 import Favorites from "./pages/favorites/Favorites";
 import NotFound404 from "./pages/notfound404/NotFound404";
-import BookEditWindow from "./components/bookeditwindow/BookEditWindow";
+import BookEditWindow from "./components/book-add-edit/BookEditForm";
 import { useSelector } from "react-redux";
 import { ToastContainer } from 'react-toastify';
-import BookAddWindow from "./components/bookaddwindow/BookAddWindow";
+import BookAddWindow from "./components/book-add-edit/BookAddForm";
 import useScrollToTopOfNewPage from "./hooks/useScrollToTopOfNewPage";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
   const loading = useSelector((s) => s.book.loading);
 
   return (
-    <div className={`App ${loading && 'overflow-hidden'}`}>
+    <div className={`App${loading ? ' overflow-hidden' : ''}`}>
       <ToastContainer />
       <TopNav />
       {editing && <BookEditWindow />}
@@ -29,8 +29,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Books />} />
         <Route path="/books" element={<Books />} />
-        <Route path="/books/:bookId" element={<BookDetails />} />
         <Route path="/favorites" element={<Favorites />} />
+        <Route path="/books/:bookId" element={<BookDetails />} />
+        <Route path="/favorites/:bookId" element={<BookDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound404 />} />
       </Routes>
