@@ -23,6 +23,10 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
                 authors: e.target.id === 'authors' ? e.target.value : prev.volumeInfo.authors,
                 publisher: e.target.id === 'publisher' ? e.target.value : prev.volumeInfo.publisher,
                 description: e.target.id === 'description' ? e.target.value : prev.volumeInfo.description,
+                imageLinks: {
+                    ...prev.volumeInfo.imageLinks,
+                    thumbnail: e.target.id === 'image' ? e.target.value : prev.volumeInfo.imageLinks?.thumbnail
+                }
             }
         }));
     };
@@ -51,6 +55,16 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
                     < hr />
                 </React.Fragment>
             )}
+
+            <label htmlFor="image">Image URL</label>
+            <input
+                id='image'
+                type="text"
+                value={book.volumeInfo.imageLinks?.thumbnail ?? ""}
+                onChange={handleChange}
+                onKeyDown={handleEnter}
+            />
+            <hr />
 
             <label htmlFor="description">Description</label>
             <textarea
