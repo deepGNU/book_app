@@ -6,13 +6,14 @@ const useError = () => {
     const error = useSelector((s) => s.book.error);
 
     useEffect(() => {
-        if (error != '') {
+        if (error !== '') {
             Swal.fire({
                 icon: "error",
-                title: "Unable to load book.",
+                title: "Error",
+                text: "No results found.",
             });
         }
     }, [error]);
-}
+};
 
 export default useError;
