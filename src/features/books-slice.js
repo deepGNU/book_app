@@ -1,8 +1,4 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import Swal from 'sweetalert2';
-// import favoritesSlice from "./favorites-slice";
-import * as favSlice from './favorites-slice';
-// import { editFavorite } from "./favorites-slice";
 
 const initialState = {
     books: [],
@@ -11,8 +7,6 @@ const initialState = {
     loading: false,
     error: '',
     query: null,
-    filter: null,
-    lang: null,
     numSelected: 0,
 };
 
@@ -30,15 +24,13 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
     //         isFavorite: false
     //     })));
     const API_KEY = 'AIzaSyBvRxCh4SRMHlh1s87QhItZwqVOEqKNyR0';
-    const { query, filter, lang } = getState().book;
+    const { query } = getState().book;
     const { favBooks } = getState().favorite;
     const isInFavs = (id) => favBooks.findIndex((f) => f.id === id) !== -1;
 
     return fetch(
         `https://www.googleapis.com/books/v1/volumes` +
         `?q=${query}` +
-        (lang !== undefined ?? `&langRestrict=${lang}`) +
-        (filter !== undefined ?? `&filter=${filter}`) +
         `&maxResults=40` +
         `&key=${API_KEY}`
     )
@@ -131,14 +123,10 @@ const booksSlice = createSlice({
         });
         builder.addCase(fetchBooks.rejected, (state, action) => {
             state.books = [];
+            state.filteredBooks = [];
             state.loading = false;
             state.numSelected = 0;
             state.error = action.error ?? "Something went wrong.";
-            // console.log("error")
-            // Swal.fire({
-            //     icon: "error",
-            //     title: "Unable to load books.",
-            // });
         });
     }
 });
