@@ -14,9 +14,11 @@ const Favorites = () => {
   // }, [books]);
 
   return (
-    favorites  &&
+    favorites &&
     <div className="books-div">
-      {favorites.map((b) => <Book key={b.id} book={b} isOnSelectingMode={false} />)}
+      {favorites.length > 0 ?
+        favorites.map((b) => <Book key={b.id} book={b} isOnSelectingMode={false} />)
+        : (<h1>No books to show.</h1>)}
     </div>
   );
 };
