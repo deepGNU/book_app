@@ -9,6 +9,11 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
     const inputFields = ['title', 'authors', 'publisher'];
     useEsc(onClose);
 
+    const handleClose = (e) => {
+        e.preventDefault();
+        onClose();
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         onSubmit(book);
@@ -19,13 +24,13 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
             ...prev,
             volumeInfo: {
                 ...prev.volumeInfo,
-                title: e.target.id === 'title' ? e.target.value : prev.volumeInfo.title,
-                authors: e.target.id === 'authors' ? e.target.value : prev.volumeInfo.authors,
-                publisher: e.target.id === 'publisher' ? e.target.value : prev.volumeInfo.publisher,
-                description: e.target.id === 'description' ? e.target.value : prev.volumeInfo.description,
+                title: e.target.id === 'title' ? e.target.value : prev.volumeInfo?.title ?? "",
+                authors: e.target.id === 'authors' ? e.target.value : prev.volumeInfo?.authors ?? "",
+                publisher: e.target.id === 'publisher' ? e.target.value : prev.volumeInfo?.publisher ?? "",
+                description: e.target.id === 'description' ? e.target.value : prev.volumeInfo?.description ?? "",
                 imageLinks: {
-                    ...prev.volumeInfo.imageLinks,
-                    thumbnail: e.target.id === 'image' ? e.target.value : prev.volumeInfo.imageLinks?.thumbnail
+                    ...prev.volumeInfo?.imageLinks,
+                    thumbnail: e.target.id === 'image' ? e.target.value : prev.volumeInfo?.imageLinks?.thumbnail ?? ""
                 }
             }
         }));
@@ -40,7 +45,7 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
 
     return (
         <form className='book-form position-fixed-centered' onSubmit={handleSubmit}>
-            <CloseBtn onClose={onClose} />
+            <CloseBtn onClose={handleClose} />
 
             {inputFields.map(field =>
                 <React.Fragment key={field}>
@@ -48,7 +53,7 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
                     <input
                         id={field}
                         type="text"
-                        value={book.volumeInfo[field]}
+                        value={book.volumeInfo ? book.volumeInfo[field] : ""}
                         onChange={handleChange}
                         onKeyDown={handleEnter}
                     />
@@ -60,7 +65,7 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
             <input
                 id='image'
                 type="text"
-                value={book.volumeInfo.imageLinks?.thumbnail ?? ""}
+                value={book.volumeInfo?.imageLinks?.thumbnail ?? ""}
                 onChange={handleChange}
                 onKeyDown={handleEnter}
             />
@@ -69,7 +74,7 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
             <label htmlFor="description">Description</label>
             <textarea
                 id='description'
-                value={book.volumeInfo.description}
+                value={book.volumeInfo?.description ?? ""}
                 onChange={handleChange}
             />
             <hr />

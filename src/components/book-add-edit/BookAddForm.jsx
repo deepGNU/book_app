@@ -8,13 +8,7 @@ const BookAddForm = () => {
   const dispatch = useDispatch();
 
   const emptyBook = {
-    "id": uuid(),
-    "volumeInfo": {
-      "title": "",
-      "authors": "",
-      "publisher": "",
-      "description": "",
-    },
+    "id": uuid()
   };
 
   const handleSubmit = (book) => {

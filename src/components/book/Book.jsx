@@ -14,26 +14,26 @@ const Book = ({ book, isOnSelectingMode }) => {
   return (
     <div
       className={`book-card
-        ${isOnSelectingMode && !book.isSelected && ' faded'}
-        ${book.isSelected && ' book-selected'}
+        ${isOnSelectingMode && !book?.isSelected && ' faded'}
+        ${book?.isSelected && ' book-selected'}
         ${!isOnSelectingMode && ' not-selecting'}`}
       title={isOnSelectingMode ? 'Select Item' : 'See Details'}
-      onClick={() => isOnSelectingMode ? dispatch(toggleSelect(book.id))
-        : navigate(`${path}/${book.id}`)}
+      onClick={() => isOnSelectingMode ? dispatch(toggleSelect(book?.id))
+        : navigate(`${path}/${book?.id}`)}
     >
 
       <div className='top-book-card'>
-        <img className='img-book-card' src={book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail} alt="" />
+        <img className='img-book-card' src={book?.volumeInfo?.imageLinks?.thumbnail} alt='Cover' />
 
         <div className='text-book-card'>
           <hr />
 
-          <h5 className='book-title'>{book.volumeInfo.title}</h5>
+          <h5 className='book-title'>{book?.volumeInfo?.title}</h5>
 
           <p>
-            {book.volumeInfo.authors}
+            {book?.volumeInfo?.authors}
             &nbsp;&#9679;&nbsp;
-            {book.volumeInfo.publishedDate}
+            {book?.volumeInfo?.publishedDate}
           </p>
 
           <hr />
@@ -41,7 +41,7 @@ const Book = ({ book, isOnSelectingMode }) => {
       </div>
 
       {isOnSelectingMode ?
-        <SelectingIcon isChecked={book.isSelected} />
+        <SelectingIcon isChecked={book?.isSelected} />
         : <BookBtns book={book} />}
     </div>
   )

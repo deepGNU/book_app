@@ -15,8 +15,9 @@
     z-index: 100;
 }
 
-.book-form input {
+.book-form input, .book-form textarea {
     font-size: 1.2rem;
+    min-height: 30px;
 }
 
 .position-fixed-centered {
