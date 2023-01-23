@@ -29,6 +29,7 @@ const Book = ({ book, isOnSelectingMode }) => {
           <hr />
 
           <h5 className='book-title'>{book?.volumeInfo?.title}</h5>
+          <h6 className='book-title'>{book?.volumeInfo?.subtitle}</h6>
 
           <p>
             {book?.volumeInfo?.authors}

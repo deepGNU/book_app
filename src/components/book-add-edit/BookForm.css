@@ -15,9 +15,14 @@
     z-index: 100;
 }
 
-.book-form input, .book-form textarea {
+.book-form input,
+.book-form textarea {
     font-size: 1.2rem;
     min-height: 30px;
+}
+
+.book-form #publishedDate {
+    width: fit-content;
 }
 
 .position-fixed-centered {
@@ -25,7 +30,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}    
+}
 
 .btn.close {
     font-size: 32px;
@@ -35,7 +40,7 @@
     padding: 0;
     margin: 0;
     line-height: 0;
-}    
+}
 
 .btn.close:hover {
     color: #444;
