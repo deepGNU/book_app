@@ -8,7 +8,9 @@ const useFocus = () => {
 
     useEffect(() => {
         const handleFocus = (e) => {
-            if (e.keyCode === 191) ref.current.focus();
+            const key = e.key || e.keyCode;
+            if (key === "/" || key === 191)
+                ref.current.focus();
         };
 
         window.addEventListener("keyup", handleFocus);

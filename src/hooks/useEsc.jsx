@@ -3,9 +3,9 @@ import { useEffect } from "react";
 const useEsc = (onEsc) => {
   useEffect(() => {
     const handleEsc = (e) => {
-      if (e.keyCode === 27) {
+      const key = e.key || e.keyCode;
+      if (key === "Escape" || key === 27)
         onEsc();
-      }
     };
 
     window.addEventListener("keydown", handleEsc);
