@@ -1,6 +1,8 @@
 // import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Book from "../../components/book/Book";
+import BooksBtns from "../../components/books-header/BooksBtns";
+import Filters from "../../components/books-header/Filters";
 // import { updateFavorites } from "../../features/books-slice";
 
 const Favorites = () => {
@@ -14,12 +16,16 @@ const Favorites = () => {
   // }, [books]);
 
   return (
-    favorites &&
-    <div className="books-div">
-      {favorites.length > 0 ?
-        favorites.map((b) => <Book key={b.id} book={b} isOnSelectingMode={false} />)
-        : (<h1>No books to show.</h1>)}
-    </div>
+    <>
+      <BooksBtns />
+      <Filters />
+      {favorites &&
+      <div className="books-div">
+        {favorites.length > 0 ?
+          favorites.map((b) => <Book key={b.id} book={b} isOnSelectingMode={false} />)
+          : (<h1>No books to show.</h1>)}
+      </div>}
+    </>
   );
 };
 

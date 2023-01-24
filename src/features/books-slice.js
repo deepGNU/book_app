@@ -36,12 +36,17 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
     )
         .then((response) => response.json())
         .then((json) => json.items)
-        .then((books) => books.map((b) => isInFavs(b.id) ? favBooks.find((f) => f.id === b.id) :
-            ({
-                ...b,
-                isFavorite: false,
-                isSelected: false,
-            })));
+        .then((books) => books.map((b) =>
+            isInFavs(b.id) ? favBooks.find((f) => f.id === b.id)
+                : ({
+                    ...b,
+                    volumeInfo: {
+                        ...b.volumeInfo,
+                        authors: b.volumeInfo?.authors?.join(', ') ?? [],
+                    },
+                    isFavorite: false,
+                    isSelected: false,
+                })));
 });
 
 const booksSlice = createSlice({

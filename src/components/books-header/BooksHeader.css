@@ -33,11 +33,15 @@
 .btn.btn-top.btn-active {
     color: #000;
     background-color: var(--brown-yellow);
-    border: solid white 1px;
     font-weight: bold;
 }
 
+.btn.btn-top:hover,
 .btn.btn-top.btn-active:hover {
+    border: solid #fff 1px;
+}
+
+.btn.btn-top.btn-active {
     border: solid #000 1px;
 }
 
