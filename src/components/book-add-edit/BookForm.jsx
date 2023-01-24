@@ -44,8 +44,7 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
 
     const handleEnter = (e) => {
         if (e.key === "Enter") {
-            e.preventDefault();
-            e.target.blur();
+            handleSubmit(e);
         }
     };
 
@@ -67,43 +66,6 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
                 </React.Fragment>
             )}
 
-            <label htmlFor="publishedDate">Published Date</label>
-            <input
-                id='publishedDate'
-                type="date"
-                value={book.volumeInfo?.publishedDate ?? ""}
-                onChange={handleChange}
-            />
-            <hr />
-
-            <label htmlFor="rating">Rating</label>
-            <input
-                id='rating'
-                type="number"
-                min="0"
-                max="5"
-                value={book.volumeInfo?.averageRating ?? ""}
-                onChange={handleChange}
-            />
-            <hr />
-
-            <label htmlFor="language">Language</label>
-            <select
-                id='language'
-                value={book.volumeInfo?.language ?? ""}
-                onChange={handleChange}
-            >
-                <option value="">Select a language</option>
-                {languageCodes.map(code => {
-                    const language = iso6391.getName(code);
-                    return language &&
-                        <option key={code} value={code}>{language}</option>
-                }
-                )}
-            </select>
-            <hr />
-
-
             <label htmlFor="image">Image URL</label>
             <input
                 id='image'
@@ -120,6 +82,55 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
                 value={book.volumeInfo?.description ?? ""}
                 onChange={handleChange}
             />
+            <hr />
+
+            <div className='d-flex justify-content-between'>
+                <div className='d-flex flex-column'>
+                    <label htmlFor="publishedDate">Published Date</label>
+                    <input
+                        id='publishedDate'
+                        type="date"
+                        value={book.volumeInfo?.publishedDate ?? ""}
+                        onChange={handleChange}
+                        onKeyDown={handleEnter}
+                    />
+                </div>
+                <hr className='rotate-90deg' />
+
+                <div className='d-flex flex-column'>
+                    <label htmlFor="rating">Rating</label>
+                    <select
+                        id='rating'
+                        value={book.volumeInfo?.averageRating ?? ""}
+                        onChange={handleChange}
+                    >
+                        <option value="">Select a rating</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <hr className='rotate-90deg' />
+
+                <div className='d-flex flex-column'>
+                    <label htmlFor="language">Language</label>
+                    <select
+                        id='language'
+                        value={book.volumeInfo?.language ?? ""}
+                        onChange={handleChange}
+                    >
+                        <option value="">Select a language</option>
+                        {languageCodes.map(code => {
+                            const language = iso6391.getName(code);
+                            return language &&
+                                <option key={code} value={code}>{language}</option>
+                        }
+                        )}
+                    </select>
+                </div>
+            </div>
             <hr />
 
             <button>Submit</button>
