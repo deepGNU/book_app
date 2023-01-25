@@ -7,7 +7,7 @@ import BookForm from './BookForm';
 const BookEditForm = () => {
     const dispatch = useDispatch();
     const editingId = useSelector((s) => s.mode.editingId);
-    const book = useSelector((s) => [...s.book.books, ...s.favorite.favBooks])
+    const book = useSelector((s) => [...s.book.books, ...s.book.favoriteBooks])
         .find((b) => b.id === editingId);
     if (!book) dispatch(leaveEditMode());
 

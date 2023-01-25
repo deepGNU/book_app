@@ -8,7 +8,7 @@ import BookBtns from '../../components/book/BookBtns';
 const BookDetails = () => {
     const { bookId } = useParams();
     const navigate = useNavigate();
-    const book = useSelector((s) => [...s.book.books, ...s.favorite.favBooks]).find((b) => b.id === bookId);
+    const book = useSelector((s) => [...s.book.books, ...s.book.favoriteBooks]).find((b) => b.id === bookId);
 
     if (!book) {
         return <Navigate to={-1} />;

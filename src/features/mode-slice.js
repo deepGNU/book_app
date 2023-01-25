@@ -6,6 +6,10 @@ const initialState = {
     adding: false,
     showFilters: false,
     selecting: false,
+    selectingFavorites: false,
+    filterDateBefore: null,
+    filterDateAfter: null,
+    filterMinRating: null,
 };
 
 const modeSlice = createSlice({
@@ -27,10 +31,21 @@ const modeSlice = createSlice({
         },
         toggleSelectMode: (state) => {
             state.selecting = !state.selecting;
-            state.numSelected = 0;
         },
+        toggleSelectFavoritesMode: (state) => {
+            state.selectingFavorites = !state.selectingFavorites;
+        },
+        setFilterDateBefore: (state, { payload }) => {
+            state.filterDateBefore = payload;
+        },
+        setFilterDateAfter: (state, { payload }) => {
+            state.filterDateAfter = payload;
+        },
+        setFilterMinRating: (state, { payload }) => {
+            state.filterMinRating = payload;
+        }
     }
 });
 
 export default modeSlice.reducer;
-export const { enterEditMode, leaveEditMode, toggleAddMode, toggleSelectMode, toggleShowFilters, incrementNumSelected, decrementNumSelected } = modeSlice.actions;
+export const { enterEditMode, leaveEditMode, toggleAddMode, toggleSelectMode, toggleShowFilters, toggleSelectFavoritesMode, setFilterDateAfter, setFilterDateBefore, setFilterMinRating } = modeSlice.actions;

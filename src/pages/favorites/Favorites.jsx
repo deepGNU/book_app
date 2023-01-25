@@ -1,30 +1,25 @@
-// import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Book from "../../components/book/Book";
-import BooksBtns from "../../components/books-header/BooksBtns";
-import Filters from "../../components/books-header/Filters";
-// import { updateFavorites } from "../../features/books-slice";
-
+import FavoritesHeader from "../../components/favorites-header/FavoritesHeader";
+import { toggleSelectedInFavs } from '../../features/books-slice';
 const Favorites = () => {
-  // const dispatch = useDispatch();
-  const favorites = useSelector((s) => s.favorite.favBooks);
-  // const books = useSelector((s) => s.book.books);
-  // const favorites = useSelector((s) => s.book.favoriteBooks);
+  const dispatch = useDispatch();
+  const favorites = useSelector((s) => s.book.favoriteBooks);
+  const selecting = useSelector((s) => s.mode.selectingFavorites);
 
-  // useEffect(() => {
-  //   dispatch(updateFavorites());
-  // }, [books]);
+  const toggleSelected = (id) => {
+    dispatch(toggleSelectedInFavs(id));
+  };
 
   return (
     <>
-      <BooksBtns />
-      <Filters />
+      <FavoritesHeader />
       {favorites &&
-      <div className="books-div">
-        {favorites.length > 0 ?
-          favorites.map((b) => <Book key={b.id} book={b} isOnSelectingMode={false} />)
-          : (<h1>No books to show.</h1>)}
-      </div>}
+        <div className="books-div">
+          {favorites.length > 0 ?
+            favorites.map((b) => <Book key={b.id} book={b} selecting={selecting} toggleSelected={toggleSelected} />)
+            : (<h1>No books to show.</h1>)}
+        </div>}
     </>
   );
 };

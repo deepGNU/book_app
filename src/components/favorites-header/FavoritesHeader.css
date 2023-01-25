@@ -1,0 +1,8 @@
+.favorites-header {
+    position: sticky;
+    top: var(--nav-height);
+    display: flex;
+    justify-content: right;
+    z-index: 1;
+    background-color: var(--seal-brown);
+}

@@ -1,12 +1,9 @@
 import './Book.css';
-import { useDispatch } from 'react-redux';
-import { toggleSelect } from '../../features/books-slice';
 import { useNavigate, useLocation } from 'react-router-dom';
 import BookBtns from './BookBtns';
 import SelectingIcon from './SelectingIcon';
 
-const Book = ({ book, isOnSelectingMode }) => {
-  const dispatch = useDispatch();
+const Book = ({ book, selecting, toggleSelected }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const path = location.pathname === '/' ? '/books' : location.pathname;
@@ -14,11 +11,11 @@ const Book = ({ book, isOnSelectingMode }) => {
   return (
     <div
       className={`book-card
-        ${isOnSelectingMode && !book?.isSelected && ' faded'}
+        ${selecting && !book?.isSelected && ' faded'}
         ${book?.isSelected && ' book-selected'}
-        ${!isOnSelectingMode && ' not-selecting'}`}
-      title={isOnSelectingMode ? 'Select Item' : 'See Details'}
-      onClick={() => isOnSelectingMode ? dispatch(toggleSelect(book?.id))
+        ${!selecting && ' not-selecting'}`}
+      title={selecting ? 'Select Item' : 'See Details'}
+      onClick={() => selecting ? toggleSelected(book.id)
         : navigate(`${path}/${book?.id}`)}
     >
 
@@ -41,7 +38,7 @@ const Book = ({ book, isOnSelectingMode }) => {
         </div>
       </div>
 
-      {isOnSelectingMode ?
+      {selecting ?
         <SelectingIcon isChecked={book?.isSelected} />
         : <BookBtns book={book} />}
     </div>
