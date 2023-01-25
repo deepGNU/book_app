@@ -9,7 +9,6 @@ import iso6391 from 'iso-639-1';
 
 const BookForm = ({ bookData, onSubmit, onClose }) => {
     const [book, setBook] = useState(bookData);
-    const inputFields = ['title', 'authors', 'publisher'];
     useEsc(onClose);
 
     const handleClose = (e) => {
@@ -51,20 +50,50 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
     return (
         <form className='book-form position-fixed-centered' onSubmit={handleSubmit}>
             <CloseBtn onClose={handleClose} />
-
+            {/* 
             {inputFields.map(field =>
                 <React.Fragment key={field}>
                     <label htmlFor={field}>{capitalize(field)}</label>
                     <input
                         id={field}
                         type="text"
-                        value={book.volumeInfo ? book.volumeInfo[field] : ""}
+                        value={book.volumeInfo[field] ?? ""}
                         onChange={handleChange}
                         onKeyDown={handleEnter}
                     />
                     < hr />
                 </React.Fragment>
-            )}
+            )} */}
+
+            <label htmlFor="title">Title</label>
+            <input
+                id='title'
+                type="text"
+                value={book.volumeInfo?.title ?? ""}
+                onChange={handleChange}
+                onKeyDown={handleEnter}
+            />
+            <hr />
+
+            <label htmlFor="authors">Authors</label>
+            <input
+                id='authors'
+                type="text"
+                value={book.volumeInfo?.authors ?? ""}
+                onChange={handleChange}
+                onKeyDown={handleEnter}
+            />
+            <hr />
+
+            <label htmlFor="publisher">Publisher</label>
+            <input
+                id='publisher'
+                type="text"
+                value={book.volumeInfo?.publisher ?? ""}
+                onChange={handleChange}
+                onKeyDown={handleEnter}
+            />
+            <hr />
 
             <label htmlFor="image">Image URL</label>
             <input
@@ -90,7 +119,7 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
                     <input
                         id='publishedDate'
                         type="date"
-                        value={book.volumeInfo?.publishedDate ?? ""}
+                        value={book.volumeInfo?.publishedDate ? new Date(book.volumeInfo?.publishedDate).toISOString().slice(0, 10) : ""}
                         onChange={handleChange}
                         onKeyDown={handleEnter}
                     />
