@@ -13,8 +13,20 @@ const SearchBar = () => {
     const location = useLocation();
 
     useEffect(() => {
-        dispatch(changeQuery(query));
+        if (query) dispatch(changeQuery(query));
     }, [dispatch, query]);
+
+    const handleEmptyQueryEnter = (e) => {
+        if (e.key === 'Enter' && !e.target.value) {
+            e.preventDefault();
+        }
+    };
+
+    const handleEmptyQueryClick = (e) => {
+        if (!ref.current.value) {
+            e.preventDefault();
+        }
+    };
 
     return (
         <form action={location.pathname} method='get' className='search-bar'>
@@ -24,8 +36,9 @@ const SearchBar = () => {
                 type='text'
                 placeholder='Search'
                 ref={ref}
+                onKeyDown={handleEmptyQueryEnter}
             />
-            <button title='Search'>
+            <button title='Search' onClick={handleEmptyQueryClick}>
                 <SearchIcon />
             </button>
         </form>
