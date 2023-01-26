@@ -11,7 +11,7 @@ const BookDetails = () => {
     const book = useSelector((s) => [...s.book.books, ...s.book.favoriteBooks]).find((b) => b.id === bookId);
 
     if (!book) {
-        return <Navigate to={-1} />;
+        return <Navigate to='/404notfound' />;
     }
 
     return (

@@ -6,10 +6,22 @@ const initialState = {
     favoriteBooks: [],
     loading: false,
     error: '',
-    query: null,
+    query: 'albert einstein',
     numSelectedInBooks: 0,
     numSelectedInFavs: 0,
 };
+
+const processNewBook = (b) => ({
+    ...b,
+    volumeInfo: {
+        ...b.volumeInfo,
+        authors: b.volumeInfo?.authors?.join(', ') ?? '',
+    },
+    isFavorite: false,
+    isSelected: false,
+});
+
+const uniqueBooks = (books) => books.filter((book, index) => books.findIndex(b => b.id === book.id) === index);
 
 export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) => {
     // return fetch('../data.json', {
@@ -28,7 +40,8 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
     const { query } = getState().book;
     // const { favBooks } = getState().favorite;
     const favBooks = getState().book.favoriteBooks;
-    const isInFavs = (id) => favBooks.findIndex((f) => f.id === id) !== -1;
+    // const isInFavs = (id) => favBooks.findIndex((f) => f.id === id) !== -1;
+    const bookInFavorites = (id) => favBooks.find((f) => f.id === id);
 
     return fetch(
         `https://www.googleapis.com/books/v1/volumes` +
@@ -39,16 +52,9 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
         .then((response) => response.json())
         .then((json) => json.items)
         .then((books) => books.map((b) =>
-            isInFavs(b.id) ? favBooks.find((f) => f.id === b.id)
-                : ({
-                    ...b,
-                    volumeInfo: {
-                        ...b.volumeInfo,
-                        authors: b.volumeInfo?.authors?.join(', ') ?? [],
-                    },
-                    isFavorite: false,
-                    isSelected: false,
-                })));
+            bookInFavorites(b.id) ?? processNewBook(b)))
+        .then((books) => uniqueBooks(books)); // To avoid duplicates from the API.
+
 });
 
 const booksSlice = createSlice({
