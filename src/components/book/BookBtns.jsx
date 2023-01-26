@@ -1,30 +1,28 @@
 import React from 'react'
+import Swal from 'sweetalert2';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { toggleFavorite, deleteBook } from '../../features/books-slice';
-import { addFavorite, removeFavorite } from '../../features/favorites-slice';
 import { enterEditMode } from '../../features/mode-slice';
 import { RiDeleteBin5Line as DeleteIcon } from 'react-icons/ri';
 import { AiOutlineEdit as EditIcon } from 'react-icons/ai';
 import FavoriteIcon from './FavoriteIcon';
+import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const BookBtns = ({ book }) => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const handleFavoriteClick = (e) => {
         e.stopPropagation();
         dispatch(toggleFavorite(book.id));
-        if (book.isFavorite) {
-            dispatch(removeFavorite(book.id));
-            toast.warning(`${book.volumeInfo.title} removed from favorites.`,
-                { position: toast.POSITION.TOP_CENTER });
-        }
-        else {
-            dispatch(addFavorite(book));
-            toast.success(`${book.volumeInfo.title} added to favorites.`,
-                { position: toast.POSITION.TOP_CENTER });
-        }
+        if (book.isFavorite)
+            toast.warning(<div><i>{book.volumeInfo?.title ?? 'Untitled'}</i> removed from favorites.</div>, { position: toast.POSITION.TOP_CENTER });
+        else
+            toast.success(<div><i>{book.volumeInfo?.title ?? 'Untitled'}</i> added to favorites.</div>, { position: toast.POSITION.TOP_CENTER });
     };
 
     const handleEditClick = (e) => {
@@ -34,10 +32,20 @@ const BookBtns = ({ book }) => {
 
     const handleDeleteClick = (e) => {
         e.stopPropagation();
-        if (window.confirm(`Are you sure you want to delete ${book.volumeInfo.title}?`)) {
-            dispatch(deleteBook(book.id));
-            dispatch(removeFavorite(book.id));
-        }
+        Swal.fire({
+            title: `Are you sure you want to delete <i>${book.volumeInfo?.title ?? "Untitled"}</i>?`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                if (location.pathname.includes(book.id)) navigate(-1); // go back if on book details page
+                toast.error(<div><i>{book.volumeInfo?.title ?? "Untitled"}</i> deleted.</div>, { position: toast.POSITION.TOP_CENTER });
+                dispatch(deleteBook(book.id));
+            }
+        });
     };
 
     return (

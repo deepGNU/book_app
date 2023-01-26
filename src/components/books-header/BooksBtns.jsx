@@ -4,6 +4,7 @@ import { ImMenu3 as MenuDropDown, ImMenu4 as MenuDropUp } from 'react-icons/im';
 import { toggleSelectMode, toggleAddMode, toggleShowFilters } from '../../features/mode-slice';
 import { cancelSelectionInBooks, deleteSelectedInBooks } from '../../features/books-slice';
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 
 const BooksBtns = () => {
     const dispatch = useDispatch();
@@ -21,10 +22,19 @@ const BooksBtns = () => {
     };
 
     const handleDeleteClick = () => {
-        if (window.confirm(`Delete ${numSelected > 1 ? numSelected + ' items' : 'item'}?`)) {
-            dispatch(deleteSelectedInBooks());
-            dispatch(toggleSelectMode());
-        }
+        Swal.fire({
+            title: `Are you sure delete ${numSelected > 1 ? numSelected + ' items' : 'item'}?`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: `Yes, delete ${numSelected > 1 ? 'them' : 'it'}!`
+        }).then((result) => {
+            if (result.isConfirmed) {
+                dispatch(deleteSelectedInBooks());
+                dispatch(toggleSelectMode());
+            }
+        });
     };
 
     const handleFilterClick = () => {

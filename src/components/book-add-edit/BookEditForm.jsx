@@ -3,6 +3,7 @@ import { leaveEditMode } from '../../features/mode-slice';
 import { editBook } from '../../features/books-slice';
 import { editFavorite } from '../../features/favorites-slice';
 import BookForm from './BookForm';
+import { toast } from 'react-toastify';
 
 const BookEditForm = () => {
     const dispatch = useDispatch();
@@ -15,6 +16,7 @@ const BookEditForm = () => {
         dispatch(editBook(book));
         dispatch(editFavorite(book));
         dispatch(leaveEditMode());
+        toast.info(<div><i>{book.volumeInfo?.title ?? 'Untitled'}</i> edited.</div>, { position: toast.POSITION.TOP_CENTER });
     };
 
     const handleClose = () => {
