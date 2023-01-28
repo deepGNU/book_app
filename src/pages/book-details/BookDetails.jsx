@@ -14,7 +14,7 @@ const BookDetails = () => {
         path.includes('books') ? s.book.books : s.book.favoriteBooks)
         .find((b) => b.id === bookId);
 
-    if (!book) return <Navigate to={-1} />;
+    if (!book) return <Navigate to={path.replace(`/${bookId}`, '')} />;
 
     return (
         <div className={`book-details-div`}>
@@ -42,16 +42,16 @@ const BookDetails = () => {
                 <div className="btns-details">
                     <BookButtons className='details-book-btns' book={book} />
                     {book.volumeInfo?.previewLink &&
-                        <a href={book.volumeInfo.previewLink}>Preview at Google Books</a>}
+                        <a href={book.volumeInfo.previewLink} target="_blank" rel="noopener noreferrer">Preview at Google Books</a>}
                     <br />
                     {book.volumeInfo?.infoLink &&
-                        <a href={book.volumeInfo.infoLink}>Info at Google Books</a>}
+                        <a href={book.volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">Info at Google Books</a>}
                     <br />
                     {book.accessInfo?.epub?.downloadLink &&
-                        <a href={book.accessInfo?.epub?.downloadLink}>Download EPUB</a>}
+                        <a href={book.accessInfo?.epub?.downloadLink} target="_blank" rel="noopener noreferrer">Download EPUB</a>}
                     <br />
                     {book.accessInfo?.pdf?.downloadLink &&
-                        <a href={book.accessInfo.pdf.downloadLink}>Download PDF</a>}
+                        <a href={book.accessInfo.pdf.downloadLink} target="_blank" rel="noopener noreferrer">Download PDF</a>}
                 </div>
             </div>
         </div>
