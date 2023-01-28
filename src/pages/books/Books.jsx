@@ -13,8 +13,8 @@ const Books = () => {
     const { filterMinRating, filterDateAfter, filterDateBefore } = useSelector((s) => s.mode);
     const filter = (book) =>
         (!filterMinRating || book.volumeInfo?.averageRating >= filterMinRating) &&
-        (!filterDateAfter || book.volumeInfo?.publishedDate >= filterDateAfter) &&
-        (!filterDateBefore || book.volumeInfo?.publishedDate <= filterDateBefore);
+        (!filterDateAfter || Date.parse(book.volumeInfo?.publishedDate) >= filterDateAfter) &&
+        (!filterDateBefore || Date.parse(book.volumeInfo?.publishedDate) <= filterDateBefore);
     const books = useSelector((s) => s.book.books).filter(filter);
     const isFilterOn = filterMinRating || filterDateAfter || filterDateBefore;
     useError();
