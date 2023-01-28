@@ -1,44 +1,43 @@
 import './BookForm.css';
-import React, { useState } from 'react';
-import useEsc from '../../hooks/useEsc';
-import CloseBtn from './CloseBtn';
-import { capitalize } from '../../utils/string';
-import languageCodes from './language-codes';
 import iso6391 from 'iso-639-1';
-
+import useEsc from '../../hooks/useEsc';
+import useBookForm from '../../hooks/useBookForm';
+import CloseBtn from './CloseBtn';
+import languageCodes from './language-codes';
 
 const BookForm = ({ bookData, onSubmit, onClose }) => {
-    const [book, setBook] = useState(bookData);
     useEsc(onClose);
 
-    const handleClose = (e) => {
+    const {
+        title,
+        handleTitleChange,
+        subtitle,
+        handleSubtitleChange,
+        authors,
+        handleAuthorsChange,
+        language,
+        handleLanguageChange,
+        publisher,
+        handlePublisherChange,
+        rating,
+        handleRatingChange,
+        description,
+        handleDescriptionChange,
+        publishedDate,
+        handlePublishedDateChange,
+        image,
+        handleImageChange,
+        getBook
+    } = useBookForm(bookData);
+
+    const handleCloseClick = (e) => {
         e.preventDefault();
         onClose();
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit(book);
-    };
-
-    const handleChange = (e) => {
-        setBook((prev) => ({
-            ...prev,
-            volumeInfo: {
-                ...prev.volumeInfo,
-                title: e.target.id === 'title' ? e.target.value : prev.volumeInfo?.title ?? "",
-                authors: e.target.id === 'authors' ? e.target.value : prev.volumeInfo?.authors ?? "",
-                language: e.target.id === 'language' ? e.target.value : prev.volumeInfo?.language ?? "",
-                publisher: e.target.id === 'publisher' ? e.target.value : prev.volumeInfo?.publisher ?? "",
-                averageRating: e.target.id === 'rating' ? e.target.value : prev.volumeInfo?.averageRating ?? "",
-                description: e.target.id === 'description' ? e.target.value : prev.volumeInfo?.description ?? "",
-                publishedDate: e.target.id === 'publishedDate' ? e.target.value : prev.volumeInfo?.publishedDate ?? "",
-                imageLinks: {
-                    ...prev.volumeInfo?.imageLinks,
-                    thumbnail: e.target.id === 'image' ? e.target.value : prev.volumeInfo?.imageLinks?.thumbnail ?? ""
-                }
-            }
-        }));
+        onSubmit(getBook());
     };
 
     const handleEnter = (e) => {
@@ -49,89 +48,100 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
 
     return (
         <form className='book-form position-fixed-centered' onSubmit={handleSubmit}>
-            <CloseBtn onClose={handleClose} />
-            {/* 
-            {inputFields.map(field =>
-                <React.Fragment key={field}>
-                    <label htmlFor={field}>{capitalize(field)}</label>
-                    <input
-                        id={field}
-                        type="text"
-                        value={book.volumeInfo[field] ?? ""}
-                        onChange={handleChange}
-                        onKeyDown={handleEnter}
-                    />
-                    < hr />
-                </React.Fragment>
-            )} */}
+            <CloseBtn onClose={handleCloseClick} />
 
+            {/* Title input */}
             <label htmlFor="title">Title</label>
             <input
                 id='title'
                 type="text"
-                value={book.volumeInfo?.title ?? ""}
-                onChange={handleChange}
+                value={title}
+                onChange={handleTitleChange}
                 onKeyDown={handleEnter}
             />
             <hr />
+            {/* End of title input */}
 
+            {/* Subtitle input */}
+            <label htmlFor="subtitle">Subtitle</label>
+            <input
+                id='subtitle'
+                type="text"
+                value={subtitle}
+                onChange={handleSubtitleChange}
+                onKeyDown={handleEnter}
+            />
+            <hr />
+            {/* End of subtitle input */}
+
+            {/* Authors input */}
             <label htmlFor="authors">Authors</label>
             <input
                 id='authors'
                 type="text"
-                value={book.volumeInfo?.authors ?? ""}
-                onChange={handleChange}
+                value={authors}
+                onChange={handleAuthorsChange}
                 onKeyDown={handleEnter}
             />
             <hr />
+            {/* End of authors input */}
 
+            {/* Publisher input */}
             <label htmlFor="publisher">Publisher</label>
             <input
                 id='publisher'
                 type="text"
-                value={book.volumeInfo?.publisher ?? ""}
-                onChange={handleChange}
+                value={publisher}
+                onChange={handlePublisherChange}
                 onKeyDown={handleEnter}
             />
             <hr />
+            {/* End of publisher input */}
 
+            {/* Image input */}
             <label htmlFor="image">Image URL</label>
             <input
                 id='image'
                 type="text"
-                value={book.volumeInfo?.imageLinks?.thumbnail ?? ""}
-                onChange={handleChange}
+                value={image}
+                onChange={handleImageChange}
                 onKeyDown={handleEnter}
             />
             <hr />
+            {/* End of image input */}
 
+            {/* Description input */}
             <label htmlFor="description">Description</label>
             <textarea
                 id='description'
-                value={book.volumeInfo?.description ?? ""}
-                onChange={handleChange}
+                value={description}
+                onChange={handleDescriptionChange}
             />
             <hr />
+            {/* End of description input */}
 
             <div className='d-flex justify-content-between'>
+                {/* Published date input */}
                 <div className='d-flex flex-column'>
                     <label htmlFor="publishedDate">Published Date</label>
                     <input
                         id='publishedDate'
                         type="date"
-                        value={book.volumeInfo?.publishedDate ? new Date(book.volumeInfo?.publishedDate).toISOString().slice(0, 10) : ""}
-                        onChange={handleChange}
+                        value={publishedDate}
+                        onChange={handlePublishedDateChange}
                         onKeyDown={handleEnter}
                     />
                 </div>
                 <hr className='rotate-90deg' />
+                {/* End of published date input */}
 
+                {/* Rating input */}
                 <div className='d-flex flex-column'>
                     <label htmlFor="rating">Rating</label>
                     <select
                         id='rating'
-                        value={book.volumeInfo?.averageRating ?? ""}
-                        onChange={handleChange}
+                        value={rating}
+                        onChange={handleRatingChange}
                     >
                         <option value="">Select a rating</option>
                         <option value="1">1</option>
@@ -142,23 +152,25 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
                     </select>
                 </div>
                 <hr className='rotate-90deg' />
+                {/* End of rating input */}
 
+                {/* Language input */}
                 <div className='d-flex flex-column'>
                     <label htmlFor="language">Language</label>
                     <select
                         id='language'
-                        value={book.volumeInfo?.language ?? ""}
-                        onChange={handleChange}
+                        value={language}
+                        onChange={handleLanguageChange}
                     >
                         <option value="">Select a language</option>
                         {languageCodes.map(code => {
                             const language = iso6391.getName(code);
                             return language &&
                                 <option key={code} value={code}>{language}</option>
-                        }
-                        )}
+                        })}
                     </select>
                 </div>
+                {/* End of language input */}
             </div>
             <hr />
 
