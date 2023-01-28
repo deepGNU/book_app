@@ -1,13 +1,13 @@
 import './BooksHeader.css';
 import SearchBar from './SearchBar';
-import BooksBtns from './BooksBtns';
+import Buttons from './BooksHeaderBtns';
 import Filters from './Filters';
 
 const BooksHeader = () => {
     return (
         <div className='books-header'>
             <SearchBar />
-            <BooksBtns />
+            <Buttons />
             <Filters />
         </div>
     );

@@ -1,32 +1,41 @@
 import './FavoritesHeader.css';
-import { toggleSelectFavoritesMode as toggleSelectMode } from "../../features/mode-slice";
-import { deleteSelectedInFavs as deleteSelected } from "../../features/books-slice";
-import { cancelSelectionInFavs } from "../../features/books-slice";
 import { useDispatch, useSelector } from "react-redux";
-import SelectBtn from "../books-header/buttons/SelectBtn";
-import DeleteBtn from "../books-header/buttons/DeleteBtn";
+import { toggleSelectFavoritesMode as toggleSelectMode } from "../../features/mode-slice";
+import { deleteSelectedInFavs as deleteSelected, cancelSelectionInFavs as cancelSelection } from "../../features/books-slice";
+import SelectBtn from "../header-buttons/SelectBtn";
+import DeleteBtn from "../header-buttons/DeleteBtn";
 
 const FavoritesHeader = () => {
     const dispatch = useDispatch();
-    const selecting = useSelector((s) => s.mode.selectingFavorites);
-    const numSelected = useSelector((s) => s.book.numSelectedInFavs);
+    const { selecting, numSelected } = useSelector((s) => ({
+        selecting: s.mode.selectingFavorites,
+        numSelected: s.book.numSelectedInFavs
+    }));
 
     const handleSelectClick = () => {
-        if (selecting) dispatch(cancelSelectionInFavs());
+        if (selecting) dispatch(cancelSelection());
         dispatch(toggleSelectMode());
     };
 
-    const handleDeleteClick = () => {
+    const handleDelete = () => {
         dispatch(deleteSelected());
         dispatch(toggleSelectMode());
     };
 
     return (
         <div className="favorites-header">
-            <SelectBtn classes={`btn btn-top${selecting ? ' btn-active' : ''}`} selecting={selecting} onClick={handleSelectClick} />
-            <DeleteBtn classes={`btn btn-top${!selecting ? ' hide' : ''}`} onClick={handleDeleteClick} numSelected={numSelected} />
+            <SelectBtn
+                onClick={handleSelectClick}
+                selecting={selecting}
+            />
+
+            <DeleteBtn
+                onDelete={handleDelete}
+                selecting={selecting}
+                numSelected={numSelected}
+            />
         </div>
     )
-}
+};
 
-export default FavoritesHeader
+export default FavoritesHeader;
