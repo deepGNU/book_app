@@ -9,42 +9,29 @@ import {
   // REGISTER, 
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { combineReducers } from 'redux';
+// import { combineReducers } from 'redux';
 import bookReducer from "../features/books-slice";
 import modeReducer from "../features/mode-slice";
-import favReducer from '../features/favorites-slice';
 import thunk from "redux-thunk";
-
-// const persistedReducer = persistReducer(
-//   {
-//     key: 'root', // The key for the persisted state
-//     storage, // The storage engine to use (e.g. localStorage)
-
-//   },
-//   favReducer,
-// );
 
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['favoriteBooks'],
+  whitelist: ['favoriteBooks', 'query'],
 };
 
 const persistedReducer = persistReducer(persistConfig, bookReducer);
 
-const rootReducer = combineReducers({
-  // book: bookReducer,
-  // favorite: favReducer,
-  // favorite: persistedReducer,
-  book: persistedReducer,
-  mode: modeReducer,
-});
-
-// const store = configureStore(persistedReducer);
+// const rootReducer = combineReducers({
+//   book: persistedReducer,
+//   mode: modeReducer,
+// });
 
 const store = configureStore({
-  // reducer: persistedReducer,
-  reducer: rootReducer,
+  reducer: {
+    book: persistedReducer,
+    mode: modeReducer,
+  },
   middleware: [thunk],
   // middleware: (getDefaultMiddleware) =>
   //   getDefaultMiddleware({

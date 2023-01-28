@@ -21,21 +21,17 @@ const Book = ({ book, selecting, toggleSelected }) => {
 
       <div className='top-book-card'>
         <img className='img-book-card' src={book?.volumeInfo?.imageLinks?.thumbnail} alt='Cover' />
-
+        <hr />
         <div className='text-book-card'>
-          <hr />
-
           <h5 className='book-title'>{book?.volumeInfo?.title}</h5>
           <h6 className='book-title'>{book?.volumeInfo?.subtitle}</h6>
-
           <p>
             {book?.volumeInfo?.authors}
             &nbsp;&#9679;&nbsp;
             {book?.volumeInfo?.publishedDate}
           </p>
-
-          <hr />
         </div>
+        <hr />
       </div>
 
       {selecting ?
