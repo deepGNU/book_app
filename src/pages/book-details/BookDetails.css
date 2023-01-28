@@ -62,14 +62,15 @@
     grid-column: 1 / span 2;
     /* grid-area: 'btns'; */
     display: flex;
-    justify-content: space-evenly;
-    /* gap: 5%; */
+    /* justify-content: space-evenly; */
+    gap: 5%;
     align-items: baseline;
     /* border: solid black 1px; */
     background-color: var(--deep-champagne);
     border-radius: 15px;
     padding: 5px;
     margin: 10px;
+    width: 100%;
     /* justify-content: space-between; */
     /* width: inherit; */
 }
@@ -83,7 +84,14 @@
         padding: 5px;
     }
 
+    .btns-details {
+        flex-direction: column;
+        gap: 3px;
+    }
 
+    .btns-details .book-btns {
+        flex-direction: row;
+    }
 
     .img-details {
         width: fit-content;

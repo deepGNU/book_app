@@ -120,7 +120,7 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
             <hr />
             {/* End of description input */}
 
-            <div className='d-flex justify-content-between'>
+            <div className='select-inputs'>
                 {/* Published date input */}
                 <div className='d-flex flex-column'>
                     <label htmlFor="publishedDate">Published Date</label>
@@ -132,7 +132,7 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
                         onKeyDown={handleEnter}
                     />
                 </div>
-                <hr className='rotate-90deg' />
+                <hr />
                 {/* End of published date input */}
 
                 {/* Rating input */}
@@ -151,7 +151,7 @@ const BookForm = ({ bookData, onSubmit, onClose }) => {
                         <option value="5">5</option>
                     </select>
                 </div>
-                <hr className='rotate-90deg' />
+                <hr />
                 {/* End of rating input */}
 
                 {/* Language input */}

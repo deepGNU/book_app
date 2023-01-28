@@ -6,15 +6,18 @@
     padding: 15px;
 }
 
+.books-h1 {
+    margin: auto;
+}
+
 h1 {
     background-color: var(--deep-champagne);
     padding: 2vw;
-    margin: 2vw;
+    /* margin: 2vw; */
     border-radius: 15px;
     /* position: fixed;
     top: calc(var(--nav-height) + 150px); */
     height: fit-content;
     width: fit-content;
-    margin: auto;
     z-index: 1;
 }

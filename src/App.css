@@ -7,6 +7,14 @@
   background-attachment: fixed;
 }
 
+.disable-background {
+  pointer-events: none;
+  filter: blur(1px);
+  opacity: 0.9;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
 .overflow-hidden {
   overflow: hidden;
 }
