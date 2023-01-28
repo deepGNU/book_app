@@ -22,6 +22,7 @@ const modeSlice = createSlice({
         },
         leaveEditMode: (state) => {
             state.editing = false;
+            state.editingId = null;
         },
         toggleAddMode: (state) => {
             state.adding = !state.adding;
