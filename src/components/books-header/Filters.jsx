@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { filterBooks } from '../../features/books-slice';
+// import { filterBooks } from '../../features/books-slice';
 import { setFilterDateAfter, setFilterDateBefore, setFilterMinRating } from '../../features/mode-slice';
 
 const Filters = () => {
     const dispatch = useDispatch();
-    const books = useSelector((s) => s.book.books);
+    // const books = useSelector((s) => s.book.books);
     const showFilters = useSelector((s) => s.mode.showFilters);
     const datePrior = useSelector((s) => s.mode.filterDateBefore);
     const dateAfter = useSelector((s) => s.mode.filterDateAfter);
@@ -15,15 +15,15 @@ const Filters = () => {
     // const [filterRating, setFilterRating] = useState(prev => prev);
     // console.log(dateAfter, datePrior, filterRating)
 
-    useEffect(() => {
-        const booksFiltered = books.filter((b) => {
-            return (!dateAfter || Date.parse(b.volumeInfo?.publishedDate) > dateAfter) &&
-                (!datePrior || Date.parse(b.volumeInfo?.publishedDate) < datePrior) &&
-                (!filterRating || b.volumeInfo?.averageRating >= filterRating);
-        });
+    // useEffect(() => {
+    //     const booksFiltered = books.filter((b) => {
+    //         return (!dateAfter || Date.parse(b.volumeInfo?.publishedDate) > dateAfter) &&
+    //             (!datePrior || Date.parse(b.volumeInfo?.publishedDate) < datePrior) &&
+    //             (!filterRating || b.volumeInfo?.averageRating >= filterRating);
+    //     });
 
-        dispatch(filterBooks(booksFiltered));
-    }, [dispatch, books, dateAfter, datePrior, filterRating]);
+    //     dispatch(filterBooks(booksFiltered));
+    // }, [dispatch, books, dateAfter, datePrior, filterRating]);
 
     const handleRatingChange = (e) => {
         dispatch(setFilterMinRating(e.target.value));
