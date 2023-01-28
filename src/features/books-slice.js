@@ -36,9 +36,8 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
     //         isFavorite: false
     //     })));
     const API_KEY = 'AIzaSyBvRxCh4SRMHlh1s87QhItZwqVOEqKNyR0';
-    const { query } = getState().book;
-    const favBooks = getState().book.favoriteBooks;
-    const bookInFavorites = (id) => favBooks.find((f) => f.id === id);
+    const { query, favoriteBooks } = getState().book;
+    const bookInFavorites = (id) => favoriteBooks.find((f) => f.id === id);
 
     return fetch(
         `https://www.googleapis.com/books/v1/volumes` +
@@ -51,7 +50,6 @@ export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) =>
         .then((books) => uniqueBooks(books)) // To avoid duplicates from the API.
         .then((books) => books.map((b) =>
             bookInFavorites(b.id) ?? processNewBook(b)));
-
 });
 
 const booksSlice = createSlice({

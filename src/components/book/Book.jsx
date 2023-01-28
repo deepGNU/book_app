@@ -10,15 +10,13 @@ const Book = ({ book, selecting, toggleSelected }) => {
 
   return (
     <div
-      className={`book-card
-        ${selecting && !book?.isSelected && ' faded'}
-        ${book?.isSelected && ' book-selected'}
-        ${!selecting && ' not-selecting'}`}
+      className={`book-card${(selecting && !book?.isSelected ? ' faded' : '') +
+        (book?.isSelected ? ' book-selected' : '') +
+        (!selecting ? ' not-selecting' : '')}`}
       title={selecting ? 'Select Item' : 'See Details'}
       onClick={() => selecting ? toggleSelected(book.id)
         : navigate(`${path}/${book?.id}`)}
     >
-
       <div className='top-book-card'>
         <img className='img-book-card' src={book?.volumeInfo?.imageLinks?.thumbnail} alt='Cover' />
         <hr />

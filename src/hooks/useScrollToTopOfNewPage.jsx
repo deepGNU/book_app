@@ -6,9 +6,9 @@ const useScrollToTop = () => {
     const onTop = () => {
         window.scrollTo(0, 0);
     }
-    
+
     useEffect(() => {
-        onTop()
+        onTop();
     }, [routePath]);
 };
 

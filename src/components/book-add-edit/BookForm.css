@@ -29,26 +29,9 @@
 
 .select-inputs {
     display: flex;
-    /* flex-direction: row; */
     justify-content: space-between;
-    /* flex-wrap: wrap; */
-    width: 100%;
-    height: fit-content;
     gap: 10px;
-    /* min-height: 200px; */
-    /* overflow: hidden; */
 }
-
-/* .select-inputs div {
-    display: flex;
-    flex-direction: column;
-}*/
-
-/* .select-inputs input,
-.select-inputs select {
-    width: fit-content;
-    height: fit-content;
-} */
 
 .position-fixed-centered {
     position: fixed;

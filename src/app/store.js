@@ -9,7 +9,6 @@ import {
   // REGISTER, 
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-// import { combineReducers } from 'redux';
 import bookReducer from "../features/books-slice";
 import modeReducer from "../features/mode-slice";
 import thunk from "redux-thunk";
@@ -21,11 +20,6 @@ const persistConfig = {
 };
 
 const persistedReducer = persistReducer(persistConfig, bookReducer);
-
-// const rootReducer = combineReducers({
-//   book: persistedReducer,
-//   mode: modeReducer,
-// });
 
 const store = configureStore({
   reducer: {
@@ -42,12 +36,4 @@ const store = configureStore({
 });
 
 export const persistor = persistStore(store);
-// const store = configureStore({
-//     reducer: {
-//         book: bookReducer,
-//         fav: favReducer,
-//         mode: modeReducer
-//     }
-// });
-
 export default store;

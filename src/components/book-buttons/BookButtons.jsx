@@ -1,7 +1,7 @@
 import './BookButtons.css';
-import Swal from 'sweetalert2';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
+import Swal from 'sweetalert2';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleFavorite, deleteBook } from '../../features/books-slice';
 import { enterEditMode, leaveEditMode } from '../../features/mode-slice';

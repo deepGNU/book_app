@@ -49,4 +49,14 @@ const modeSlice = createSlice({
 });
 
 export default modeSlice.reducer;
-export const { enterEditMode, leaveEditMode, toggleAddMode, toggleSelectMode, toggleShowFilters, toggleSelectFavoritesMode, setFilterDateAfter, setFilterDateBefore, setFilterMinRating } = modeSlice.actions;
+export const {
+    enterEditMode,
+    leaveEditMode,
+    toggleAddMode,
+    toggleSelectMode,
+    toggleShowFilters,
+    toggleSelectFavoritesMode,
+    setFilterDateAfter,
+    setFilterDateBefore,
+    setFilterMinRating
+} = modeSlice.actions;
