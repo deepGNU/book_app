@@ -2,15 +2,16 @@ import './BookButtons.css';
 import Swal from 'sweetalert2';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toggleFavorite, deleteBook } from '../../features/books-slice';
-import { enterEditMode } from '../../features/mode-slice';
+import { enterEditMode, leaveEditMode } from '../../features/mode-slice';
 import { RiDeleteBin5Line as DeleteIcon } from 'react-icons/ri';
 import { AiOutlineEdit as EditIcon } from 'react-icons/ai';
 import FavoriteIcon from '../icons/FavoriteIcon';
 
 const BookButtons = ({ book }) => {
     const dispatch = useDispatch();
+    const editingId = useSelector((s) => s.mode.editingId);
 
     const handleFavoriteClick = (e) => {
         e.stopPropagation();
@@ -28,6 +29,7 @@ const BookButtons = ({ book }) => {
 
     const handleDeleteClick = (e) => {
         e.stopPropagation();
+        if (editingId === book.id) dispatch(leaveEditMode());
         Swal.fire({
             title: `Are you sure you want to delete <i>${book.volumeInfo?.title ?? "Untitled"}</i>?`,
             icon: 'warning',
@@ -48,21 +50,24 @@ const BookButtons = ({ book }) => {
             <button
                 className='btn btn-book-item'
                 title={`${book.isFavorite ? 'Remove from' : 'Add to'} Favorites`}
-                onClick={handleFavoriteClick}>
+                onClick={handleFavoriteClick}
+            >
                 <FavoriteIcon isFavorite={book.isFavorite} />
             </button>
 
             <button
                 className='btn btn-book-item'
                 title='Edit'
-                onClick={handleEditClick}>
+                onClick={handleEditClick}
+            >
                 <EditIcon />
             </button>
 
             <button
                 className='btn btn-book-item'
                 title='Delete'
-                onClick={handleDeleteClick}>
+                onClick={handleDeleteClick}
+            >
                 <DeleteIcon />
             </button>
         </div>
