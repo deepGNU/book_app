@@ -63,27 +63,7 @@
     color: #555;
 }
 
-.book-btns {
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
-    /* gap: 15px; */
-    gap: 3%;
-    margin: 10px;
-}
 
-
-.btn-book-item {
-    font-size: 1.8rem;
-}
-
-.book-card:hover.btn-book-item:hover {
-    color: #000;
-}
-
-.book-card button.btn-book-item:hover {
-    background-color: #bbb;
-}
 
 @media screen and (max-width: 500px) {
 

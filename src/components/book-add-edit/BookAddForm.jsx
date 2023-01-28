@@ -15,7 +15,7 @@ const BookAddForm = () => {
   const handleSubmit = (book) => {
     dispatch(addBook(book));
     dispatch(toggleAddMode());
-    toast.success(<div><i>{book.volumeInfo?.title ?? 'Untitled'}</i> added.</div>, { position: toast.POSITION.TOP_CENTER });
+    toast.success(<div>Added <i>{book.volumeInfo?.title ?? 'Untitled'}</i>!</div>, { position: toast.POSITION.TOP_CENTER });
   };
 
   const handleClose = () => {

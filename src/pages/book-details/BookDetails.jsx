@@ -3,19 +3,21 @@ import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { IoCaretBack as BackIcon } from 'react-icons/io5';
 import iso6391 from 'iso-639-1';
-import BookBtns from '../../components/book/BookBtns';
+import BookButtons from '../../components/book-buttons/BookButtons';
+import { useLocation } from 'react-router-dom';
 
 const BookDetails = () => {
     const { bookId } = useParams();
     const navigate = useNavigate();
-    const book = useSelector((s) => [...s.book.books, ...s.book.favoriteBooks]).find((b) => b.id === bookId);
+    const path = useLocation().pathname;
+    const book = useSelector((s) =>
+        path.includes('books') ? s.book.books : s.book.favoriteBooks)
+        .find((b) => b.id === bookId);
 
-    if (!book) {
-        return <Navigate to='/404notfound' />;
-    }
+    if (!book) return <Navigate to={-1} />;
 
     return (
-        <div className='book-details-div'>
+        <div className={`book-details-div`}>
             <button
                 title='Go Back'
                 className='btn btn-back'
@@ -28,8 +30,8 @@ const BookDetails = () => {
                 <img className='img-details' src={book.volumeInfo?.imageLinks?.thumbnail} alt="Book Cover" />}
 
             <div className="text-details">
-                <h1>{book.volumeInfo?.title}</h1>
-                <h2>{book.volumeInfo?.subtitle}</h2>
+                <h1><i>{book.volumeInfo?.title ?? "Untitled"}</i></h1>
+                <h2><i>{book.volumeInfo?.subtitle}</i></h2>
                 <p>Authors: {book.volumeInfo?.authors ?? "unavailable."}</p>
                 <p>Description: {book.volumeInfo?.description ?? "unavailable."}</p>
                 <p>Publisher: {book.volumeInfo?.publisher ?? "unavailable."}</p>
@@ -38,7 +40,7 @@ const BookDetails = () => {
                 <p>Average Rating: {book.volumeInfo?.averageRating ?? "unavailable"}</p>
 
                 <div className="btns-details">
-                    <BookBtns className='details-book-btns' book={book} />
+                    <BookButtons className='details-book-btns' book={book} />
                     {book.volumeInfo?.previewLink &&
                         <a href={book.volumeInfo.previewLink}>Preview at Google Books</a>}
                     <br />

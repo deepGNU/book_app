@@ -1,7 +1,7 @@
 import './Book.css';
 import { useNavigate, useLocation } from 'react-router-dom';
-import BookBtns from './BookBtns';
-import SelectingIcon from './SelectingIcon';
+import BookButtons from '../book-buttons/BookButtons';
+import SelectingIcon from '../icons/SelectingIcon';
 
 const Book = ({ book, selecting, toggleSelected }) => {
   const navigate = useNavigate();
@@ -39,8 +39,8 @@ const Book = ({ book, selecting, toggleSelected }) => {
       </div>
 
       {selecting ?
-        <SelectingIcon isChecked={book?.isSelected} />
-        : <BookBtns book={book} />}
+        <SelectingIcon isChecked={book.isSelected} />
+        : <BookButtons book={book} />}
     </div>
   )
 };

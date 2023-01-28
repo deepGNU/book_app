@@ -1,4 +1,4 @@
-import React from 'react'
+import './BookButtons.css';
 import Swal from 'sweetalert2';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
@@ -7,22 +7,18 @@ import { toggleFavorite, deleteBook } from '../../features/books-slice';
 import { enterEditMode } from '../../features/mode-slice';
 import { RiDeleteBin5Line as DeleteIcon } from 'react-icons/ri';
 import { AiOutlineEdit as EditIcon } from 'react-icons/ai';
-import FavoriteIcon from './FavoriteIcon';
-import { useLocation } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import FavoriteIcon from '../icons/FavoriteIcon';
 
-const BookBtns = ({ book }) => {
+const BookButtons = ({ book }) => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
-    const location = useLocation();
 
     const handleFavoriteClick = (e) => {
         e.stopPropagation();
         dispatch(toggleFavorite(book.id));
         if (book.isFavorite)
-            toast.warning(<div><i>{book.volumeInfo?.title ?? 'Untitled'}</i> removed from favorites.</div>, { position: toast.POSITION.TOP_CENTER });
+            toast.warning(<div>Removed <i>{book.volumeInfo?.title ?? 'Untitled'}</i> from favorites!</div>, { position: toast.POSITION.TOP_CENTER });
         else
-            toast.success(<div><i>{book.volumeInfo?.title ?? 'Untitled'}</i> added to favorites.</div>, { position: toast.POSITION.TOP_CENTER });
+            toast.success(<div>Added <i>{book.volumeInfo?.title ?? 'Untitled'}</i> to favorites!</div>, { position: toast.POSITION.TOP_CENTER });
     };
 
     const handleEditClick = (e) => {
@@ -41,8 +37,7 @@ const BookBtns = ({ book }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                if (location.pathname.includes(book.id)) navigate(-1); // go back if on book details page
-                toast.error(<div><i>{book.volumeInfo?.title ?? "Untitled"}</i> deleted.</div>, { position: toast.POSITION.TOP_CENTER });
+                toast.error(<div>Deleted <i>{book.volumeInfo?.title ?? "Untitled"}</i>!</div>, { position: toast.POSITION.TOP_CENTER });
                 dispatch(deleteBook(book.id));
             }
         });
@@ -74,4 +69,4 @@ const BookBtns = ({ book }) => {
     )
 };
 
-export default BookBtns;
+export default BookButtons;

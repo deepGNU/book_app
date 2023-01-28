@@ -10,7 +10,7 @@ const useError = () => {
             Swal.fire({
                 icon: "error",
                 title: "Error",
-                text: "No results found.",
+                text: "An error occurred while trying to fetch the books. Please check your internet connection and try again."
             });
         }
     }, [error]);

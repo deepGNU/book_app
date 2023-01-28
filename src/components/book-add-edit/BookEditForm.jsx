@@ -16,7 +16,7 @@ const BookEditForm = () => {
         dispatch(editBook(book));
         dispatch(editFavorite(book));
         dispatch(leaveEditMode());
-        toast.info(<div><i>{book.volumeInfo?.title ?? 'Untitled'}</i> edited.</div>, { position: toast.POSITION.TOP_CENTER });
+        toast.info(<div>Edited <i>{book.volumeInfo?.title ?? 'Untitled'}</i>!</div>, { position: toast.POSITION.TOP_CENTER });
     };
 
     const handleClose = () => {

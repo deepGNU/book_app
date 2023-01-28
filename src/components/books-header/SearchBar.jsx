@@ -36,6 +36,7 @@ const SearchBar = () => {
                 type='text'
                 placeholder='Search'
                 ref={ref}
+                onChange={(e) => e.target.value = e.target.value.trimStart()}
                 onKeyDown={handleEmptyQueryEnter}
             />
             <button title='Search' onClick={handleEmptyQueryClick}>

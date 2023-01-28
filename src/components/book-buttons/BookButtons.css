@@ -1,0 +1,20 @@
+.book-btns {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    gap: 3%;
+    margin: 10px;
+}
+
+.btn-book-item {
+    font-size: 1.8rem;
+}
+
+.book-card button.btn-book-item:hover {
+    background-color: #bbb;
+}
+
+.book-details-div button.btn-book-item:hover {
+    color: #fff;
+    background-color: var(--dark-gold);
+}
