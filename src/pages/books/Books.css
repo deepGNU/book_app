@@ -9,12 +9,3 @@
 .books-h1 {
     margin: auto;
 }
-
-h1 {
-    background-color: var(--deep-champagne);
-    padding: 2vw;
-    border-radius: 15px;
-    height: fit-content;
-    width: fit-content;
-    z-index: 1;
-}

@@ -7,28 +7,28 @@
   background-attachment: fixed;
 }
 
-.disable-background {
-  pointer-events: none;
-  filter: blur(1px);
-  opacity: 0.9;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-
-.overflow-hidden {
-  overflow: hidden;
+h1 {
+  background-color: var(--deep-champagne);
+  padding: 2vw;
+  border-radius: 15px;
+  height: fit-content;
+  width: fit-content;
 }
 
 :root {
+  /* For adjusting the sticky position of the header
+  relative to the nav when nav height changes. */
   --nav-height: 40px;
   --nav-padding: 8px;
+
+  /* Palette 1 */
   --crayolas-tan: #DF9D6C;
   --raw-sienna: #D0814E;
   --deep-champagne: #F7D3AA;
   --chamoisee: #9F7159;
   --rose-ebony: #634739;
 
-
+  /* Palette 2 */
   --seal-brown: #592b14;
   --russet: #7b3f21;
   --chestnut: #8d4f2c;
