@@ -1,4 +1,5 @@
 import React from 'react';
+import '../books-header/BooksHeader.css';
 import { ImFilter } from 'react-icons/im';
 
 const FilterBtn = ({ onClick, showFilters, isMenuCollapsed = false, selecting = false }) => {

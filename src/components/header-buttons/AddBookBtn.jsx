@@ -1,8 +1,9 @@
 import React from 'react';
+import '../books-header/BooksHeader.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleAddMode } from '../../features/mode-slice';
 
-const AddBookBtn = ({ onClick, selecting = false, isMenuCollapsed = false }) => {
+const AddBookBtn = ({ selecting = false, isMenuCollapsed = false }) => {
     const dispatch = useDispatch();
     const adding = useSelector((s) => s.mode.adding);
     const handleClick = () => dispatch(toggleAddMode());

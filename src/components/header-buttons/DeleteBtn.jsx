@@ -1,4 +1,5 @@
 import React from 'react';
+import '../books-header/BooksHeader.css';
 import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
 
@@ -15,7 +16,7 @@ const DeleteBtn = ({ selecting, onDelete, numSelected }) => {
             if (result.isConfirmed) {
                 onDelete();
                 toast.error(<div>Deleted {numSelected + ' book' + (numSelected > 1 ? 's' : '')}!</div>,
-                    { position: toast.POSITION.TOP_CENTER });
+                    { position: toast.POSITION.BOTTOM_LEFT });
             }
         });
     };
@@ -30,6 +31,6 @@ const DeleteBtn = ({ selecting, onDelete, numSelected }) => {
             Delete
         </button>
     )
-}
+};
 
-export default DeleteBtn
+export default DeleteBtn;

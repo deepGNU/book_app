@@ -29,7 +29,7 @@ const BookButtons = ({ book }) => {
 
     const handleDeleteClick = (e) => {
         e.stopPropagation();
-        if (editingId === book.id) dispatch(leaveEditMode());
+        if (editingId === book.id) dispatch(leaveEditMode()); // So a book that's being edited won't be deleted while editing, causing an error.
         Swal.fire({
             title: `Are you sure you want to delete <i>${book.volumeInfo?.title ?? "Untitled"}</i>?`,
             icon: 'warning',

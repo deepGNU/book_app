@@ -1,4 +1,5 @@
 import React from 'react';
+import '../books-header/BooksHeader.css';
 import { ImMenu3 as MenuDropDown, ImMenu4 as MenuDropUp } from 'react-icons/im';
 
 const ExpandBtn = ({ isMenuCollapsed, selecting, onClick }) => {
@@ -11,6 +12,6 @@ const ExpandBtn = ({ isMenuCollapsed, selecting, onClick }) => {
             {isMenuCollapsed ? <MenuDropDown /> : <MenuDropUp />}
         </button>
     )
-}
+};
 
-export default ExpandBtn
+export default ExpandBtn;
