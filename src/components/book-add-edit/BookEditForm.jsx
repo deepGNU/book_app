@@ -15,7 +15,8 @@ const BookEditForm = () => {
     const handleSubmit = (book) => {
         dispatch(editBook(book));
         dispatch(leaveEditMode());
-        toast.info(<div>Edited <i>{book.volumeInfo?.title ?? 'Untitled'}</i>!</div>, { position: toast.POSITION.TOP_CENTER });
+        toast.info(<div>Edited <i>{book.volumeInfo?.title ?? 'Untitled'}</i>!</div>,
+            { position: toast.POSITION.BOTTOM_LEFT });
     };
 
     const handleClose = () => {
