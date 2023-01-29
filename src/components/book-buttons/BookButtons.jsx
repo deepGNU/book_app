@@ -1,5 +1,5 @@
-import './BookButtons.css';
 import 'react-toastify/dist/ReactToastify.css';
+import './BookButtons.css';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 import { useDispatch, useSelector } from 'react-redux';
@@ -17,9 +17,9 @@ const BookButtons = ({ book }) => {
         e.stopPropagation();
         dispatch(toggleFavorite(book.id));
         if (book.isFavorite)
-            toast.warning(<div>Removed <i>{book.volumeInfo?.title ?? 'Untitled'}</i> from favorites!</div>, { position: toast.POSITION.TOP_CENTER });
+            toast.warning(<div>Removed <i>{book.volumeInfo?.title ?? 'Untitled'}</i> from favorites!</div>, { position: toast.POSITION.BOTTOM_LEFT });
         else
-            toast.success(<div>Added <i>{book.volumeInfo?.title ?? 'Untitled'}</i> to favorites!</div>, { position: toast.POSITION.TOP_CENTER });
+            toast.success(<div>Added <i>{book.volumeInfo?.title ?? 'Untitled'}</i> to favorites!</div>, { position: toast.POSITION.BOTTOM_LEFT });
     };
 
     const handleEditClick = (e) => {
@@ -39,8 +39,8 @@ const BookButtons = ({ book }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                toast.error(<div>Deleted <i>{book.volumeInfo?.title ?? "Untitled"}</i>!</div>, { position: toast.POSITION.TOP_CENTER });
                 dispatch(deleteBook(book.id));
+                toast.error(<div>Deleted <i>{book.volumeInfo?.title ?? "Untitled"}</i>!</div>, { position: toast.POSITION.BOTTOM_LEFT });
             }
         });
     };
