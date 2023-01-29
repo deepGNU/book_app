@@ -9,7 +9,9 @@ const BookAddForm = () => {
   const dispatch = useDispatch();
 
   const emptyBook = {
-    "id": uuid()
+    "id": uuid(),
+    isFavorite: false,
+    isSelected: false,
   };
 
   const handleSubmit = (book) => {
