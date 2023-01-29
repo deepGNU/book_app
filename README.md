@@ -3,6 +3,51 @@
 # אימייל: thehumbletheorist@gmail.com
 # טלפון: 0538226601 
 
+# Book App
+This is a web-based book search platform that utilizes the Google Books API to search for books and display the results.
+
+## Features
+
+* Search bar at the top of the page for easy searching
+
+* Search results are displayed in a card layout, with cover image, title, and author
+
+* Detailed view of each book, with information such as publisher, publication date, ratings, link to preview, and description
+
+* Add books to personal favorites list
+
+* Edit details about books and add new books (changes only affect front-end)
+
+* Filter results by minimum rating, books published before a certain year, and books published after a certain year
+
+* Keyboard shortcuts: "/" to select search bar, "esc" to exit edit or add book form
+
+* Select multiple books and remove them
+
+* Responsive design
+
+## Usage
+
+1. Search for books in the search bar
+
+2. Click on the cover image or title of a book to view details
+
+3. Click on button with heart icon to add a book to your favorites list
+
+4. Click on "Favorites" link to view your favorite books
+
+7. Use filter option to refine your search results
+
+6. To select and delete multiple books, click on "Select" button and then click on the desired books and then click on "Delete" button
+
+7. Click on "Add Book" button to add a new book
+
+8. Click on button with edit icon to edit details about a book
+
+9. Click on button with delete icon to delete a book
+
+Please note that changes made to book information will only affect the front-end display of the website and will not be reflected on the Google Books servers.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
