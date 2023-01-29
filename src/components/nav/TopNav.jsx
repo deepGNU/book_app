@@ -6,7 +6,6 @@ import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import { useResizeDetector } from 'react-resize-detector';
-// import NavDropdown from "react-bootstrap/NavDropdown";
 
 const TopNav = () => {
     const { height, ref } = useResizeDetector();
@@ -18,17 +17,10 @@ const TopNav = () => {
     return (
         <Navbar
             ref={ref}
-            // bg="light"
             expand="lg"
             className="top-nav">
             <Container>
-                <NavLink to="/"
-                 className="navbar-brand"
-                 >
-                    {/* <span className="text-muted color-white"> */}
-                        Book App
-                        {/* </span> */}
-                </NavLink>
+                <NavLink to="/" className="navbar-brand">Book App</NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-ham" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
@@ -41,6 +33,6 @@ const TopNav = () => {
             </Container>
         </Navbar>
     );
-}
+};
 
 export default TopNav;
