@@ -14,7 +14,7 @@ const processNewBook = (b) => ({
     ...b,
     volumeInfo: {
         ...b.volumeInfo,
-        authors: b.volumeInfo?.authors?.join(', ') ?? '',
+        authors: b.volumeInfo?.authors?.join(', ') ?? 'unavailable',
     },
     isFavorite: false,
     isSelected: false,
@@ -23,18 +23,6 @@ const processNewBook = (b) => ({
 const uniqueBooks = (books) => books.filter((book, index) => books.findIndex(b => b.id === book.id) === index);
 
 export const fetchBooks = createAsyncThunk('books/fetch', (arg, { getState }) => {
-    // return fetch('../data.json', {
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //         "Accept": "application/json"
-    //     },
-    // })
-    //     .then((response) => response.json())
-    //     .then((json) => json.items)
-    //     .then((books) => books.map((b) => ({
-    //         ...b,
-    //         isFavorite: false
-    //     })));
     const API_KEY = 'AIzaSyBvRxCh4SRMHlh1s87QhItZwqVOEqKNyR0';
     const { query, favoriteBooks } = getState().book;
     const bookInFavorites = (id) => favoriteBooks.find((f) => f.id === id);
@@ -77,14 +65,18 @@ const booksSlice = createSlice({
         },
         deleteSelectedInBooks: (state) => {
             state.books.filter((b) => b.isSelected).forEach((b) => {
-                state.favoriteBooks = state.favoriteBooks.filter((f) => f.id !== b.id);
+                const indexFavorites = state.favoriteBooks.findIndex((f) => f.id === b.id);
+                if (indexFavorites !== -1)
+                    state.favoriteBooks.splice(indexFavorites, 1);
             });
             state.books = state.books.filter((b) => !b.isSelected);
             state.numSelectedInBooks = 0;
         },
         deleteSelectedInFavs: (state) => {
             state.favoriteBooks.filter((f) => f.isSelected).forEach((f) => {
-                state.books = state.books.filter((b) => b.id !== f.id);
+                const indexBooks = state.books.findIndex((b) => b.id === f.id);
+                if (indexBooks !== -1)
+                    state.books.splice(indexBooks, 1);
             });
             state.favoriteBooks = state.favoriteBooks.filter((f) => !f.isSelected);
             state.numSelectedInFavs = 0;
