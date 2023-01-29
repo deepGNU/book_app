@@ -11,7 +11,7 @@ import FavoriteIcon from '../icons/FavoriteIcon';
 
 const BookButtons = ({ book }) => {
     const dispatch = useDispatch();
-    const editingId = useSelector((s) => s.mode.editingId);
+    const { editing, editingId } = useSelector((s) => s.mode);
 
     const handleFavoriteClick = (e) => {
         e.stopPropagation();
@@ -24,7 +24,7 @@ const BookButtons = ({ book }) => {
 
     const handleEditClick = (e) => {
         e.stopPropagation();
-        dispatch(enterEditMode(book.id));
+        if (!editing) dispatch(enterEditMode(book.id));
     };
 
     const handleDeleteClick = (e) => {
