@@ -1,3 +1,8 @@
+# שם: יצחק פרייד
+# מס' מחזור: D110422ER
+# אימייל: thehumbletheorist@gmail.com
+# טלפון: 0538226601 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
