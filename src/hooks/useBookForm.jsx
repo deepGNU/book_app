@@ -1,14 +1,14 @@
 import { useState } from 'react';
 
 const useBookForm = (book) => {
-    const [title, setTitle] = useState((book.volumeInfo?.title && book.volumeInfo?.title !== 'Untitled') ? book.volumeInfo?.title : "");
+    const [title, setTitle] = useState((book.volumeInfo?.title && book.volumeInfo.title !== 'Untitled') ? book.volumeInfo.title : "");
     const [subtitle, setSubtitle] = useState(book.volumeInfo?.subtitle ?? "");
     const [authors, setAuthors] = useState(book.volumeInfo?.authors ?? "");
     const [language, setLanguage] = useState(book.volumeInfo?.language ?? "");
     const [publisher, setPublisher] = useState(book.volumeInfo?.publisher ?? "");
     const [rating, setRating] = useState(book.volumeInfo?.averageRating ?? "");
     const [description, setDescription] = useState(book.volumeInfo?.description ?? "");
-    const [publishedDate, setPublishedDate] = useState(book.volumeInfo?.publishedDate ? new Date(book.volumeInfo?.publishedDate).toISOString().slice(0, 10) : "");
+    const [publishedDate, setPublishedDate] = useState(book.volumeInfo?.publishedDate ? new Date(book.volumeInfo.publishedDate).toISOString().slice(0, 10) : "");
     const [image, setImage] = useState(book.volumeInfo?.imageLinks?.thumbnail ?? "");
 
     const handleTitleChange = (e) => {
