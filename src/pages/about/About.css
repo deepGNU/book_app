@@ -1,11 +1,6 @@
 .about-div {
     min-height: calc(100vh - var(--nav-height));
     background-color: antiquewhite;
-    padding: 15px;
+    padding: 5vh 10vw;
     font-weight: bold;
-}
-
-.about-txt {
-    width: 80%;
-    margin: auto;
 }
