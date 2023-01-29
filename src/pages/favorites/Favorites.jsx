@@ -1,7 +1,8 @@
+import '../books/Books.css';
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSelectedInFavs } from '../../features/books-slice';
 import FavoritesHeader from "../../components/favorites-header/FavoritesHeader";
-import Book from "../../components/book/Book";
+import Book from '../../components/book/Book';
 
 const Favorites = () => {
   const dispatch = useDispatch();
@@ -15,12 +16,11 @@ const Favorites = () => {
   return (
     <>
       <FavoritesHeader />
-      {favorites &&
-        <div className={`books-div`}>
-          {favorites.length > 0 ?
-            favorites.map((b) => <Book key={b.id} book={b} selecting={selecting} toggleSelected={toggleSelected} />)
-            : (<h1>No books to show.</h1>)}
-        </div>}
+      <div className='books-div'>
+        {favorites.length > 0 ?
+          favorites.map((b) => <Book key={b.id} book={b} selecting={selecting} toggleSelected={toggleSelected} />)
+          : (<h1>No books to show.</h1>)}
+      </div>
     </>
   );
 };
