@@ -1,3 +1,4 @@
+import './BooksHeader.css';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
@@ -6,11 +7,11 @@ import { changeQuery } from '../../features/books-slice';
 import useFocus from '../../hooks/useFocus';
 
 const SearchBar = () => {
-    const { search } = window.location;
-    const query = new URLSearchParams(search).get('search_query');
-    const dispatch = useDispatch();
     const ref = useFocus();
+    const dispatch = useDispatch();
     const location = useLocation();
+    const { search } = location;
+    const query = new URLSearchParams(search).get('search_query');
 
     useEffect(() => {
         if (query) dispatch(changeQuery(query));

@@ -1,3 +1,4 @@
+import './BooksHeader.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { setFilterDateAfter, setFilterDateBefore, setFilterMinRating } from '../../features/mode-slice';
 
@@ -28,7 +29,7 @@ const Filters = () => {
             <div className='filter-div'>
                 <label htmlFor="rating">Minimum Rating:&nbsp;</label>
                 <select
-                    name="" id="rating" value={filterRating || ''}
+                    id="rating" value={filterRating || ''}
                     onChange={handleRatingChange}
                 >
                     <option value="">No Filter</option>
@@ -41,7 +42,7 @@ const Filters = () => {
             <div className='filter-div'>
                 <label htmlFor="published-after">Published After:&nbsp;</label>
                 <select
-                    name="" id="published-after"
+                    id="published-after"
                     value={dateAfter ? new Date(dateAfter).getFullYear().toString() : ''}
                     onChange={handleDateAfterChange}
                 >
@@ -55,7 +56,7 @@ const Filters = () => {
             <div className='filter-div'>
                 <label htmlFor="published-prior">Published Before:&nbsp;</label>
                 <select
-                    name="" id="published-prior"
+                    id="published-prior"
                     value={datePrior ? new Date(datePrior).getFullYear().toString() : ''}
                     onChange={handleDatePriorChange}
                 >

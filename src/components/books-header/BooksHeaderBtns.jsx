@@ -1,3 +1,4 @@
+import './BooksHeader.css';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleSelectMode, toggleShowFilters } from '../../features/mode-slice';
@@ -13,7 +14,7 @@ const BooksHeaderButtons = () => {
     const selecting = useSelector((s) => s.mode.selecting);
     const numSelected = useSelector((s) => s.book.numSelectedInBooks);
     const showFilters = useSelector((s) => s.mode.showFilters);
-    const [isMenuCollapsed, setIsMenuCollapsed] = useState(!showFilters);
+    const [isMenuCollapsed, setIsMenuCollapsed] = useState(!showFilters); // So the filter button will appear when the page is loaded with filters shown.
 
     const handleSelectClick = () => {
         if (selecting) dispatch(cancelSelectionInBooks());
@@ -27,7 +28,7 @@ const BooksHeaderButtons = () => {
     };
 
     const handleFilterClick = () => {
-        if (!showFilters) setIsMenuCollapsed(false);
+        if (!showFilters) setIsMenuCollapsed(false); // So the filter button will appear if page is narrowed.
         dispatch(toggleShowFilters());
     }
 

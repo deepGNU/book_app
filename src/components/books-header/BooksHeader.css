@@ -1,9 +1,9 @@
 .books-header {
-    display: grid;
-    column-gap: 5%;
-    justify-content: space-between;
     position: sticky;
     top: var(--nav-height);
+    display: grid;
+    justify-content: space-between;
+    column-gap: 5%;
     color: white;
     padding: 10px;
     margin-bottom: 10px;
@@ -24,9 +24,9 @@
     font-family: monospace;
     height: auto;
     width: fit-content;
-    margin: 10px;
-    border: solid white 1px;
     background-color: var(--cafe-noir);
+    border: solid white 1px;
+    margin: 10px;
 }
 
 .btn.btn-top:hover,
@@ -58,9 +58,9 @@
 
 .filter-div {
     display: flex;
-    padding: 5px;
     background-color: var(--cafe-noir);
     width: fit-content;
+    padding: 5px;
     border: solid #fff 1px;
     border-radius: 10px;
     margin: 5px;
