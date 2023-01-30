@@ -66,8 +66,11 @@ const booksSlice = createSlice({
         deleteSelectedInBooks: (state) => {
             state.books.filter((b) => b.isSelected).forEach((b) => {
                 const indexFavorites = state.favoriteBooks.findIndex((f) => f.id === b.id);
-                if (indexFavorites !== -1)
+                if (indexFavorites !== -1) {
+                    if (state.favoriteBooks[indexFavorites].isSelected)
+                        state.numSelectedInFavs--;
                     state.favoriteBooks.splice(indexFavorites, 1);
+                }
             });
             state.books = state.books.filter((b) => !b.isSelected);
             state.numSelectedInBooks = 0;
@@ -75,8 +78,11 @@ const booksSlice = createSlice({
         deleteSelectedInFavs: (state) => {
             state.favoriteBooks.filter((f) => f.isSelected).forEach((f) => {
                 const indexBooks = state.books.findIndex((b) => b.id === f.id);
-                if (indexBooks !== -1)
+                if (indexBooks !== -1) {
+                    if (state.books[indexBooks].isSelected)
+                        state.numSelectedInBooks--;
                     state.books.splice(indexBooks, 1);
+                }
             });
             state.favoriteBooks = state.favoriteBooks.filter((f) => !f.isSelected);
             state.numSelectedInFavs = 0;
