@@ -12,8 +12,8 @@ const BookDetails = () => {
     const book = useSelector((s) =>
         path.includes('books') ? s.book.books : s.book.favoriteBooks)
         .find((b) => b.id === bookId);
-
     if (!book) return <Navigate to={path.replace(`/${bookId}`, '')} />;
+    const language = book.volumeInfo?.language ? iso6391.getName(book.volumeInfo.language) : '';
 
     return (
         <div className='book-details-div'>
@@ -35,7 +35,7 @@ const BookDetails = () => {
                 <p>Description: {book.volumeInfo?.description ?? 'unavailable.'}</p>
                 <p>Publisher: {book.volumeInfo?.publisher ?? 'unavailable.'}</p>
                 <p>Published Date: {book.volumeInfo?.publishedDate ?? 'unavailable.'}</p>
-                <p>Language: {(book.volumeInfo?.language && iso6391.getName(book.volumeInfo.language)) ?? 'unavailable.'}</p>
+                <p>Language: {(language !== '') ? language : 'unavailable.'}</p>
                 <p>Average Rating: {book.volumeInfo?.averageRating ?? 'unavailable'}</p>
 
                 <div className='btns-details'>
