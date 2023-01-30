@@ -14,7 +14,7 @@ const processNewBook = (b) => ({
     ...b,
     volumeInfo: {
         ...b.volumeInfo,
-        authors: b.volumeInfo?.authors?.join(', ') ?? 'unavailable',
+        authors: b.volumeInfo?.authors?.join(', ') ?? null,
     },
     isFavorite: false,
     isSelected: false,
