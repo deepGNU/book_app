@@ -1,7 +1,5 @@
 import './BooksHeader.css';
-import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { useLocation } from 'react-router-dom';
 import { SlMagnifier as SearchIcon } from 'react-icons/sl';
 import { changeQuery } from '../../features/books-slice';
 import useFocus from '../../hooks/useFocus';
@@ -9,38 +7,24 @@ import useFocus from '../../hooks/useFocus';
 const SearchBar = () => {
     const ref = useFocus();
     const dispatch = useDispatch();
-    const location = useLocation();
-    const { search } = location;
-    const query = new URLSearchParams(search).get('search_query');
 
-    useEffect(() => {
-        if (query) dispatch(changeQuery(query));
-    }, [dispatch, query]);
-
-    const handleEmptyQueryEnter = (e) => {
-        if (e.key === 'Enter' && !e.target.value) {
-            e.preventDefault();
-        }
-    };
-
-    const handleEmptyQueryClick = (e) => {
-        if (!ref.current.value) {
-            e.preventDefault();
-        }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const queryValue = ref.current.value.trim();
+        if (!queryValue) return;
+        dispatch(changeQuery(queryValue));
+        ref.current.value = '';
+        ref.current.blur();
     };
 
     return (
-        <form action={location.pathname} method='get' className='search-bar'>
+        <form onSubmit={handleSubmit} className='search-bar'>
             <input
-                name='search_query'
-                id='search'
                 type='text'
                 placeholder='Search'
                 ref={ref}
-                onChange={(e) => e.target.value = e.target.value.trimStart()}
-                onKeyDown={handleEmptyQueryEnter}
             />
-            <button title='Search' onClick={handleEmptyQueryClick}>
+            <button title='Search'>
                 <SearchIcon />
             </button>
         </form>
